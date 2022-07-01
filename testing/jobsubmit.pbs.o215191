@@ -1,0 +1,327 @@
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.12s (125561 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/hpe_cpe.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/SUT.inc'
+WARNING: Duplicate setting for "node_compute_sw_os000" on line 46
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+WARNING: Duplicate setting for "node_compute_sw_os001" on line 47
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+Retrieving flags file (/home/br-spollard/SPEChpc/config/flags/Example_hpe_cpe_flags.xml)...
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      test       SPEChpc2021_tny   tiny                        
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 505.lbm_t, 513.soma_t, 518.tealeaf_t, 519.clvleaf_t, 521.miniswp_t, 528.pot3d_t, 532.sph_exa_t, 534.hpgmgfv_t, 535.weather_t
+Compiling Binaries
+  Building 505.lbm_t base cce_mpi: (build_base_cce_mpi.0000) [2022-06-29 12:41:39]
+specmake --output-sync -j 10 clean
+rm -rf *.o  lbm.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf lbm
+rm -rf lbm.exe
+rm -rf core
+specmake --output-sync -j 10 build
+cc -c -o specrand/specrand.o -DSPEC -DNDEBUG   -Ofast                  specrand/specrand.c
+cc -c -o main.o -DSPEC -DNDEBUG   -Ofast                  main.c
+cc -c -o lbm.o -DSPEC -DNDEBUG   -Ofast                  lbm.c
+lbm.c:311:43: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+        printf("Starting iteration: %d\n",ii);
+                                    ~~    ^~
+                                    %ld
+1 warning generated.
+cc      -Ofast          lbm.o main.o specrand/specrand.o             -lm         -o lbm  
+specmake --output-sync -j 10 options
+
+COMP: "cc -c -o options.o -DSPEC -DNDEBUG   -Ofast                  <source>"
+C: CC="cc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: "cc      -Ofast          <objects>   -lm         -o options  "
+C: LD="cc"
+O: OPTIMIZE="-Ofast"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+specmake --output-sync -j 10 compiler-version
+
+ CC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+  Building 513.soma_t base cce_mpi: (build_base_cce_mpi.0000) [2022-06-29 12:41:48]
+specmake --output-sync -j 10 clean
+rm -rf *.o  stateR42time10Npoly32000.txt
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf soma
+rm -rf soma.exe
+rm -rf core
+specmake --output-sync -j 10 build
+cc -c -o bond.o -DSPEC -DNDEBUG   -Ofast                  bond.c
+cc -c -o device.o -DSPEC -DNDEBUG   -Ofast                  device.c
+cc -c -o allocator.o -DSPEC -DNDEBUG   -Ofast                  allocator.c
+cc -c -o autotuner.o -DSPEC -DNDEBUG   -Ofast                  autotuner.c
+cc -c -o init.o -DSPEC -DNDEBUG   -Ofast                  init.c
+cc -c -o monomer.o -DSPEC -DNDEBUG   -Ofast                  monomer.c
+cc -c -o generate_positions.o -DSPEC -DNDEBUG   -Ofast                  generate_positions.c
+cc -c -o mpiroutines.o -DSPEC -DNDEBUG   -Ofast                  mpiroutines.c
+cc -c -o io.o -DSPEC -DNDEBUG   -Ofast                  io.c
+cc -c -o soma_config.o -DSPEC -DNDEBUG   -Ofast                  soma_config.c
+cc -c -o polymer.o -DSPEC -DNDEBUG   -Ofast                  polymer.c
+cc -c -o phase.o -DSPEC -DNDEBUG   -Ofast                  phase.c
+cc -c -o ana.o -DSPEC -DNDEBUG   -Ofast                  ana.c
+cc -c -o soma.o -DSPEC -DNDEBUG   -Ofast                  soma.c
+cc -c -o cmdline.o -DSPEC -DNDEBUG   -Ofast                  cmdline.c
+cc -c -o mc.o -DSPEC -DNDEBUG   -Ofast                  mc.c
+cc -c -o soma_util.o -DSPEC -DNDEBUG   -Ofast                  soma_util.c
+cc -c -o independent_sets.o -DSPEC -DNDEBUG   -Ofast                  independent_sets.c
+cc -c -o test.o -DSPEC -DNDEBUG   -Ofast                  test.c
+cc -c -o mesh.o -DSPEC -DNDEBUG   -Ofast                  mesh.c
+cc -c -o rng.o -DSPEC -DNDEBUG   -Ofast                  rng.c
+cc      -Ofast          allocator.o ana.o autotuner.o bond.o cmdline.o device.o generate_positions.o independent_sets.o init.o io.o mc.o mesh.o monomer.o mpiroutines.o phase.o polymer.o rng.o soma.o soma_config.o soma_util.o test.o             -lm         -o soma  
+specmake --output-sync -j 10 options
+
+COMP: "cc -c -o options.o -DSPEC -DNDEBUG   -Ofast                  <source>"
+C: CC="cc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: "cc      -Ofast          <objects>   -lm         -o options  "
+C: LD="cc"
+O: OPTIMIZE="-Ofast"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+specmake --output-sync -j 10 compiler-version
+
+ CC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+  Building 518.tealeaf_t base cce_mpi: (build_base_cce_mpi.0000) [2022-06-29 12:41:53]
+specmake --output-sync -j 10 clean
+rm -rf *.o  tea.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf tealeaf
+rm -rf tealeaf.exe
+rm -rf core
+specmake --output-sync -j 10 build
+cc -c -o 2d/profiler.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/profiler.c
+cc -c -o 2d/settings.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/settings.c
+cc -c -o 2d/chunk.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/chunk.c
+cc -c -o 2d/comms.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/comms.c
+cc -c -o 2d/main.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/main.c
+cc -c -o 2d/shared.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/shared.c
+cc -c -o 2d/drivers/cg_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/cg_driver.c
+cc -c -o 2d/diffuse.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/diffuse.c
+cc -c -o 2d/drivers/halo_update_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/halo_update_driver.c
+cc -c -o 2d/initialise.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/initialise.c
+cc -c -o 2d/drivers/field_summary_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/field_summary_driver.c
+cc -c -o 2d/drivers/kernel_initialise_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/kernel_initialise_driver.c
+cc -c -o 2d/drivers/jacobi_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/jacobi_driver.c
+cc -c -o 2d/drivers/set_chunk_state_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/set_chunk_state_driver.c
+cc -c -o 2d/drivers/set_chunk_data_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/set_chunk_data_driver.c
+cc -c -o 2d/drivers/store_energy_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/store_energy_driver.c
+cc -c -o 2d/drivers/ppcg_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/ppcg_driver.c
+cc -c -o 2d/drivers/solve_finished_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/solve_finished_driver.c
+cc -c -o 2d/c_kernels/field_summary.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/field_summary.c
+cc -c -o 2d/drivers/remote_halo_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/remote_halo_driver.c
+cc -c -o 2d/drivers/eigenvalue_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/eigenvalue_driver.c
+cc -c -o 2d/drivers/cheby_driver.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/drivers/cheby_driver.c
+cc -c -o 2d/c_kernels/kernel_interface.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/kernel_interface.c
+cc -c -o 2d/parse_config.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/parse_config.c
+cc -c -o 2d/c_kernels/kernel_initialise.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/kernel_initialise.c
+cc -c -o 2d/c_kernels/set_chunk_data.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/set_chunk_data.c
+cc -c -o 2d/c_kernels/store_energy.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/store_energy.c
+cc -c -o 2d/c_kernels/ppcg.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/ppcg.c
+cc -c -o 2d/c_kernels/diffuse_overload.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/diffuse_overload.c
+cc -c -o 2d/c_kernels/set_chunk_state.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/set_chunk_state.c
+cc -c -o 2d/c_kernels/jacobi.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/jacobi.c
+cc -c -o 2d/c_kernels/solver_methods.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/solver_methods.c
+cc -c -o 2d/c_kernels/cheby.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/cheby.c
+cc -c -o 2d/c_kernels/cg.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/cg.c
+cc -c -o 2d/c_kernels/pack_halos.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/pack_halos.c
+cc -c -o 2d/c_kernels/local_halos.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  2d/c_kernels/local_halos.c
+cc      -Ofast          2d/chunk.o 2d/comms.o 2d/diffuse.o 2d/initialise.o 2d/main.o 2d/parse_config.o 2d/profiler.o 2d/settings.o 2d/shared.o 2d/drivers/cg_driver.o 2d/drivers/cheby_driver.o 2d/drivers/eigenvalue_driver.o 2d/drivers/field_summary_driver.o 2d/drivers/halo_update_driver.o 2d/drivers/jacobi_driver.o 2d/drivers/kernel_initialise_driver.o 2d/drivers/ppcg_driver.o 2d/drivers/remote_halo_driver.o 2d/drivers/set_chunk_data_driver.o 2d/drivers/set_chunk_state_driver.o 2d/drivers/solve_finished_driver.o 2d/drivers/store_energy_driver.o 2d/c_kernels/cg.o 2d/c_kernels/cheby.o 2d/c_kernels/field_summary.o 2d/c_kernels/jacobi.o 2d/c_kernels/kernel_initialise.o 2d/c_kernels/kernel_interface.o 2d/c_kernels/local_halos.o 2d/c_kernels/pack_halos.o 2d/c_kernels/ppcg.o 2d/c_kernels/set_chunk_data.o 2d/c_kernels/set_chunk_state.o 2d/c_kernels/solver_methods.o 2d/c_kernels/store_energy.o 2d/c_kernels/diffuse_overload.o                      -o tealeaf  
+specmake --output-sync -j 10 options
+
+COMP: "cc -c -o options.o -DSPEC -DNDEBUG  -I2d/drivers/ -I2d/c_kernels -Ofast                  <source>"
+C: CC="cc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-I2d/drivers/ -I2d/c_kernels"
+O: OPTIMIZE="-Ofast"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: "cc      -Ofast          <objects>            -o options  "
+C: LD="cc"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+specmake --output-sync -j 10 compiler-version
+
+ CC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+  Building 519.clvleaf_t base cce_mpi: (build_base_cce_mpi.0000) [2022-06-29 12:42:01]
+specmake --output-sync -j 10 clean
+rm -rf *.o  clover.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf clvleaf
+rm -rf clvleaf.exe
+rm -rf core
+specmake --output-sync -j 10 build
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG accelerate.F90 -o accelerate.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG accelerate_kernel.F90 -o accelerate_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG data.F90 -o data.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG advec_cell_driver.F90 -o advec_cell_driver.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG definitions.F90 -o definitions.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG advec_mom_driver.F90 -o advec_mom_driver.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG advec_cell_kernel.F90 -o advec_cell_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG advection.F90 -o advection.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG advec_mom_kernel.F90 -o advec_mom_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG update_halo.F90 -o update_halo.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG pack_kernel.F90 -o pack_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG update_tile_halo.F90 -o update_tile_halo.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG build_field.F90 -o build_field.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG calc_dt.F90 -o calc_dt.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG clover_leaf.F90 -o clover_leaf.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG calc_dt_kernel.F90 -o calc_dt_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG field_summary.F90 -o field_summary.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG field_summary_kernel.F90 -o field_summary_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG ideal_gas.F90 -o ideal_gas.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG ideal_gas_kernel.F90 -o ideal_gas_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG flux_calc.F90 -o flux_calc.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG flux_calc_kernel.F90 -o flux_calc_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG generate_chunk.F90 -o generate_chunk.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG PdV.F90 -o PdV.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG generate_chunk_kernel.F90 -o generate_chunk_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG report.F90 -o report.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG hydro.F90 -o hydro.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG update_halo_kernel.F90 -o update_halo_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG PdV_kernel.F90 -o PdV_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG revert.F90 -o revert.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG revert_kernel.F90 -o revert_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG clover.F90 -o clover.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG reset_field.F90 -o reset_field.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG reset_field_kernel.F90 -o reset_field_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG update_tile_halo_kernel.F90 -o update_tile_halo_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG viscosity.F90 -o viscosity.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG timestep.F90 -o timestep.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG initialise_chunk.F90 -o initialise_chunk.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG viscosity_kernel.F90 -o viscosity_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG initialise_chunk_kernel.F90 -o initialise_chunk_kernel.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG initialise.F90 -o initialise.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG timer.F90 -o timer.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG start.F90 -o start.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG parse.F90 -o parse.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG read_input.F90 -o read_input.fppized.f90
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG visit.F90 -o visit.fppized.f90
+ftn -c -o data.fppized.o -Ofast data.fppized.f90
+ftn -c -o field_summary_kernel.fppized.o -Ofast field_summary_kernel.fppized.f90
+ftn -c -o ideal_gas_kernel.fppized.o -Ofast ideal_gas_kernel.fppized.f90
+ftn -c -o flux_calc_kernel.fppized.o -Ofast flux_calc_kernel.fppized.f90
+ftn -c -o accelerate_kernel.fppized.o -Ofast accelerate_kernel.fppized.f90
+ftn -c -o revert_kernel.fppized.o -Ofast revert_kernel.fppized.f90
+ftn -c -o calc_dt_kernel.fppized.o -Ofast calc_dt_kernel.fppized.f90
+ftn -c -o reset_field_kernel.fppized.o -Ofast reset_field_kernel.fppized.f90
+ftn -c -o timer.fppized.o -Ofast timer.fppized.f90
+ftn -c -o viscosity_kernel.fppized.o -Ofast viscosity_kernel.fppized.f90
+ftn -c -o definitions.fppized.o -Ofast definitions.fppized.f90
+ftn -c -o PdV_kernel.fppized.o -Ofast PdV_kernel.fppized.f90
+ftn -c -o initialise_chunk_kernel.fppized.o -Ofast initialise_chunk_kernel.fppized.f90
+ftn -c -o generate_chunk_kernel.fppized.o -Ofast generate_chunk_kernel.fppized.f90
+ftn -c -o pack_kernel.fppized.o -Ofast pack_kernel.fppized.f90
+ftn -c -o advec_cell_kernel.fppized.o -Ofast advec_cell_kernel.fppized.f90
+ftn -c -o advec_mom_kernel.fppized.o -Ofast advec_mom_kernel.fppized.f90
+ftn -c -o update_tile_halo_kernel.fppized.o -Ofast update_tile_halo_kernel.fppized.f90
+ftn -c -o update_halo_kernel.fppized.o -Ofast update_halo_kernel.fppized.f90
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-29 12:42:26 for job 215191.xci00
+Submitted              : 2022-06-29 12:41:36
+Queued                 : 2022-06-29 12:41:36
+Started                : 2022-06-29 12:41:37
+Completed              : 2022-06-29 12:42:26
+Queued Time            : 0:00:01 (1 second)
+Elapsed Time           : 0:00:44 (44 seconds, 7% of limit)
+Walltime Limit         : 0:10:00 (600 seconds)
+Node Time Limit        : 0:10:00 (600 seconds)
+Node Time              : 0:00:44 (44 seconds, 7% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o215191
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e215191
+Job Directory          : /home/br-spollard/pbs.215191.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 366
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

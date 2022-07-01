@@ -1,0 +1,36 @@
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-21 15:28:38 for job 213087.xci00
+Submitted              : 2022-06-21 15:28:30
+Queued                 : 2022-06-21 15:28:30
+Started                : 2022-06-21 15:28:30
+Completed              : 2022-06-21 15:28:38
+Queued Time            : 0:00:00 (0 seconds)
+Elapsed Time           : 0:00:03 (3 seconds, 1% of limit)
+Walltime Limit         : 0:05:00 (300 seconds)
+Node Time Limit        : 0:05:00 (300 seconds)
+Node Time              : 0:00:03 (3 seconds, 1% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o213087
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e213087
+Job Directory          : /home/br-spollard/pbs.213087.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 56
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

@@ -1,0 +1,203 @@
+                                       SPEChpc(TM) 2021 Small Result
+                                     Cray Isambard 2: XC50 (ThunderX2)
+                                    Test Sponsor: University of Bristol
+
+                hpc2021 License: ?                                       Test date: Jun-2022
+                Test sponsor: University of Bristol          Hardware availability: May-2018
+                Tested by:    University of Bristol          Software availability: Mar-2020
+
+               Base   Base    Thrds   Base       Base         Peak   Peak   Thrds    Peak       Peak
+Benchmarks     Model  Ranks  pr Rnk   Run Time   Ratio        Model  Ranks  pr Rnk   Run Time   Ratio
+-------------- ------ ------  ------  ---------  ---------    ------ ------  ------  ---------  ---------   
+605.lbm_s         MPI    512       1       1363      1.14   *                                                
+605.lbm_s         MPI    512       1       1362      1.14   S                                                
+613.soma_s        MPI    512       1       1111      1.44   S                                                
+613.soma_s        MPI    512       1       1115      1.44   *                                                
+618.tealeaf_s     MPI    512       1       1824      1.12   S                                                
+618.tealeaf_s     MPI    512       1       1831      1.12   *                                                
+619.clvleaf_s     MPI    512       1       1143      1.44   *                                                
+619.clvleaf_s     MPI    512       1       1141      1.45   S                                                
+621.miniswp_s     MPI    512       1        921      1.19   S                                                
+621.miniswp_s     MPI    512       1        922      1.19   *                                                
+628.pot3d_s       MPI    512       1       1348      1.24   S                                                
+628.pot3d_s       MPI    512       1       1349      1.24   *                                                
+632.sph_exa_s     MPI    512       1       1241      1.85   S                                                
+632.sph_exa_s     MPI    512       1       1245      1.85   *                                                
+634.hpgmgfv_s     MPI    512       1       1216      0.802  S                                                
+634.hpgmgfv_s     MPI    512       1       1217      0.801  *                                                
+635.weather_s     MPI    512       1       1318      1.97   S                                                
+635.weather_s     MPI    512       1       1326      1.96   *                                                
+============================================================================================================
+605.lbm_s         MPI    512       1       1363      1.14   *                                                
+613.soma_s        MPI    512       1       1115      1.44   *                                                
+618.tealeaf_s     MPI    512       1       1831      1.12   *                                                
+619.clvleaf_s     MPI    512       1       1143      1.44   *                                                
+621.miniswp_s     MPI    512       1        922      1.19   *                                                
+628.pot3d_s       MPI    512       1       1349      1.24   *                                                
+632.sph_exa_s     MPI    512       1       1245      1.85   *                                                
+634.hpgmgfv_s     MPI    512       1       1217      0.801  *                                                
+635.weather_s     MPI    512       1       1326      1.96   *                                                
+ SPEChpc 2021_sml_base                               1.31 
+ SPEChpc 2021_sml_peak                                                                            Not Run
+
+
+                                             BENCHMARK DETAILS
+                                             -----------------
+      Type of System: Homogenous Cluster
+  Compute Nodes Used: 8
+         Total Chips: 16
+         Total Cores: 512
+       Total Threads: 2048
+        Total Memory: 2 TB
+            Compiler: HPE Cray Programming Environment (CPE),
+                      C/C++/Fortran: Cray clang version 11.0.4
+         MPI Library: HPE Cray Programming Environment (CPE),
+                      Cray-mvapich2 Version 2.3.6
+ Base Parallel Model: MPI
+      Base Ranks Run: 512
+    Base Threads Run: 1
+Peak Parallel Models: Not Run
+
+                                        Node Description: ThunderX2
+                                        ===========================
+
+
+                                                  HARDWARE
+                                                  --------
+     Number of nodes: 8
+    Uses of the node: Compute
+              Vendor: N/A
+               Model: N/A
+            CPU Name: Marvell ThunderX2 CN9980
+    CPU(s) orderable: N/A
+       Chips enabled: 2
+       Cores enabled: 64
+      Cores per chip: 32
+    Threads per core: 4
+ CPU Characteristics: Permanent turbo to 2.5 GHz
+             CPU MHz: 2100
+       Primary Cache: 32 KB I + 32 KB D on chip per core
+     Secondary Cache: 256 KB I+D on chip per core
+            L3 Cache: 32 MB I+D on chip per chip
+                      0.5 MB shared / 64 cores
+         Other Cache: None
+              Memory: 256 GB (8 x 32 GB)
+      Other Hardware: None
+         Accel Count: N/A
+         Accel Model: N/A
+        Accel Vendor: N/A
+          Accel Type: N/A
+    Accel Connection: N/A
+   Accel ECC enabled: N/A
+   Accel Description: N/A
+             Adapter: None
+  Number of Adapters: 0
+           Slot Type: None
+           Data Rate: None
+          Ports Used: 0
+   Interconnect Type: None
+
+
+                                                  SOFTWARE
+                                                  --------
+             Adapter: None
+      Adapter Driver: None
+    Adapter Firmware: None
+    Operating System: SUSE Linux Enterprise Server 15 SP1
+                      Linux 4.12.14-197.7_5.0.99-cray_ari_s
+   Local File System: xfs
+  Shared File System: None
+        System State: Multi-user, run level 3
+      Other Software: None
+
+
+                                    Interconnect Description: Cray Aries
+                                    ====================================
+
+
+                                                  HARDWARE
+                                                  --------
+              Vendor: Cray
+               Model: N/A
+        Switch Model: N/A
+                      N/A
+  Number of Switches: N/A
+     Number of Ports: N/A
+           Data Rate: 14 Gb/s
+            Firmware: N/A
+            Topology: Dragonfly
+         Primary Use: MPI Traffic
+
+
+                                                  SOFTWARE
+                                                  --------
+
+
+
+                                                Submit Notes
+                                                ------------
+    The config file option 'submit' was used.
+
+                                           Compiler Version Notes
+                                           ----------------------
+    ==============================================================================
+     FC  619.clvleaf_s(base) 628.pot3d_s(base) 635.weather_s(base)
+
+    ------------------------------------------------------------------------------
+    Cray Fortran : Version 11.0.4
+    ------------------------------------------------------------------------------
+    
+    ==============================================================================
+     CC  605.lbm_s(base) 613.soma_s(base) 618.tealeaf_s(base) 621.miniswp_s(base)
+          634.hpgmgfv_s(base)
+    ------------------------------------------------------------------------------
+    Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+    Target: aarch64-unknown-linux-gnu
+    Thread model: posix
+    InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+    ------------------------------------------------------------------------------
+    
+    ==============================================================================
+     CXXC 632.sph_exa_s(base)
+
+    ------------------------------------------------------------------------------
+    Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+    Target: aarch64-unknown-linux-gnu
+    Thread model: posix
+    InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+    ------------------------------------------------------------------------------
+
+                                          Base Compiler Invocation
+                                          ------------------------
+C benchmarks: 
+     cc
+
+C++ benchmarks: 
+     CC
+
+Fortran benchmarks: 
+     ftn
+
+
+                                          Base Optimization Flags
+                                          -----------------------
+C benchmarks: 
+     -Ofast
+
+C++ benchmarks: 
+     -Ofast
+
+Fortran benchmarks: 
+     -Ofast
+
+
+  SPEChpc is a trademark of the Standard Performance Evaluation
+    Corporation.  All other brand and product names appearing in this
+    result are trademarks or registered trademarks of their respective
+    holders.
+-------------------------------------------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact info@spec.org.
+Copyright 2021-2022 Standard Performance Evaluation Corporation
+Tested with SPEChpc2021 v1.0.3 on 2022-06-30 16:17:32+0000.
+Report generated on 2022-06-30 22:46:21 by hpc2021 ASCII formatter v1.0.3.

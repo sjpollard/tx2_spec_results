@@ -1,0 +1,3 @@
+gcc/10.3.0(3):ERROR:150: Module 'gcc/10.3.0' conflicts with the currently loaded module(s) 'gcc/9.3.0'
+gcc/10.3.0(3):ERROR:102: Tcl command execution failed: conflict gcc
+

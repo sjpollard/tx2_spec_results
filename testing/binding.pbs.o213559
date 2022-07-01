@@ -1,0 +1,40 @@
+Hello from rank 3, thread 0, on nid00237. (core affinity = 6)
+Hello from rank 1, thread 0, on nid00237. (core affinity = 2)
+Hello from rank 0, thread 0, on nid00237. (core affinity = 0)
+Hello from rank 2, thread 0, on nid00237. (core affinity = 4)
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-23 12:33:01 for job 213559.xci00
+Submitted              : 2022-06-23 12:32:49
+Queued                 : 2022-06-23 12:32:49
+Started                : 2022-06-23 12:32:50
+Completed              : 2022-06-23 12:33:01
+Queued Time            : 0:00:01 (1 second)
+Elapsed Time           : 0:00:06 (6 seconds, 2% of limit)
+Walltime Limit         : 0:05:00 (300 seconds)
+Node Time Limit        : 0:05:00 (300 seconds)
+Node Time              : 0:00:06 (6 seconds, 2% of limit)
+Job Name               : binding.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/binding.pbs.o213559
+STDERR                 : /home/br-spollard/benchmarks/testing/binding.pbs.e213559
+Job Directory          : /home/br-spollard/pbs.213559.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 237
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

@@ -1,0 +1,3 @@
+/var/spool/PBS/mom_priv/jobs/213263.xci00.SC: line 7: cd: benchmarks/testing: No such file or directory
+aprun: file xthi not found
+aprun: Exiting due to errors. Application aborted

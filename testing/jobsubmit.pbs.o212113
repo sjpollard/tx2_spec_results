@@ -1,0 +1,495 @@
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.12s (126250 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/clang.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/Example_SUT.inc'
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      test       SPEChpc2021_tny   505.lbm_t                   
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 505.lbm_t
+Compiling Binaries
+  Up to date 505.lbm_t base clang_mpi
+
+
+Setting Up Run Directories
+  Setting up 505.lbm_t test base clang_mpi: run_base_test_clang_mpi.0000
+Running Benchmarks
+  Running 505.lbm_t test base clang_mpi [2022-06-17 11:21:57]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/505.lbm_t/run/run_base_test_clang_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+
+505.lbm_t: copy 0 non-zero return code (exit code=1, signal=0)
+
+
+****************************************
+Contents of lbm.err
+****************************************
+aprun: unrecognized option '--bind-to'
+Usage: aprun [global_options] [command_options] cmd1
+          [: [command_options] cmd2 [: ...] ]
+          [--help] [--version]
+
+--help         Print this help information and exit
+--version      Print version information
+:              Separate binaries for MPMD mode
+               (Multiple Program, Multiple Data)
+
+Global Options:
+-b, --bypass-app-transfer
+    Bypass application transfer to compute node
+-B, --batch-args
+    Get values from Batch reservation for -n, -N, -d, and -m
+-C, --reconnect
+    Reconnect fanout control tree around failed nodes
+-D, --debug level
+    Debug level bitmask (0-7)
+-e, --environment-override env
+    Set an environment variable on the compute nodes
+    Must use format VARNAME=value
+    Set multiple env variables using multiple -e args
+-P, --pipes pipes
+    Write[,read] pipes (not applicable for general use)
+-p, --protection-domain pdi
+    Protection domain identifier
+-q, --quiet
+    Quiet mode; suppress aprun non-fatal messages
+-R, --relaunch max_shrink
+    Relaunch application; max_shrink is zero or more maximum
+    PEs to shrink for a relaunch
+-T, --sync-output
+    Use synchronous TTY
+-t, --cpu-time-limit sec
+    Per PE CPU time limit in seconds (default unlimited)
+--wdir wdir
+    Application working directory (default current directory)
+-Z, --zone-sort-secs secs
+    Perform periodic memory zone sort every secs seconds
+-z, --zone-sort
+    Perform memory zone sort before application launch
+
+Command Options:
+-a, --architecture arch
+    Architecture type (only XT currently supported)
+--cc, --cpu-binding cpu_list
+    CPU binding list or keyword
+    ([cpu#[,cpu# | cpu1-cpu2] | x]...] | keyword)
+--cp, --cpu-binding-file file
+    CPU binding placement filename
+-d, --cpus-per-pe depth
+    Number of CPUs allocated per PE (number of threads)
+-E, --exclude-node-list node_list
+    List of nodes to exclude from placement
+--exclude-node-list-file node_list_file
+    File with a list of nodes to exclude from placement
+-F, --access-mode flag
+    Exclusive or share node resources flag
+-j, --cpus-per-cu CPUs
+    CPUs to use per Compute Unit (CU)
+-L, --node-list node_list
+    Manual placement list (node[,node | node1-node2]...)
+-l, --node-list-file node_list_file
+    File with manual placement list
+-m, --memory-per-pe size
+    Per PE memory limit in megabytes
+    (default node memory/number of processors)
+    K|M|G suffix supported (16 == 16M == 16 megabytes)
+    Add an 'h' suffix to request per PE huge page memory
+    Add an 's' to the 'h' suffix to make the per PE huge page
+    memory size strict (required)
+--mpmd-env env
+    Set an environment variable on the compute nodes
+    for a specific MPMD command
+    Must use format VARNAME=value
+    Set multiple env variables using multiple --mpmd-env args
+-N, --pes-per-node pes
+    PEs per node
+-n, --pes width
+    Number of PEs requested
+--p-governor governor_name
+    Specify application performance governor
+--p-state pstate
+    Specify application p-state in kHz
+-r, --specialized-cpus CPUs
+    Restrict this many CPUs per node to specialization
+-S, --pes-per-numa-node pes
+    PEs per NUMA node
+--ss, --strict-memory-containment
+    Strict memory containment per NUMA node
+
+****************************************
+
+****************************************
+Contents of speccmds.out
+****************************************
+specinvoke r4356
+ Invoked as: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/505.lbm_t/run/run_base_test_clang_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+timer ticks over every 1000 ns
+ Environment in effect for these runs:
+ # 1: PAT_BUILD_PAPI_LIBDIR=/opt/cray/pe/papi/6.0.0.7/lib64
+ # 2: CRAY_BINUTILS_ROOT_AARCH64=/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/../
+ # 3: PE_LIBSCI_OMP_REQUIRES=
+ # 4: MAIL=/var/spool/mail/br-spollard
+ # 5: PE_PKG_CONFIG_PATH=/opt/cray/pe/valgrind4hpc/2.10.2/lib/pkgconfig:/opt/cray/pe/cti/2.14.1/lib/pkgconfig:/opt/cray/pe/atp/3.11.7/lib/pkgconfig
+ # 6: PE_PAPI_DEFAULT_ACCEL_LIBS=
+ # 7: CRAY_UDREG_POST_LINK_OPTS=-L/opt/cray/udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari/lib64
+ # 8: CRAY_LIBSCI_DIR=/opt/cray/pe/libsci/20.09.1
+ # 9: USER=br-spollard
+ #10: XDG_CONFIG_DIRS=/etc/xdg
+ #11: CRAY_RCA_INCLUDE_OPTS=-I/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/include -I/opt/cray/krca/2.2.7-7.0.2.1_2.70__ge897ee1.ari/include -I/opt/cray-hss-devel/9.0.0/include
+ #12: CRAY_UDREG_INCLUDE_OPTS=-I/opt/cray/udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari/include
+ #13: LD_LIBRARY_PATH=/opt/gcc/9.3.0/snos/lib64:/opt/cray/pe/papi/6.0.0.7/lib64
+ #14: HISTSIZE=1000
+ #15: PE_MPICH_DEFAULT_VOLATILE_PRGENV=GNU CRAYCLANG CRAY
+ #16: CC_AARCH64=/opt/cray/pe/cce/11.0.4/cce/aarch64
+ #17: FTN_AARCH64=/opt/cray/pe/cce/11.0.4/cce/aarch64
+ #18: GNU_VERSION=9.3.0
+ #19: CRAY_CCE_SHARE=/opt/cray/pe/cce/11.0.4/cce/aarch64/share
+ #20: GCC_PATH=/opt/gcc/9.3.0
+ #21: CRAYLIBS_AARCH64=/opt/cray/pe/cce/11.0.4/cce/aarch64/lib
+ #22: GCC_PREFIX=/opt/gcc/9.3.0
+ #23: FORTRAN_SYSTEM_MODULE_NAMES=ftn_lib_definitions
+ #24: PBS_TASKNUM=1
+ #25: PE_LIBSCI_VOLATILE_PKGCONFIG_PATH=/opt/cray/pe/libsci/20.09.1/@PRGENV@/@PE_LIBSCI_GENCOMPS@/@PE_LIBSCI_TARGET@/lib/pkgconfig
+ #26: MANPATH=/opt/gcc/9.3.0/snos/share/man:/opt/cray/pe/mpt/7.7.17/gni/man/mpich:/opt/cray/pe/perftools/21.05.0/man:/opt/cray/pe/papi/6.0.0.7/share/pdoc/man:/opt/cray/pe/atp/3.11.7/share/man:/opt/cray/pe/pmi/5.0.17/man:/opt/cray/pe/libsci/20.09.1/man:/opt/cray/pe/man/csmlversion:/opt/cray/pe/craype/2.6.2/man:/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/man:/opt/cray/pe/cce/11.0.4/man:/opt/cray/cfgutils/man:/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/man:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/man:/opt/cray/pe/modules/3.2.11.4/share/man:/usr/local/man:/usr/share/man:/usr/man:/opt/cray/share/man:/opt/pbs/share/man:/opt/cray/pe/man
+ #27: MPICH_DIR=/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0
+ #28: PE_MPICH_CXX_PKGCONFIG_LIBS=mpichcxx
+ #29: CRAY_CXX_IPA_LIBS_AARCH64=/opt/cray/pe/cce/11.0.4/cce/aarch64/lib/libcray-c++-rts.a
+ #30: CRAY_BINUTILS_ROOT=/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/../
+ #31: MACHTYPE=aarch64-suse-linux
+ #32: PE_LIBSCI_REQUIRED_PRODUCTS=PE_MPICH
+ #33: CRAY_CC_VERSION=11.0.4
+ #34: PE_LIBSCI_DEFAULT_GENCOMPS_CRAY_aarch64=90
+ #35: ATP_INSTALL_DIR=/opt/cray/pe/atp/3.11.7
+ #36: XTPE_NETWORK_TARGET=aries
+ #37: JRE_HOME=/usr/lib64/jvm/java-11-openjdk-11
+ #38: CRAY_LD_LIBRARY_PATH=/opt/cray/pe/mpt/7.7.17/gni/mpich-cray/10.0/lib:/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0/lib:/opt/cray/pe/perftools/21.05.0/lib64:/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/lib64:/opt/cray/pe/pmi/5.0.17/lib64:/opt/cray/pe/libsci/20.09.1/CRAY/9.0/aarch64/lib:/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/lib:/opt/cray/pe/cce/11.0.4/cce/aarch64/lib:/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/lib64:/opt/cray/xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari/lib64:/opt/cray/dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari/lib64:/opt/cray/ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari/lib64:/opt/cray/udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari/lib64:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/lib64
+ #39: PE_MPICH_NV_LIBS_nvidia35=-lcudart
+ #40: ATP_CFLAGS_GNU_FORTRAN=-fno-backtrace
+ #41: CRAY_ALPS_INCLUDE_OPTS=-I/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/include
+ #42: ATP_HOME=/opt/cray/pe/atp/3.11.7/alps
+ #43: NLSPATH=/opt/cray/pe/cce/11.0.4/cce/aarch64/share/nls/En/%N.cat
+ #44: PE_MPICH_GENCOMPS_CRAY=90
+ #45: PE_MPICH_MODULE_NAME=cray-mpich
+ #46: LOADEDMODULES=modules/3.2.11.4:craype-network-aries:alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari:nodestat/2.3.89-7.0.2.1_2.53__g8645157.ari:sdb/3.3.812-7.0.2.1_2.74__gd6c4e58.ari:udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari:ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari:gni-headers/5.0.12.0-7.0.2.1_2.27__g3b1768f.ari:dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari:xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari:llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari:nodehealth/5.6.27-7.0.2.1_4.48__g20e015c.ari:system-config/3.6.3070-7.0.2.1_7.3__g40f385a9.ari:Base-opts/2.4.142-7.0.2.1_2.69__g8f27585.ari:cce/11.0.4:craype/2.6.2:cray-libsci/20.09.1:pmi/5.0.17:atp/3.11.7:rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari:perftools-base/21.05.0:PrgEnv-cray/6.0.9:cray-mpich/7.7.17:gcc/9.3.0
+ #47: XNLSPATH=/usr/share/X11/nls
+ #48: PE_FFTW_DEFAULT_TARGET_share=share
+ #49: PBS_ACCOUNT=GW03
+ #50: PBS_O_QUEUE=arm
+ #51: LESSCLOSE=lessclose.sh %s %s
+ #52: PE_MPICH_TARGET_VAR_nvidia20=-lcudart
+ #53: MODULEPATH=/opt/cray/pe/perftools/21.05.0/modulefiles:/opt/cray/ari/modulefiles:/opt/cray/pe/craype-targets/default/modulefiles:/opt/cray/pe/modulefiles:/opt/cray/modulefiles:/opt/modulefiles:/lustre/software/aarch64/modulefiles:
+ #54: PE_MPICH_NV_LIBS_nvidia20=-lcudart
+ #55: G_BROKEN_FILENAMES=1
+ #56: CRAY_SITE_LIST_DIR=/etc/opt/cray/pe/modules
+ #57: TMPDIR=/var/tmp/pbs.212113.xci00
+ #58: _LMFILES_=/opt/cray/pe/modulefiles/modules/3.2.11.4:/opt/cray/pe/craype-targets/default/modulefiles/craype-network-aries:/opt/cray/ari/modulefiles/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari:/opt/cray/ari/modulefiles/nodestat/2.3.89-7.0.2.1_2.53__g8645157.ari:/opt/cray/ari/modulefiles/sdb/3.3.812-7.0.2.1_2.74__gd6c4e58.ari:/opt/cray/ari/modulefiles/udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari:/opt/cray/ari/modulefiles/ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari:/opt/cray/ari/modulefiles/gni-headers/5.0.12.0-7.0.2.1_2.27__g3b1768f.ari:/opt/cray/ari/modulefiles/dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari:/opt/cray/ari/modulefiles/xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari:/opt/cray/ari/modulefiles/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari:/opt/cray/ari/modulefiles/nodehealth/5.6.27-7.0.2.1_4.48__g20e015c.ari:/opt/cray/ari/modulefiles/system-config/3.6.3070-7.0.2.1_7.3__g40f385a9.ari:/opt/modulefiles/Base-opts/2.4.142-7.0.2.1_2.69__g8f27585.ari:/opt/cray/pe/modulefiles/cce/11.0.4:/opt/cray/pe/modulefiles/craype/2.6.2:/opt/cray/pe/modulefiles/cray-libsci/20.09.1:/opt/cray/pe/modulefiles/pmi/5.0.17:/opt/cray/pe/modulefiles/atp/3.11.7:/opt/cray/ari/modulefiles/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari:/opt/cray/pe/modulefiles/perftools-base/21.05.0:/opt/cray/pe/modulefiles/PrgEnv-cray/6.0.9:/opt/cray/pe/modulefiles/cray-mpich/7.7.17:/opt/modulefiles/gcc/9.3.0
+ #59: LOGNAME=br-spollard
+ #60: PE_NETCDF_DEFAULT_REQUIRED_PRODUCTS=PE_HDF5
+ #61: CRAY_PMI_POST_LINK_OPTS=-L/opt/cray/pe/pmi/5.0.17/lib64
+ #62: PE_GA_DEFAULT_FIXED_PRGENV=GNU
+ #63: KSH_AUTOLOAD=1
+ #64: PE_LIBSCI_OMP_REQUIRES_openmp=_mp
+ #65: PE_MPICH_FORTRAN_PKGCONFIG_LIBS=mpichf90
+ #66: PE_CRAYCLANG_FIXED_PKGCONFIG_PATH=/opt/cray/pe/libsci/20.09.1/CRAY/90/aarch64/lib/pkgconfig
+ #67: FROM_HEADER=
+ #68: CRAY_PERFTOOLS_VERSION=21.05.0
+ #69: OFFLOAD_INIT=on_start
+ #70: PE_LIBSCI_FIXED_PRGENV=CRAYCLANG
+ #71: SPECDB_PWD=/home/br-spollard/SPEChpc
+ #72: HOST=xcimom2
+ #73: PE_MPICH_NV_LIBS=
+ #74: PE_ATP_MODULE_NAME=atp
+ #75: SPECPERLLIB=/home/br-spollard/SPEChpc/bin/lib:/home/br-spollard/SPEChpc/bin
+ #76: MODULE_VERSION_STACK=3.2.11.4
+ #77: ATP_IGNORE_SIGTERM=1
+ #78: PKG_CONFIG_PATH=/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/lib64/pkgconfig:/opt/cray/pe/pmi/5.0.17/lib64/pkgconfig:/opt/cray/pe/craype/2.6.2/pkg-config:/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/lib64/pkgconfig:/opt/cray/xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari/lib64/pkgconfig:/opt/cray/dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari/lib64/pkgconfig:/opt/cray/gni-headers/5.0.12.0-7.0.2.1_2.27__g3b1768f.ari/lib64/pkgconfig:/opt/cray/ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari/lib64/pkgconfig:/opt/cray/udreg/2.3.2-7.0.2.1_2.24__g8175d3d.ari/lib64/pkgconfig:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/lib64/pkgconfig:/opt/cray/pe/atp/3.11.7/lib/pkgconfig
+ #79: PE_MPICH_ALTERNATE_LIBS_multithreaded=_mt
+ #80: CRAY_ALPS_POST_LINK_OPTS=-L/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/lib64
+ #81: CRAY_BINUTILS_BIN_AARCH64=/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin
+ #82: PYTHONPATH=/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/lib64/python
+ #83: PE_LIBSCI_GENCOMPILERS_GNU_aarch64=8.1
+ #84: PBS_JOBNAME=jobsubmit.pbs
+ #85: PE_LIBSCI_DEFAULT_GENCOMPS_GNU_aarch64=81
+ #86: PERFTOOLS_VERSION=21.05.0
+ #87: PE_NETCDF_HDF5PARALLEL_DEFAULT_REQUIRED_PRODUCTS=PE_HDF5_PARALLEL
+ #88: CRAY_XPMEM_INCLUDE_OPTS=-I/opt/cray/xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari/include
+ #89: PKGCONFIG_ENABLED=1
+ #90: CRAY_CXX_IPA_LIBS=/opt/cray/pe/cce/11.0.4/cce/aarch64/lib/libcray-c++-rts.a
+ #91: PE_PKGCONFIG_DEFAULT_PRODUCTS=PE_PARALLEL_NETCDF:PE_NETCDF_HDF5PARALLEL:PE_NETCDF:PE_MPICH:PE_LIBSCI:PE_HDF5_PARALLEL:PE_HDF5:PE_GA:PE_FFTW
+ #92: PBS_O_LOGNAME=br-spollard
+ #93: PE_FFTW_DEFAULT_TARGET_aarch64=aarch64
+ #94: CRAY_DMAPP_POST_LINK_OPTS=-L/opt/cray/dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari/lib64
+ #95: PE_LIBSCI_PKGCONFIG_VARIABLES=PE_LIBSCI_OMP_REQUIRES_@openmp@:PE_SCI_EXT_LIBPATH:PE_SCI_EXT_LIBNAME
+ #96: CRAY_XPMEM_POST_LINK_OPTS=-L/opt/cray/xpmem/2.2.20-7.0.2.1_2.61__g87eb960.ari/lib64
+ #97: COLORTERM=1
+ #98: PBS_O_SYSTEM=Linux
+ #99: SHELL=/bin/bash
+ #100: CRAYPE_NETWORK_TARGET=aries
+ #101: LESS_ADVANCED_PREPROCESSOR=no
+ #102: PE_PAPI_DEFAULT_ACCELL_FAMILY_LIBS=
+ #103: PE_MPICH_GENCOMPS_CRAYCLANG=100
+ #104: CRAY_BINUTILS_BIN_X86_64=X86_64_NOT_SUPPORTED
+ #105: PBS_NODEFILE=/var/spool/PBS/aux/212113.xci00
+ #106: PROFILEREAD=true
+ #107: TARGETMODULES=craype-abudhabi:craype-abudhabi-cu:craype-accel-host:craype-accel-nvidia20:craype-accel-nvidia30:craype-accel-nvidia35:craype-barcelona:craype-broadwell:craype-haswell:craype-hugepages128K:craype-hugepages128M:craype-hugepages16M:craype-hugepages256M:craype-hugepages2M:craype-hugepages32M:craype-hugepages4M:craype-hugepages512K:craype-hugepages512M:craype-hugepages64M:craype-hugepages8M:craype-intel-knc:craype-interlagos:craype-interlagos-cu:craype-istanbul:craype-ivybridge:craype-mc12:craype-mc8:craype-mic-knl:craype-network-aries:craype-network-gemini:craype-network-infiniband:craype-network-none:craype-network-seastar:craype-sandybridge:craype-shanghai:craype-target-compute_node:craype-target-local_host:craype-target-native:craype-xeon:xtpe-barcelona:xtpe-interlagos:xtpe-interlagos-cu:xtpe-istanbul:xtpe-mc12:xtpe-mc8:xtpe-network-gemini:xtpe-network-seastar:xtpe-shanghai:xtpe-target-native:xtpe-xeon
+ #108: PE_MPICH_ALTERNATE_LIBS_dpm=_dpm
+ #109: ATP_CFLAGS=
+ #110: WINDOWMANAGER=/usr/bin/gnome
+ #111: ATP_VERSION=3.11.7
+ #112: PE_LIBSCI_GENCOMPILERS_CRAY_aarch64=9.0
+ #113: RCLOCAL_PRGENV=true
+ #114: craype_already_loaded=0
+ #115: PE_LIBSCI_MODULE_NAME=cray-libsci/20.09.1
+ #116: CRAY_PMI_INCLUDE_OPTS=-I/opt/cray/pe/pmi/5.0.17/include
+ #117: LESS=-M -I -R
+ #118: GCC_X86_64=X86_64_NOT_SUPPORTED
+ #119: PBS_NODENUM=0
+ #120: PBS_O_LANG=en_GB.UTF-8
+ #121: COMPILERRT_PATH_AARCH64=/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/lib/clang/11.0.0/lib/linux
+ #122: PE_LIBSCI_VOLATILE_PRGENV=CRAY GNU
+ #123: CRAY_UGNI_POST_LINK_OPTS=-L/opt/cray/ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari/lib64
+ #124: CRAY_MPICH_VERSION=7.7.17
+ #125: CRAY_LIBSCI_VERSION=20.09.1
+ #126: PE_MPICH_PKGCONFIG_VARIABLES=PE_MPICH_NV_LIBS_@accelerator@:PE_MPICH_ALTERNATE_LIBS_@multithreaded@:PE_MPICH_ALTERNATE_LIBS_@dpm@
+ #127: CRAY_PERFTOOLS_PREFIX=/opt/cray/pe/perftools/21.05.0
+ #128: PKG_CONFIG_PATH_DEFAULT=/opt/cray/pe/papi/6.0.0.7/lib64/pkgconfig
+ #129: SHLVL=2
+ #130: XCURSOR_THEME=DMZ
+ #131: MORE=-sl
+ #132: CSHEDIT=emacs
+ #133: PE_MPICH_GENCOMPILERS_GNU=8.2 8.1 7.3
+ #134: PELOCAL_PRGENV=true
+ #135: PBS_JOBCOOKIE=2D2BC361026F821A09373F380241149F
+ #136: OLDPWD=/home/br-spollard/benchmarks/testing
+ #137: PE_ENV=CRAY
+ #138: PE_FFTW_DEFAULT_TARGET_arm_thunderx2=arm_thunderx2
+ #139: JAVA_ROOT=/usr/lib64/jvm/jre-11-openjdk
+ #140: QT_SYSTEM_DIR=/usr/share/desktop-data
+ #141: PBS_O_SHELL=/bin/bash
+ #142: PAGER=less
+ #143: OSTYPE=linux
+ #144: CRAY_MPICH_BASEDIR=/opt/cray/pe/mpt/7.7.17/gni
+ #145: CRAYPAT_OPTS_EXECUTABLE=libexec64/opts
+ #146: PE_GNU_DEFAULT_FIXED_PKGCONFIG_PATH=/opt/cray/pe/parallel-netcdf/1.12.1.4/GNU/8.3/lib/pkgconfig:/opt/cray/pe/netcdf-hdf5parallel/4.7.4.4/GNU/8.3/lib/pkgconfig:/opt/cray/pe/netcdf/4.7.4.4/GNU/8.3/lib/pkgconfig:/opt/cray/pe/hdf5-parallel/1.12.0.4/GNU/8.3/lib/pkgconfig:/opt/cray/pe/hdf5/1.12.0.4/GNU/8.3/lib/pkgconfig:/opt/cray/pe/ga/5.3.0.10/GNU/7.3/lib/pkgconfig
+ #147: FTN_X86_64=X86_64_NOT_SUPPORTED
+ #148: PE_FFTW_DEFAULT_VOLATILE_PKGCONFIG_PATH=/opt/cray/pe/fftw/3.3.8.10/@PE_FFTW_DEFAULT_TARGET@/lib/pkgconfig
+ #149: PE_PKGCONFIG__PRODUCTS=PE_ATP
+ #150: CRAY_MPICH2_DIR=/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0
+ #151: PBS_MOMPORT=15003
+ #152: LINKER_X86_64=X86_64_NOT_SUPPORTED
+ #153: LIBSCI_BASE_DIR=/opt/cray/pe/libsci/20.09.1
+ #154: APP2_STATE=21.05.0
+ #155: PE_PKGCONFIG_PRODUCTS=PE_MPICH:PE_LIBSCI
+ #156: PE_HDF5_DEFAULT_FIXED_PRGENV=GNU CRAYCLANG
+ #157: CRAY_GNI_HEADERS_INCLUDE_OPTS=-I/opt/cray/gni-headers/5.0.12.0-7.0.2.1_2.27__g3b1768f.ari/include
+ #158: FPATH=:/opt/cray/pe/modules/3.2.11.4/init/sh_funcs/no_redirect
+ #159: CRAY_PMI_VERSION=5.0.17
+ #160: CRAY_UGNI_INCLUDE_OPTS=-I/opt/cray/ugni/6.0.14.0-7.0.2.1_3.24__ge78e5b0.ari/include
+ #161: PRGENVMODULES=PrgEnv-cray:PrgEnv-gnu:PrgEnv-intel:PrgEnv-pgi
+ #162: SHMEM_ABORT_ON_ERROR=1
+ #163: PE_MPICH_PKGCONFIG_LIBS=mpich
+ #164: PE_MPICH_GENCOMPILERS_CRAY=9.0
+ #165: PE_PKGCONFIG_PRODUCTS_DEFAULT=PE_PAPI
+ #166: CRAYLIBS_X86_64=X86_64_NOT_SUPPORTED
+ #167: PBS_O_PATH=/home/br-spollard/SPEChpc/bin:/home/br-spollard/.local/bin:/home/br-spollard/bin:/opt/gcc/9.3.0/bin:/home/br-spollard/.local/bin:/home/br-spollard/bin:/opt/cray/pe/mpt/7.7.17/gni/bin:/opt/cray/pe/perftools/21.05.0/bin:/opt/cray/pe/papi/6.0.0.7/bin:/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/bin:/opt/cray/pe/craype/2.6.2/bin:/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/bin:/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin:/opt/cray/pe/cce/11.0.4/utils/aarch64/bin:/opt/cray/cfgutils/bin:/opt/cray/nodehealth/5.6.27-7.0.2.1_4.48__g20e015c.ari/bin:/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/bin:/opt/cray/sdb/3.3.812-7.0.2.1_2.74__gd6c4e58.ari/bin:/opt/cray/nodestat/2.3.89-7.0.2.1_2.53__g8645157.ari/bin:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/sbin:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/bin:/opt/cray/alps/default/bin:/opt/cray/pe/modules/3.2.11.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/pbs/bin:/opt/cray/pe/bin
+ #168: JAVA_HOME=/usr/lib64/jvm/jre-11-openjdk
+ #169: CRAY_BINUTILS_BIN=/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin
+ #170: TOOLMODULES=apprentice:apprentice2:atp:chapel:cray-lgdb:cray-snplauncher:craypat:craypkg-gen:ddt:gdb:iobuf:papi:perftools:perftools-lite:stat:totalview:xt-craypat:xt-lgdb:xt-papi:xt-totalview
+ #171: PE_PAPI_DEFAULT_ACCEL_FAMILY_LIBS_nvidia=,-lcupti,-lcudart,-lcuda
+ #172: LIBC_FATAL_STDERR_=1
+ #173: SPEC=/home/br-spollard/SPEChpc
+ #174: CRAY_RCA_POST_LINK_OPTS=-L/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/lib64 -lrca
+ #175: PE_PAPI_DEFAULT_PKGCONFIG_VARIABLES=PE_PAPI_ACCEL_LIBS_@accelerator@ PE_PAPI_ACCEL_FAMILY_LIBS_@accelerator_family@
+ #176: PBS_O_MAIL=/var/mail/br-spollard
+ #177: XDG_DATA_DIRS=/usr/share
+ #178: PE_MPICH_DEFAULT_VOLATILE_PKGCONFIG_PATH=/opt/cray/pe/mpt/7.7.17/gni/mpich-@PRGENV@@PE_MPICH_DEFAULT_DIR_DEFAULT64@/@PE_MPICH_DEFAULT_GENCOMPS@/lib/pkgconfig
+ #179: CVS_RSH=ssh
+ #180: MODULE_VERSION=3.2.11.4
+ #181: PE_NETCDF_DEFAULT_FIXED_PRGENV=GNU CRAYCLANG
+ #182: LINKER_AARCH64=/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld
+ #183: PE_MPICH_NV_LIBS_nvidia60=-lcudart
+ #184: CRAY_FTN_VERSION=11.0.4
+ #185: PE_LIBSCI_DEFAULT_PKGCONFIG_VARIABLES=PE_LIBSCI_DEFAULT_OMP_REQUIRES_@openmp@:PE_SCI_EXT_LIBPATH:PE_SCI_EXT_LIBNAME
+ #186: PE_MPICH_VOLATILE_PRGENV=GNU CRAYCLANG CRAY
+ #187: PE_MPICH_DEFAULT_DIR_CRAY_DEFAULT64=64
+ #188: LIBSCI_VERSION=20.09.1
+ #189: CRAY_MPICH_ROOTDIR=/opt/cray/pe/mpt/7.7.17
+ #190: NCPUS=64
+ #191: MINICOM=-c on
+ #192: PE_MPICH_DEFAULT_FIXED_PRGENV=
+ #193: PBS_QUEUE=arm
+ #194: PE_LIBSCI_DEFAULT_GENCOMPILERS_GNU_aarch64=8.1
+ #195: CRAY_CXX_IPA_LIBS_X86_64=X86_64_NOT_SUPPORTED
+ #196: CRAY_MPICH_PREFIX=/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0
+ #197: PBS_O_WORKDIR=/home/br-spollard/benchmarks/testing
+ #198: PE_PARALLEL_NETCDF_DEFAULT_FIXED_PRGENV=GNU CRAYCLANG
+ #199: INCLUDE_PATH_AARCH64=/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/lib/clang/11.0.0/include:/opt/cray/pe/cce/11.0.4/cce/aarch64/include/craylibs
+ #200: PE_PRODUCT_LIST=CRAY_RCA:CRAY_PMI:CRAY_LIBSCI:CRAYPE:CRAY:CRAY_XPMEM:CRAY_DMAPP:CRAY_UGNI:CRAY_UDREG:CRAY_ALPS:PERFTOOLS:CRAYPAT
+ #201: CRAY_MPICH2_VER=7.7.17
+ #202: CC_X86_64=X86_64_NOT_SUPPORTED
+ #203: CRAY_PE_USE_CLANG=/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/bin/clang
+ #204: PE_LEVEL=11.0
+ #205: LC_ALL=C
+ #206: ASSEMBLER_X86_64=X86_64_NOT_SUPPORTED
+ #207: CRAY_CPU_TARGET=arm-thunderx2
+ #208: BASH_FUNC_module%%=() {  eval `/opt/cray/pe/modules/3.2.11.4/bin/modulecmd bash $*`
+}
+ #209: GCC_VERSION=9.3.0
+ #210: LIBRARYMODULES=acml:alps:cray-dwarf:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich-abi:cray-mpich2:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:cray-petsc:cray-petsc-complex:cray-shmem:cray-tpsl:cray-trilinos:cudatoolkit:fftw:ga:hdf5:hdf5-parallel:iobuf:libfast:netcdf:netcdf-hdf5parallel:ntk:onesided:papi:petsc:petsc-complex:pmi:tpsl:trilinos:xt-libsci:xt-mpich2:xt-mpt:xt-papi
+ #211: CRAYPAT_ROOT=/opt/cray/pe/perftools/21.05.0
+ #212: PE_LIBSCI_GENCOMPS_GNU_aarch64=81
+ #213: MPICH_ABORT_ON_ERROR=1
+ #214: LESSOPEN=lessopen.sh %s
+ #215: CRAY_BINUTILS_VERSION=/opt/cray/pe/cce/11.0.4
+ #216: CRAY_LIBSCI_BASE_DIR=/opt/cray/pe/libsci/20.09.1
+ #217: CRAYPAT_LD_LIBRARY_PATH=/opt/cray/pe/gcc-libs:/opt/cray/gcc-libs:/opt/cray/pe/perftools/21.05.0/lib64
+ #218: GCC_AARCH64=/opt/gcc/8.1.0/snos
+ #219: PE_NETCDF_HDF5PARALLEL_DEFAULT_FIXED_PRGENV=GNU CRAYCLANG
+ #220: PE_FORTRAN_PKGCONFIG_LIBS=mpichf90
+ #221: PBS_O_HOME=/home/br-spollard
+ #222: MODULESHOME=/opt/cray/pe/modules/3.2.11.4
+ #223: PWD=/home/br-spollard/SPEChpc
+ #224: PE_MPICH_DIR_CRAYCLANG_DEFAULT64=64
+ #225: PE_MPICH_FIXED_PRGENV=
+ #226: PE_MPICH_GENCOMPILERS_CRAYCLANG=10.0
+ #227: PE_MPICH_DEFAULT_GENCOMPILERS_GNU=8.2 8.1 7.3
+ #228: PE_LIBSCI_DEFAULT_VOLATILE_PKGCONFIG_PATH=/opt/cray/pe/libsci/20.09.1/@PRGENV@/@PE_LIBSCI_DEFAULT_GENCOMPS@/@PE_LIBSCI_DEFAULT_TARGET@/lib/pkgconfig
+ #229: INFOPATH=/opt/gcc/9.3.0/snos/share/info
+ #230: CRAY_BINUTILS_ROOT_X86_64=X86_64_NOT_SUPPORTED
+ #231: PE_LIBSCI_DEFAULT_OMP_REQUIRES=
+ #232: HOSTNAME=xcimom2
+ #233: PE_MPICH_GENCOMPS_GNU=82 81 73
+ #234: PE_LIBSCI_DEFAULT_REQUIRED_PRODUCTS=PE_MPICH
+ #235: ASSEMBLER_AARCH64=/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/as
+ #236: PE_HDF5_PARALLEL_DEFAULT_FIXED_PRGENV=GNU CRAYCLANG
+ #237: PE_MPICH_DEFAULT_GENCOMPS_CRAYCLANG=100
+ #238: ENVIRONMENT=BATCH
+ #239: CRAY_PMI_PREFIX=/opt/cray/pe/pmi/5.0.17
+ #240: CRAY_LIBSCI_PREFIX_DIR=/opt/cray/pe/libsci/20.09.1/CRAY/9.0/aarch64
+ #241: PE_CRAYCLANG_DEFAULT_FIXED_PKGCONFIG_PATH=/opt/cray/pe/parallel-netcdf/1.12.1.4/CRAYCLANG/11.0/lib/pkgconfig:/opt/cray/pe/netcdf-hdf5parallel/4.7.4.4/CRAYCLANG/11.0/lib/pkgconfig:/opt/cray/pe/netcdf/4.7.4.4/CRAYCLANG/11.0/lib/pkgconfig:/opt/cray/pe/hdf5-parallel/1.12.0.4/CRAYCLANG/11.0/lib/pkgconfig:/opt/cray/pe/hdf5/1.12.0.4/CRAYCLANG/11.0/lib/pkgconfig
+ #242: JAVA_BINDIR=/usr/lib64/jvm/jre-11-openjdk/bin
+ #243: PE_LIBSCI_DEFAULT_VOLATILE_PRGENV=CRAY GNU
+ #244: CRAY_CCE_CLANGSHARE=/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share
+ #245: PBS_O_HOST=nid00004
+ #246: PBS_JOBID=212113.xci00
+ #247: CRAYLMD_LICENSE_FILE=/opt/cray/pe/cce/cce.lic
+ #248: CRAYPE_VERSION=2.6.2
+ #249: CRAY_DMAPP_INCLUDE_OPTS=-I/opt/cray/dmapp/7.1.1-7.0.2.1_2.75__g38cf134.ari/include -I/opt/cray/gni-headers/5.0.12.0-7.0.2.1_2.27__g3b1768f.ari/include
+ #250: PE_MPICH_DEFAULT_DIR_CRAYCLANG_DEFAULT64=64
+ #251: PE_LIBSCI_GENCOMPS_CRAY_aarch64=90
+ #252: RCLOCAL_BASEOPTS=true
+ #253: PE_MPICH_DIR_CRAY_DEFAULT64=64
+ #254: CRAY_MPICH_DIR=/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0
+ #255: GPG_TTY=not a tty
+ #256: USERMODULES=PrgEnv-cray:PrgEnv-gnu:PrgEnv-intel:PrgEnv-pathscale:PrgEnv-pgi:acml:alps:apprentice:apprentice2:atp:blcr:cce:chapel:cray-ccdb:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-lgdb:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich-compat:cray-mpich2:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:cray-petsc:cray-petsc-complex:cray-shmem:cray-snplauncher:cray-tpsl:cray-trilinos:craypat:craype:craypkg-gen:cudatoolkit:ddt:fftw:ga:gcc:hdf5:hdf5-parallel:intel:iobuf:java:lgdb:libfast:libsci_acc:mpich1:netcdf:netcdf-hdf5parallel:netcdf-nofsync:netcdf-nofsync-hdf5parallel:ntk:onesided:papi:parallel-netcdf:pathscale:perftools:perftools-lite:petsc:petsc-complex:pgi:pmi:stat:totalview:tpsl:trilinos:xt-asyncpe:xt-craypat:xt-lgdb:xt-libsci:xt-mpich2:xt-mpt:xt-papi:xt-shmem:xt-totalview
+ #257: PE_HDF5_PARALLEL_DEFAULT_REQUIRED_PRODUCTS=PE_MPICH
+ #258: OMP_NUM_THREADS=1
+ #259: PE_MPICH_DEFAULT_GENCOMPS_GNU=82 81 73
+ #260: PE_LIBSCI_DEFAULT_OMP_REQUIRES_openmp=_mp
+ #261: HOSTTYPE=aarch64
+ #262: cce_already_loaded=0
+ #263: PE_CXX_PKGCONFIG_LIBS=mpichcxx
+ #264: PATH=/home/br-spollard/SPEChpc/bin:/home/br-spollard/.local/bin:/home/br-spollard/bin:/opt/gcc/9.3.0/bin:/home/br-spollard/.local/bin:/home/br-spollard/bin:/opt/cray/pe/mpt/7.7.17/gni/bin:/opt/cray/pe/perftools/21.05.0/bin:/opt/cray/pe/papi/6.0.0.7/bin:/opt/cray/rca/2.2.20-7.0.2.1_2.76__g8e3fb5b.ari/bin:/opt/cray/pe/craype/2.6.2/bin:/opt/cray/pe/cce/11.0.4/cce-clang/aarch64/bin:/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin:/opt/cray/pe/cce/11.0.4/utils/aarch64/bin:/opt/cray/cfgutils/bin:/opt/cray/nodehealth/5.6.27-7.0.2.1_4.48__g20e015c.ari/bin:/opt/cray/llm/21.4.629-7.0.2.1_2.53__g8cae6ef.ari/bin:/opt/cray/sdb/3.3.812-7.0.2.1_2.74__gd6c4e58.ari/bin:/opt/cray/nodestat/2.3.89-7.0.2.1_2.53__g8645157.ari/bin:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/sbin:/opt/cray/alps/6.6.59-7.0.2.1_3.62__g872a8d62.ari/bin:/opt/cray/alps/default/bin:/opt/cray/pe/modules/3.2.11.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/pbs/bin:/opt/cray/pe/bin
+ #265: LC_LANG=C
+ #266: PE_PAPI_DEFAULT_ACCEL_LIBS_nvidia35=,-lcupti,-lcudart,-lcuda
+ #267: PE_LIBSCI_PKGCONFIG_LIBS=libsci_mpi:libsci
+ #268: XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+ #269: PE_MPICH_DEFAULT_GENCOMPILERS_CRAYCLANG=10.0
+ #270: CRAY_PE_CCE_VARIANT=CC=Clang:FTN=Classic
+ #271: PE_MPICH_VOLATILE_PKGCONFIG_PATH=/opt/cray/pe/mpt/7.7.17/gni/mpich-@PRGENV@@PE_MPICH_DIR_DEFAULT64@/@PE_MPICH_GENCOMPS@/lib/pkgconfig
+ #272: PE_PKGCONFIG_LIBS=mpich:cray-rca:libAtpSigHandler:libsci_mpi:libsci
+ #273: SYSROOT_DIR_AARCH64=/
+ #274: TZ=UTC
+ #275: PE_LIBSCI_DEFAULT_GENCOMPILERS_CRAY_aarch64=9.0
+ #276: PBS_ENVIRONMENT=PBS_BATCH
+ #277: PE_MPICH_TARGET_VAR_nvidia35=-lcudart
+ #278: PE_MPICH_DEFAULT_GENCOMPILERS_CRAY=9.0
+ #279: PBS_JOBDIR=/home/br-spollard/pbs.212113.xci00.x8z
+ #280: PE_ATP_PKGCONFIG_VARIABLES=ATP_CFLAGS_@prgenv@_@language@
+ #281: CPU=aarch64
+ #282: PE_MPICH_DEFAULT_GENCOMPS_CRAY=90
+ #283: CRAYPE_DIR=/opt/cray/pe/craype/2.6.2
+ #284: LESSKEY=/etc/lesskey.bin
+ #285: ALLINEA_QUEUE_DLL=/opt/cray/pe/mpt/7.7.17/gni/mpich-crayclang/10.0/lib/libtvmpich.so.3.0.1
+ #286: CRAY_PRGENVCRAY=loaded
+ #287: HOME=/home/br-spollard
+ #288: ACC_NUM_CORES=1
+running commands in speccmds.cmd 1 times
+runs started at		1655464918, 040253000, Fri Jun 17 11:21:58 2022
+run 1 started at	1655464918, 040294000, Fri Jun 17 11:21:58 2022
+child started: 0,	1655464918, 040303000, pid=21598, 'aprun --bind-to none -np 64 ../run_base_test_clang_mpi.0000/lbm_base.clang_mpi'
+child finished: 0,	1655464918, 551522000, sec=0, nsec=511219000, pid=21598, rc=256
+run 1 finished at:	1655464918, 552179000, Fri Jun 17 11:21:58 2022
+run 1 elapsed time:	         0, 511885000, 0.511885000
+runs finished at	1655464918, 552194000, Fri Jun 17 11:21:58 2022
+runs elapsed time:	         0, 511941000, 0.511941000
+error: a total of 1 children finished with errors
+specinvoke exit: rc=0
+
+****************************************
+Invalid run; unable to continue.
+If you wish to ignore errors please use '-I' or ignore_errors
+
+The log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.010.log
+The debug log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.010.log.debug
+
+*
+* Temporary files were NOT deleted; keeping temporaries such as
+* /home/br-spollard/SPEChpc/result/hpc2021.010.log.debug and
+* /home/br-spollard/SPEChpc/tmp/hpc2021.010
+* (These may be large!)
+*
+runhpc finished at 2022-06-17 11:21:58; 2 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-17 11:22:04 for job 212113.xci00
+Submitted              : 2022-06-17 11:21:54
+Queued                 : 2022-06-17 11:21:54
+Started                : 2022-06-17 11:21:54
+Completed              : 2022-06-17 11:22:04
+Queued Time            : 0:00:00 (0 seconds)
+Elapsed Time           : 0:00:05 (5 seconds, 9% of limit)
+Walltime Limit         : 0:01:00 (60 seconds)
+Node Time Limit        : 0:01:00 (60 seconds)
+Node Time              : 0:00:05 (5 seconds, 9% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o212113
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e212113
+Job Directory          : /home/br-spollard/pbs.212113.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 341
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

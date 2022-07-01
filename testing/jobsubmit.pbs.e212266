@@ -1,0 +1,3 @@
+cray-mpich/7.7.12(9):ERROR:150: Module 'cray-mpich/7.7.12' conflicts with the currently loaded module(s) 'cray-mpich/7.7.17'
+cray-mpich/7.7.12(9):ERROR:102: Tcl command execution failed: conflict cray-mpich
+

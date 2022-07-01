@@ -1,0 +1,142 @@
+gcc (GCC) 9.3.0 20200312 (Cray Inc.)
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+gcc (GCC) 9.3.0 20200312 (Cray Inc.)
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.27s (54977 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/hpe_cpe.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/SUT.inc'
+WARNING: Duplicate setting for "node_compute_sw_os000" on line 46
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+WARNING: Duplicate setting for "node_compute_sw_os001" on line 47
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+Retrieving flags file (/home/br-spollard/SPEChpc/config/flags/Example_hpe_cpe_flags.xml)...
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      test       SPEChpc2021_tny   tiny                        
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 505.lbm_t, 513.soma_t, 518.tealeaf_t, 519.clvleaf_t, 521.miniswp_t, 528.pot3d_t, 532.sph_exa_t, 534.hpgmgfv_t, 535.weather_t
+Compiling Binaries
+  Up to date 505.lbm_t base cce_mpi
+  Up to date 513.soma_t base cce_mpi
+  Up to date 518.tealeaf_t base cce_mpi
+  Up to date 519.clvleaf_t base cce_mpi
+  Up to date 521.miniswp_t base cce_mpi
+  Up to date 528.pot3d_t base cce_mpi
+  Up to date 532.sph_exa_t base cce_mpi
+  Building 534.hpgmgfv_t base cce_mpi: (build_base_cce_mpi.0000) [2022-06-22 12:36:23]
+specmake --output-sync -j 10 clean
+rm -rf *.o  hpgmgfv.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf hpgmgfv
+rm -rf hpgmgfv.exe
+rm -rf core
+specmake --output-sync -j 10 build
+cc -c -o timers.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        timers.c
+cc -c -o solvers.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        solvers.c
+cc -c -o directives-wrapper.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        directives-wrapper.c
+cc -c -o cuda-wrapper.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        cuda-wrapper.c
+cc -c -o hpgmg-fv.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        hpgmg-fv.c
+cc -c -o offload-fns.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        offload-fns.c
+cc -c -o mg.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        mg.c
+cc -c -o level.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        level.c
+cc -c -o operators.fv4.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast           -DSPEC_OPENMP        operators.fv4.c
+operators.fv4.c:40:4: warning: #warning Threading max reductions requires OpenMP 3.1 (July 2011). Please upgrade your compiler. [-Wcpp]
+   40 |   #warning Threading max reductions requires OpenMP 3.1 (July 2011).  Please upgrade your compiler.
+      |    ^~~~~~~
+cc      -Ofast          hpgmg-fv.o level.o mg.o operators.fv4.o solvers.o timers.o directives-wrapper.o cuda-wrapper.o offload-fns.o             -lm         -o hpgmgfv  
+/usr/bin/ld: level.o: in function `create_level':
+level.c:(.text+0x4578): undefined reference to `omp_get_num_threads'
+/usr/bin/ld: level.c:(.text+0x4a08): undefined reference to `omp_get_num_threads'
+/usr/bin/ld: mg.o: in function `MGBuild':
+mg.c:(.text+0x3028): undefined reference to `omp_get_wtime'
+/usr/bin/ld: mg.c:(.text+0x33ec): undefined reference to `omp_get_wtime'
+/usr/bin/ld: mg.o: in function `MGVCycle':
+mg.c:(.text+0x3f08): undefined reference to `omp_get_wtime'
+/usr/bin/ld: mg.c:(.text+0x3f7c): undefined reference to `omp_get_wtime'
+/usr/bin/ld: mg.c:(.text+0x3fb8): undefined reference to `omp_get_wtime'
+/usr/bin/ld: mg.o:mg.c:(.text+0x3ff8): more undefined references to `omp_get_wtime' follow
+collect2: error: ld returned 1 exit status
+specmake: *** [/home/br-spollard/SPEChpc/benchspec/Makefile.defaults:347: hpgmgfv] Error 1
+Error with make 'specmake --output-sync -j 10 build':
+
+  ----------------------------------------------------------------------------
+  Please review this file:
+    "/lustre/home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t/build/build_base_cce_mpi.0000/make.out"
+  ----------------------------------------------------------------------------
+
+  Command returned exit code 2
+  Error with make!
+*** Error building 534.hpgmgfv_t base
+If you wish to ignore this error, please use '-I' or ignore errors.
+
+The log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.055.log
+The debug log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.055.log.debug
+
+*
+* Temporary files were NOT deleted; keeping temporaries such as
+* /home/br-spollard/SPEChpc/result/hpc2021.055.log.debug and
+* /home/br-spollard/SPEChpc/tmp/hpc2021.055
+* (These may be large!)
+*
+runhpc finished at 2022-06-22 12:36:29; 15 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-22 12:36:34 for job 213183.xci00
+Submitted              : 2022-06-22 12:33:43
+Queued                 : 2022-06-22 12:33:43
+Started                : 2022-06-22 12:36:11
+Completed              : 2022-06-22 12:36:34
+Queued Time            : 0:02:28 (148 seconds)
+Elapsed Time           : 0:00:18 (18 seconds, 6% of limit)
+Walltime Limit         : 0:05:00 (300 seconds)
+Node Time Limit        : 0:05:00 (300 seconds)
+Node Time              : 0:00:18 (18 seconds, 6% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o213183
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e213183
+Job Directory          : /home/br-spollard/pbs.213183.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 354
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

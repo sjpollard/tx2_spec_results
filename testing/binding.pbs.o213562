@@ -1,0 +1,100 @@
+Hello from rank 50, thread 0, on nid00127. (core affinity = 50)
+Hello from rank 23, thread 0, on nid00127. (core affinity = 23)
+Hello from rank 21, thread 0, on nid00127. (core affinity = 21)
+Hello from rank 37, thread 0, on nid00127. (core affinity = 37)
+Hello from rank 13, thread 0, on nid00127. (core affinity = 13)
+Hello from rank 28, thread 0, on nid00127. (core affinity = 28)
+Hello from rank 15, thread 0, on nid00127. (core affinity = 15)
+Hello from rank 38, thread 0, on nid00127. (core affinity = 38)
+Hello from rank 46, thread 0, on nid00127. (core affinity = 46)
+Hello from rank 57, thread 0, on nid00127. (core affinity = 57)
+Hello from rank 35, thread 0, on nid00127. (core affinity = 35)
+Hello from rank 29, thread 0, on nid00127. (core affinity = 29)
+Hello from rank 14, thread 0, on nid00127. (core affinity = 14)
+Hello from rank 59, thread 0, on nid00127. (core affinity = 59)
+Hello from rank 47, thread 0, on nid00127. (core affinity = 47)
+Hello from rank 25, thread 0, on nid00127. (core affinity = 25)
+Hello from rank 16, thread 0, on nid00127. (core affinity = 16)
+Hello from rank 8, thread 0, on nid00127. (core affinity = 8)
+Hello from rank 58, thread 0, on nid00127. (core affinity = 58)
+Hello from rank 61, thread 0, on nid00127. (core affinity = 61)
+Hello from rank 52, thread 0, on nid00127. (core affinity = 52)
+Hello from rank 7, thread 0, on nid00127. (core affinity = 7)
+Hello from rank 62, thread 0, on nid00127. (core affinity = 62)
+Hello from rank 4, thread 0, on nid00127. (core affinity = 4)
+Hello from rank 55, thread 0, on nid00127. (core affinity = 55)
+Hello from rank 19, thread 0, on nid00127. (core affinity = 19)
+Hello from rank 9, thread 0, on nid00127. (core affinity = 9)
+Hello from rank 3, thread 0, on nid00127. (core affinity = 3)
+Hello from rank 27, thread 0, on nid00127. (core affinity = 27)
+Hello from rank 0, thread 0, on nid00127. (core affinity = 0)
+Hello from rank 31, thread 0, on nid00127. (core affinity = 31)
+Hello from rank 48, thread 0, on nid00127. (core affinity = 48)
+Hello from rank 26, thread 0, on nid00127. (core affinity = 26)
+Hello from rank 43, thread 0, on nid00127. (core affinity = 43)
+Hello from rank 24, thread 0, on nid00127. (core affinity = 24)
+Hello from rank 20, thread 0, on nid00127. (core affinity = 20)
+Hello from rank 49, thread 0, on nid00127. (core affinity = 49)
+Hello from rank 18, thread 0, on nid00127. (core affinity = 18)
+Hello from rank 51, thread 0, on nid00127. (core affinity = 51)
+Hello from rank 63, thread 0, on nid00127. (core affinity = 63)
+Hello from rank 1, thread 0, on nid00127. (core affinity = 1)
+Hello from rank 56, thread 0, on nid00127. (core affinity = 56)
+Hello from rank 11, thread 0, on nid00127. (core affinity = 11)
+Hello from rank 10, thread 0, on nid00127. (core affinity = 10)
+Hello from rank 44, thread 0, on nid00127. (core affinity = 44)
+Hello from rank 22, thread 0, on nid00127. (core affinity = 22)
+Hello from rank 45, thread 0, on nid00127. (core affinity = 45)
+Hello from rank 40, thread 0, on nid00127. (core affinity = 40)
+Hello from rank 42, thread 0, on nid00127. (core affinity = 42)
+Hello from rank 17, thread 0, on nid00127. (core affinity = 17)
+Hello from rank 6, thread 0, on nid00127. (core affinity = 6)
+Hello from rank 36, thread 0, on nid00127. (core affinity = 36)
+Hello from rank 32, thread 0, on nid00127. (core affinity = 32)
+Hello from rank 12, thread 0, on nid00127. (core affinity = 12)
+Hello from rank 30, thread 0, on nid00127. (core affinity = 30)
+Hello from rank 5, thread 0, on nid00127. (core affinity = 5)
+Hello from rank 2, thread 0, on nid00127. (core affinity = 2)
+Hello from rank 54, thread 0, on nid00127. (core affinity = 54)
+Hello from rank 41, thread 0, on nid00127. (core affinity = 41)
+Hello from rank 39, thread 0, on nid00127. (core affinity = 39)
+Hello from rank 53, thread 0, on nid00127. (core affinity = 53)
+Hello from rank 60, thread 0, on nid00127. (core affinity = 60)
+Hello from rank 33, thread 0, on nid00127. (core affinity = 33)
+Hello from rank 34, thread 0, on nid00127. (core affinity = 34)
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-23 12:49:05 for job 213562.xci00
+Submitted              : 2022-06-23 12:41:25
+Queued                 : 2022-06-23 12:41:25
+Started                : 2022-06-23 12:48:54
+Completed              : 2022-06-23 12:49:05
+Queued Time            : 0:07:29 (449 seconds)
+Elapsed Time           : 0:00:06 (6 seconds, 2% of limit)
+Walltime Limit         : 0:05:00 (300 seconds)
+Node Time Limit        : 0:05:00 (300 seconds)
+Node Time              : 0:00:06 (6 seconds, 2% of limit)
+Job Name               : binding.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/binding.pbs.o213562
+STDERR                 : /home/br-spollard/benchmarks/testing/binding.pbs.e213562
+Job Directory          : /home/br-spollard/pbs.213562.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 127
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

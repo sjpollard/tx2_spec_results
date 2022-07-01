@@ -1,0 +1,145 @@
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.29s (52386 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/hpe_cpe.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/SUT.inc'
+WARNING: Duplicate setting for "node_compute_sw_os000" on line 46
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+WARNING: Duplicate setting for "node_compute_sw_os001" on line 47
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+Retrieving flags file (/home/br-spollard/SPEChpc/config/flags/Example_hpe_cpe_flags.xml)...
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      ref        SPEChpc2021_sml   small                       
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 605.lbm_s, 613.soma_s, 618.tealeaf_s, 619.clvleaf_s, 621.miniswp_s, 628.pot3d_s, 632.sph_exa_s, 634.hpgmgfv_s, 635.weather_s
+Compiling Binaries
+  Up to date 605.lbm_s base cce_mpi
+  Up to date 613.soma_s base cce_mpi
+  Up to date 618.tealeaf_s base cce_mpi
+  Up to date 619.clvleaf_s base cce_mpi
+  Up to date 621.miniswp_s base cce_mpi
+  Up to date 628.pot3d_s base cce_mpi
+  Up to date 632.sph_exa_s base cce_mpi
+  Up to date 634.hpgmgfv_s base cce_mpi
+  Up to date 635.weather_s base cce_mpi
+
+
+Setting Up Run Directories
+  Setting up 605.lbm_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 613.soma_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 618.tealeaf_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 619.clvleaf_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 621.miniswp_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 628.pot3d_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 632.sph_exa_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 634.hpgmgfv_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+  Setting up 635.weather_s ref base cce_mpi: run_base_ref_cce_mpi.0002
+Running Benchmarks
+  Running 605.lbm_s ref base cce_mpi [2022-06-28 20:59:02]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/605.lbm_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/605.lbm_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 613.soma_s ref base cce_mpi [2022-06-28 21:18:22]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/613.soma_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/613.soma_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 618.tealeaf_s ref base cce_mpi [2022-06-28 21:37:50]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/618.tealeaf_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/618.tealeaf_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 619.clvleaf_s ref base cce_mpi [2022-06-28 22:06:42]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/619.clvleaf_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/619.clvleaf_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 621.miniswp_s ref base cce_mpi [2022-06-28 22:26:49]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/621.miniswp_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/621.miniswp_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 628.pot3d_s ref base cce_mpi [2022-06-28 22:40:11]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/628.pot3d_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/628.pot3d_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 632.sph_exa_s ref base cce_mpi [2022-06-28 23:02:10]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/632.sph_exa_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/632.sph_exa_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 634.hpgmgfv_s ref base cce_mpi [2022-06-28 23:22:26]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/634.hpgmgfv_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/634.hpgmgfv_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 635.weather_s ref base cce_mpi [2022-06-28 23:40:59]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/635.weather_s/run/run_base_ref_cce_mpi.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/635.weather_s/run/run_base_ref_cce_mpi.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+Success: 1x605.lbm_s 1x613.soma_s 1x618.tealeaf_s 1x619.clvleaf_s 1x621.miniswp_s 1x628.pot3d_s 1x632.sph_exa_s 1x634.hpgmgfv_s 1x635.weather_s
+Producing Raw Reports
+ label: cce_mpi
+  workload: ref
+   metric: SPEChpc2021_sml_base
+    format: raw -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.rsf
+Parsing flags for 605.lbm_s base: done
+Parsing flags for 613.soma_s base: done
+Parsing flags for 618.tealeaf_s base: done
+Parsing flags for 619.clvleaf_s base: done
+Parsing flags for 621.miniswp_s base: done
+Parsing flags for 628.pot3d_s base: done
+Parsing flags for 632.sph_exa_s base: done
+Parsing flags for 634.hpgmgfv_s base: done
+Parsing flags for 635.weather_s base: done
+Doing flag reduction: done
+    format: flags -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.flags.html
+    format: cfg -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.cfg, /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.orig.cfg
+    format: CSV -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.csv
+    format: PDF -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.pdf
+    format: HTML -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.html, /home/br-spollard/SPEChpc/result/invalid.gif
+    format: PostScript -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.ps
+    format: Text -> /home/br-spollard/SPEChpc/result/hpc2021_sml.074.small.ref.txt
+
+The log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.074.log
+
+runhpc finished at 2022-06-29 00:06:09; 11237 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-29 00:06:15 for job 215139.xci00
+Submitted              : 2022-06-28 20:13:32
+Queued                 : 2022-06-28 20:13:32
+Started                : 2022-06-28 20:58:49
+Completed              : 2022-06-29 00:06:15
+Queued Time            : 0:45:17 (2717 seconds)
+Elapsed Time           : 3:07:21 (11241 seconds, 78% of limit)
+Walltime Limit         : 4:00:00 (14400 seconds)
+Node Time Limit        : 1 day, 8:00:00 (115200 seconds)
+Node Time              : 1 day, 0:58:50 (89930 seconds, 78% of limit)
+Job Name               : SPEC_small
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/SPEC_small/SPEC_small.out
+STDERR                 : /home/br-spollard/benchmarks/SPEC_small/SPEC_small.e215139
+Job Directory          : /home/br-spollard/pbs.215139.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 8
+Total Tasks            : 512
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 192,211,233,261:262,295:296,315
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

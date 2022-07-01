@@ -1,0 +1,120 @@
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.12s (125785 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/hpe_cpe.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/Example_SUT.inc'
+WARNING: Duplicate setting for "node_compute_sw_os000" on line 46
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+WARNING: Duplicate setting for "node_compute_sw_os001" on line 47
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+Retrieving flags file (/home/br-spollard/SPEChpc/config/flags/Example_hpe_cpe_flags.xml)...
+  '505.lbm_t' removed
+  '519.clvleaf_t' removed
+  '521.miniswp_t' removed
+  '528.pot3d_t' removed
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      test       SPEChpc2021_tny   513.soma_t, 518.tealeaf_t,  
+                                                   532.sph_exa_t,              
+                                                   534.hpgmgfv_t,              
+                                                   535.weather_t               
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 513.soma_t, 518.tealeaf_t, 532.sph_exa_t, 534.hpgmgfv_t, 535.weather_t
+Compiling Binaries
+  Up to date 513.soma_t base cce_mpi
+  Up to date 518.tealeaf_t base cce_mpi
+  Up to date 532.sph_exa_t base cce_mpi
+  Up to date 534.hpgmgfv_t base cce_mpi
+  Up to date 535.weather_t base cce_mpi
+
+
+Setting Up Run Directories
+  Setting up 513.soma_t test base cce_mpi: run_base_test_cce_mpi.0000
+  Setting up 518.tealeaf_t test base cce_mpi: run_base_test_cce_mpi.0000
+  Setting up 532.sph_exa_t test base cce_mpi: run_base_test_cce_mpi.0000
+  Setting up 534.hpgmgfv_t test base cce_mpi: run_base_test_cce_mpi.0000
+  Setting up 535.weather_t test base cce_mpi: run_base_test_cce_mpi.0000
+Running Benchmarks
+  Running 513.soma_t test base cce_mpi [2022-06-18 15:12:23]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/513.soma_t/run/run_base_test_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/513.soma_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 518.tealeaf_t test base cce_mpi [2022-06-18 15:12:28]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/518.tealeaf_t/run/run_base_test_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/518.tealeaf_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 532.sph_exa_t test base cce_mpi [2022-06-18 15:12:36]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/532.sph_exa_t/run/run_base_test_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/532.sph_exa_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+  Running 534.hpgmgfv_t test base cce_mpi [2022-06-18 15:12:46]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t/run/run_base_test_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Error with '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'; no non-empty output files exist
+  Command returned exit code 1
+
+*** Miscompare of hpgmgfv.out; for details see
+    /home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t/run/run_base_test_cce_mpi.0000/hpgmgfv.out.mis
+Invalid run; unable to continue.
+If you wish to ignore errors please use '-I' or ignore_errors
+
+The log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.025.log
+The debug log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.025.log.debug
+
+*
+* Temporary files were NOT deleted; keeping temporaries such as
+* /home/br-spollard/SPEChpc/result/hpc2021.025.log.debug and
+* /home/br-spollard/SPEChpc/tmp/hpc2021.025
+* (These may be large!)
+*
+runhpc finished at 2022-06-18 15:12:54; 36 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-18 15:13:00 for job 212258.xci00
+Submitted              : 2022-06-18 15:12:17
+Queued                 : 2022-06-18 15:12:17
+Started                : 2022-06-18 15:12:17
+Completed              : 2022-06-18 15:13:00
+Queued Time            : 0:00:00 (0 seconds)
+Elapsed Time           : 0:00:38 (38 seconds, 6% of limit)
+Walltime Limit         : 0:10:00 (600 seconds)
+Node Time Limit        : 0:10:00 (600 seconds)
+Node Time              : 0:00:38 (38 seconds, 6% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o212258
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e212258
+Job Directory          : /home/br-spollard/pbs.212258.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 345
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

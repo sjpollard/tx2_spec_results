@@ -1,0 +1,41 @@
+gcc (GCC) 9.3.0 20200312 (Cray Inc.)
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-22 14:20:32 for job 213262.xci00
+Submitted              : 2022-06-22 14:20:23
+Queued                 : 2022-06-22 14:20:23
+Started                : 2022-06-22 14:20:24
+Completed              : 2022-06-22 14:20:32
+Queued Time            : 0:00:01 (1 second)
+Elapsed Time           : 0:00:03 (3 seconds, 1% of limit)
+Walltime Limit         : 0:05:00 (300 seconds)
+Node Time Limit        : 0:05:00 (300 seconds)
+Node Time              : 0:00:03 (3 seconds, 1% of limit)
+Job Name               : binding.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/binding.pbs.o213262
+STDERR                 : /home/br-spollard/benchmarks/testing/binding.pbs.e213262
+Job Directory          : /home/br-spollard/pbs.213262.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 331
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

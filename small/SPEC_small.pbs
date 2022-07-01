@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N SPEC_small
+#PBS -q arm
+#PBS -l select=8
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -o SPEC_small.out
+
+cd $PBS_O_WORKDIR
+cd ../../SPEChpc
+. ./shrc
+
+module swap PrgEnv-cray PrgEnv-gnu
+
+runhpc --config=hpe_cpe.cfg --ranks=512 --noreportable --output_format=all --iterations=1 small
+

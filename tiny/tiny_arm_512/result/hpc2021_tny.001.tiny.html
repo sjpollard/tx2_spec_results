@@ -1,0 +1,2201 @@
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="generator" content="SPEC hpc2021 Tools v.unknown (HTML v1.0.3)" />
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=2" />
+<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<meta name="author" content="University of Bristol" />
+<meta name="description" content="hpc2021_tny result for Isambard 2: XC50 (ThunderX2); SPEChpc2021_tny_base: 9.64; SPEChpc2021_tny_peak: Not Run" />
+<meta name="keywords" content="hpc2021_tny SPEC www.spec.org Cray Isambard 2: XC50 (ThunderX2) University of Bristol Base=9.64" />
+<style type="text/css" id="internalScreen" media="screen">
+<!--
+body {
+  margin:  1em;
+  border:  0;
+  padding: 0;
+  background: white;
+  color:      black;
+  font-family: "Times Roman", times, serif;
+}
+
+.tt {
+  font-family: monospace;
+}
+
+div.flagClass > h2 {
+  border-bottom: 1px dotted black;
+  width: 80%;
+  font-family: sans-serif;
+}
+
+div.flagDesc {
+  clear: both;
+  background-color: rgb(255, 245, 220);
+  border: 1px solid blue; /* XXX This is for debugging */ 
+  margin: 0 auto;
+  width: 90%;
+}
+
+li.flagName {
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: block;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 125%;
+  white-space: nowrap;
+}
+
+/* (presumably short) informationals all get grouped together near the top
+ * of the flag description block.
+ */
+.flagOrigin, .flagDescClass, .flagDescCompiler, .flagDescRE, .flagDescParallel, .flagVar {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  padding: 0.25em;
+  margin: 0 0 0.25em 0;
+}
+
+.flagDescClass::before {
+  content: "Flag Class: ";
+}
+.flagDescCompiler::before {
+  content: "Compilers that recognize this flag: ";
+}
+.flagDescRE::before {
+  content: "Regular Expression: ";
+}
+.flagDescParallel::before {
+  content: "Indicates automatic parallelization: ";
+}
+.flagVar::before {
+  content: "Found In: ";
+}
+
+span.flagDescInc {
+  border-bottom: 1px solid black;
+}
+
+/* The description text stands alone. */
+.descText {
+  clear: both;
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* This is a separate class so that in the print style sheet it can
+ * be ignored.
+ * Also, 'style="clear:both;"' is longer than 'class="clear"'
+ */
+.clear {
+  clear: both;
+}
+
+/* This is really for the link _to_ the flag report */
+li.unknown > a:link, a:visited { text-decoration: none; }
+
+.monospace {
+  font-family: Courier, "Courier New", monospace;
+}
+
+ul.flagDescList {
+  clear: both;
+  list-style-type: none;
+}
+
+/* Arrange for each flag description to have some headroom. */
+ul.flagDescList > li {
+  margin: 2em 0 0 0;
+}
+
+ul.flagDesc {
+  list-style-type: none;
+}
+
+div.flagTOC {
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  width: 95%;
+}
+
+ul.flagTOC {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.flagTOC > li {
+  border: thin dotted lightgray;
+  margin: 0 1em 0 0;
+  padding: 0.25em 0 0.25em 0;
+  float: left;
+  display: inline-block; /* Fix IE bug; compliant browsers will ignore this */
+  width: 22.3%;
+  min-height: 1.5em;
+  overflow: hidden; /* If the table gets squeezed too much, don't let the
+                     * text overlap
+                     */
+}
+
+ul.flagTOC > li > a {
+   color:blue;
+   text-decoration:none;
+}
+
+ul.SubMenu li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+}
+
+ul.SubMenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0 0 0 2em;
+  padding: 0.25em 5em 0.25em 0.5em;
+  white-space: nowrap;
+}
+
+li:hover > ul.SubMenu, ul.SubMenu:hover {
+  display: block;
+}
+
+ul.SubMenu > li:hover, ul.flagTOC > li:hover {
+  background-color: rgb(176, 196, 238); /* lightsteelgray... almost */
+  border: 1px solid rgb(128, 128, 128);
+}
+
+
+.resultpage a:link, .resultpage a:visited {
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: inherit;
+}
+
+.resultpage {
+  margin: auto;
+  padding: 0;
+  width: 1000px;
+}
+
+.resultpage_landscape {
+  width: 1200px;
+}
+
+div.logo {
+  float: left;
+  width: 38px;
+  height: 57px;
+}
+
+.titlebarcontainer, .resultstable, .ncsection {
+  border: solid 1px;
+  width: 100%;
+  float: left;
+}
+
+.ncsection {
+  background-color: white;
+  color: black;
+}
+
+.titlebar {
+  float: left;
+  padding: 0em 1em 0em 1em;
+  text-align: center;
+  width: 91%;
+}
+
+div.titlebar > h1, div.titlebar > p {
+  margin: 0 1em 0 1em;
+}
+
+div.ncsection {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.systembar {
+  width: 65%;
+  font-size: 150%;
+  margin: 0;
+}
+
+td.systembar {
+  padding: 0.2em;
+}
+
+.metricbar {
+  margin: 0;
+  font-size: 120%;
+}
+
+/* CSS for the old-style div-based systembar */
+
+div.systembar {
+  float: left;
+  padding: 0.1em;
+  border-right: solid 1px black;
+}
+
+div.metricbar {
+  padding: 0.1em;
+  float: right;
+  width: 33%;
+  height: 50%;
+}
+
+.base, .metricbar#base {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+.peak, .metricbar#peak {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+}
+
+.metricbar p {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.datebar p, .systembar p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Datebar stuff for older results */
+.datebar p {
+  float: left;
+  border-left: solid 1px black;
+}
+
+span.item {
+  float: left;
+  margin: 0;
+  padding: 0.1em 0 0.1em 0.5em;
+}
+
+span.value {
+  float: right;
+  padding: 0.1em 0.5em 0.1em 0;
+}
+
+div.datebar {
+  width: 100%;
+  float: left;
+  min-height: 100%;
+  border: solid 1px black;
+}
+
+p#test_sponsor         { width: 48%; }
+p#tester               { width: 48%; }
+p#license_num          { width: 24%; }
+p#test_date            { width: 23%; }
+p#hw_avail, p#sw_avail { width: 25%; }
+
+/* Table-based datebar and systembar on newer results */
+table.datebar, table.titlebarcontainer {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  border-collapse: collapse;
+  border: solid 1px black;
+  table-layout: fixed;
+}
+
+table.datebar th {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0.5em;
+  padding: 0 0.5em 0 0.25em;
+}
+
+table.datebar td {
+  text-align: left;
+  padding: 0 0.5em 0 0;
+}
+
+table.titlebarcontainer tr {
+  vertical-align: top;
+}
+table.titlebarcontainer td {
+  border-right: 1px solid black;
+}
+
+th#license_num          { width: 17%; }
+th#test_sponsor         { width: 17%; }
+th#tester               { width: 17%; }
+th#test_date            { width: 22%; }
+th#hw_avail             { width: 22%; }
+th#sw_avail             { width: 22%; }
+td#license_num_val      { width: 52%; }
+td#test_sponsor_val     { width: 52%; }
+td#tester_val           { width: 52%; }
+td#test_date_val        { width: 13%; white-space: nowrap; }
+td#hw_avail_val         { width: 13%; white-space: nowrap; }
+td#sw_avail_val         { width: 13%; white-space: nowrap; }
+
+
+div.graph {
+  width: 100%
+  margin: auto;
+}
+
+div.sysdesc > h2 {
+  text-align: center;
+  background-color: #c8c8c8;
+  color: black;
+  padding: 0.5em 0 0.5em 0;
+  margin: 0;
+} 
+  
+div.sysdesc {
+  margin: 0.5em 0 0.5em 0;
+}
+
+div.infobox, div.sysdesc {
+  float: left;
+  width: 100%;
+  padding: 0;
+  border: solid 1px black;
+}
+
+div.infobox table {
+  width: 49%;
+  float: left;
+}
+
+div.infobox table tr {
+  vertical-align: top;
+}
+
+div.infobox table#Hardware,
+div.infobox table#BenchmarkSoftware {
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+div.infobox table#Systems {
+  width: 100%;
+}
+
+div.infobox table#Power {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+div.infobox table#Systems tbody th {
+  width: 20%;
+}
+
+div.infobox thead th {
+  font-size: 200%;
+}
+
+div.infobox tbody th {
+  text-align: left;
+}
+
+.resultstable h2, div.notes h2 {
+  text-align: center;
+  margin: 0.1em;
+}
+
+div.notes h3 {
+  margin: 0.1em;
+}
+
+div.notes table {
+  width: 100%;
+}
+
+div.notes table tr td {
+  text-align: right;
+  vertical-align: top;
+}
+
+/* Alas, IE6... if only you didn't suck so much...
+div.notes table tr td + td {
+*/
+div.notes table td.al {
+  text-align: left;
+  width: 85%;
+}
+
+div.notes table tr td {
+  padding-bottom: 1em;
+}
+
+div.notes table.portability tr td {
+  padding: 0em;
+}
+
+div.notes table.portability {
+  padding: 1em;
+}
+
+.resultstable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultstable th.basecol, .resultstable th.peakcol {
+  padding: 0.1em;
+  font-size: 90%;
+}
+
+.resultstable th {
+  border: solid 2px black;
+}
+
+.resultstable td {
+  border: solid 1px #b8b8b8;
+}
+
+td.bm, th.bm { 
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+td.l_edge { 
+  border-left: solid 2px black;
+}
+
+td.r_edge { 
+  border-right: solid 2px black;
+}
+
+.resultstable tfoot td {
+  text-align: center;
+  border: solid 2px black;
+}
+
+tr.table_metrics > td {
+  text-align: right;
+}
+
+th.basecol {
+  background-color: #c8c8c8;
+  color: black;
+}
+td.basecol {
+  text-align: right;
+  background-color: transparent;
+  color: black;
+}
+
+th.peakcol {
+  text-align: center;
+}
+
+.peakcol {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+  text-align: right;
+}
+
+td.bm {
+  /* Basically, the benchmark name and copies columns */
+  background-color: #c8c8c8;
+  color: black;
+}
+
+span.selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.selected a:link, .selected a:visited {
+  border-bottom: 0;
+}
+
+div.notes {
+  width: 100%;
+  float: left;
+  border: solid 1px black;
+}
+
+div.flagfooter {
+  text-align: center;
+}
+
+div.errors {
+  border: solid 2px red;
+}
+div.errors h2 {
+  background-color: transparent;
+  color: red;
+}
+
+div.footer {
+  border: none;
+}
+
+/* People find the "double underline" confusing.  And Safari 1.3 doesn't deal
+ * well with attempting to disable the border for userflag links.  So just
+ * give up and don't decorate user flags specially.
+********************
+span.userflag {
+  text-decoration: underline;
+}
+
+.userflag a:link {
+  border-bottom: 0;
+}
+********************
+*/
+
+/* Keep flags from being wrapped */
+span.userflag, span.flagtext {
+  white-space: nowrap;
+}
+/* Most of the screen-specific CSS is also the common CSS */
+
+/* Style for the non-image W3C marking at the bottom of the page, courtesy of
+ * Marek Prokop (http://www.sovavsiti.cz/css/w3c_buttons.html)
+ */
+.w3cbutton3 {
+  margin: 1em 1em 0 0;
+  width: 9em;
+  border: 1px solid #ccc;
+  font-family: helvetica,arial,sans-serif;
+  font-size: 70%;
+  font-weight: bold;
+  float: left;
+}
+.w3cbutton3 a {
+  display: block;
+  width: 100%;
+}
+.w3cbutton3 a:link,
+.w3cbutton3 a:visited,
+.w3cbutton3 a:hover {
+  background-color: #fc6;
+  color: #000;
+  text-decoration: none;
+  border-bottom: none;
+}
+.w3cbutton3 span.w3c {
+  padding: 0 0.4em;
+  background-color: #fff;
+  color: #0c479d;
+}
+
+-->
+</style>
+<style type="text/css" id="internalPrint" media="print">
+<!--
+body {
+  margin:  1em;
+  border:  0;
+  padding: 0;
+  background: white;
+  color:      black;
+  font-family: "Times Roman", times, serif;
+}
+
+.tt {
+  font-family: monospace;
+}
+
+div.flagClass > h2 {
+  border-bottom: 1px dotted black;
+  width: 80%;
+  font-family: sans-serif;
+}
+
+div.flagDesc {
+  clear: both;
+  background-color: rgb(255, 245, 220);
+  border: 1px solid blue; /* XXX This is for debugging */ 
+  margin: 0 auto;
+  width: 90%;
+}
+
+li.flagName {
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: block;
+  margin: 0.5em 0 0.5em 0;
+  font-size: 125%;
+  white-space: nowrap;
+}
+
+/* (presumably short) informationals all get grouped together near the top
+ * of the flag description block.
+ */
+.flagOrigin, .flagDescClass, .flagDescCompiler, .flagDescRE, .flagDescParallel, .flagVar {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  padding: 0.25em;
+  margin: 0 0 0.25em 0;
+}
+
+.flagDescClass::before {
+  content: "Flag Class: ";
+}
+.flagDescCompiler::before {
+  content: "Compilers that recognize this flag: ";
+}
+.flagDescRE::before {
+  content: "Regular Expression: ";
+}
+.flagDescParallel::before {
+  content: "Indicates automatic parallelization: ";
+}
+.flagVar::before {
+  content: "Found In: ";
+}
+
+span.flagDescInc {
+  border-bottom: 1px solid black;
+}
+
+/* The description text stands alone. */
+.descText {
+  clear: both;
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* This is a separate class so that in the print style sheet it can
+ * be ignored.
+ * Also, 'style="clear:both;"' is longer than 'class="clear"'
+ */
+.clear {
+  clear: both;
+}
+
+/* This is really for the link _to_ the flag report */
+li.unknown > a:link, a:visited { text-decoration: none; }
+
+.monospace {
+  font-family: Courier, "Courier New", monospace;
+}
+
+ul.flagDescList {
+  clear: both;
+  list-style-type: none;
+}
+
+/* Arrange for each flag description to have some headroom. */
+ul.flagDescList > li {
+  margin: 2em 0 0 0;
+}
+
+ul.flagDesc {
+  list-style-type: none;
+}
+
+div.flagTOC {
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  width: 95%;
+}
+
+ul.flagTOC {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.flagTOC > li {
+  border: thin dotted lightgray;
+  margin: 0 1em 0 0;
+  padding: 0.25em 0 0.25em 0;
+  float: left;
+  display: inline-block; /* Fix IE bug; compliant browsers will ignore this */
+  width: 22.3%;
+  min-height: 1.5em;
+  overflow: hidden; /* If the table gets squeezed too much, don't let the
+                     * text overlap
+                     */
+}
+
+ul.flagTOC > li > a {
+   color:blue;
+   text-decoration:none;
+}
+
+ul.SubMenu li {
+  border: 1px solid white; /* rgb(211, 211, 211); */
+}
+
+ul.SubMenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0 0 0 2em;
+  padding: 0.25em 5em 0.25em 0.5em;
+  white-space: nowrap;
+}
+
+li:hover > ul.SubMenu, ul.SubMenu:hover {
+  display: block;
+}
+
+ul.SubMenu > li:hover, ul.flagTOC > li:hover {
+  background-color: rgb(176, 196, 238); /* lightsteelgray... almost */
+  border: 1px solid rgb(128, 128, 128);
+}
+
+
+.resultpage a:link, .resultpage a:visited {
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: inherit;
+}
+
+.resultpage {
+  margin: auto;
+  padding: 0;
+  width: 1000px;
+}
+
+.resultpage_landscape {
+  width: 1200px;
+}
+
+div.logo {
+  float: left;
+  width: 38px;
+  height: 57px;
+}
+
+.titlebarcontainer, .resultstable, .ncsection {
+  border: solid 1px;
+  width: 100%;
+  float: left;
+}
+
+.ncsection {
+  background-color: white;
+  color: black;
+}
+
+.titlebar {
+  float: left;
+  padding: 0em 1em 0em 1em;
+  text-align: center;
+  width: 91%;
+}
+
+div.titlebar > h1, div.titlebar > p {
+  margin: 0 1em 0 1em;
+}
+
+div.ncsection {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.systembar {
+  width: 65%;
+  font-size: 150%;
+  margin: 0;
+}
+
+td.systembar {
+  padding: 0.2em;
+}
+
+.metricbar {
+  margin: 0;
+  font-size: 120%;
+}
+
+/* CSS for the old-style div-based systembar */
+
+div.systembar {
+  float: left;
+  padding: 0.1em;
+  border-right: solid 1px black;
+}
+
+div.metricbar {
+  padding: 0.1em;
+  float: right;
+  width: 33%;
+  height: 50%;
+}
+
+.base, .metricbar#base {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+.peak, .metricbar#peak {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+}
+
+.metricbar p {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.datebar p, .systembar p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Datebar stuff for older results */
+.datebar p {
+  float: left;
+  border-left: solid 1px black;
+}
+
+span.item {
+  float: left;
+  margin: 0;
+  padding: 0.1em 0 0.1em 0.5em;
+}
+
+span.value {
+  float: right;
+  padding: 0.1em 0.5em 0.1em 0;
+}
+
+div.datebar {
+  width: 100%;
+  float: left;
+  min-height: 100%;
+  border: solid 1px black;
+}
+
+p#test_sponsor         { width: 48%; }
+p#tester               { width: 48%; }
+p#license_num          { width: 24%; }
+p#test_date            { width: 23%; }
+p#hw_avail, p#sw_avail { width: 25%; }
+
+/* Table-based datebar and systembar on newer results */
+table.datebar, table.titlebarcontainer {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  border-collapse: collapse;
+  border: solid 1px black;
+  table-layout: fixed;
+}
+
+table.datebar th {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 0.5em;
+  padding: 0 0.5em 0 0.25em;
+}
+
+table.datebar td {
+  text-align: left;
+  padding: 0 0.5em 0 0;
+}
+
+table.titlebarcontainer tr {
+  vertical-align: top;
+}
+table.titlebarcontainer td {
+  border-right: 1px solid black;
+}
+
+th#license_num          { width: 17%; }
+th#test_sponsor         { width: 17%; }
+th#tester               { width: 17%; }
+th#test_date            { width: 22%; }
+th#hw_avail             { width: 22%; }
+th#sw_avail             { width: 22%; }
+td#license_num_val      { width: 52%; }
+td#test_sponsor_val     { width: 52%; }
+td#tester_val           { width: 52%; }
+td#test_date_val        { width: 13%; white-space: nowrap; }
+td#hw_avail_val         { width: 13%; white-space: nowrap; }
+td#sw_avail_val         { width: 13%; white-space: nowrap; }
+
+
+div.graph {
+  width: 100%
+  margin: auto;
+}
+
+div.sysdesc > h2 {
+  text-align: center;
+  background-color: #c8c8c8;
+  color: black;
+  padding: 0.5em 0 0.5em 0;
+  margin: 0;
+} 
+  
+div.sysdesc {
+  margin: 0.5em 0 0.5em 0;
+}
+
+div.infobox, div.sysdesc {
+  float: left;
+  width: 100%;
+  padding: 0;
+  border: solid 1px black;
+}
+
+div.infobox table {
+  width: 49%;
+  float: left;
+}
+
+div.infobox table tr {
+  vertical-align: top;
+}
+
+div.infobox table#Hardware,
+div.infobox table#BenchmarkSoftware {
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+div.infobox table#Systems {
+  width: 100%;
+}
+
+div.infobox table#Power {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+div.infobox table#Systems tbody th {
+  width: 20%;
+}
+
+div.infobox thead th {
+  font-size: 200%;
+}
+
+div.infobox tbody th {
+  text-align: left;
+}
+
+.resultstable h2, div.notes h2 {
+  text-align: center;
+  margin: 0.1em;
+}
+
+div.notes h3 {
+  margin: 0.1em;
+}
+
+div.notes table {
+  width: 100%;
+}
+
+div.notes table tr td {
+  text-align: right;
+  vertical-align: top;
+}
+
+/* Alas, IE6... if only you didn't suck so much...
+div.notes table tr td + td {
+*/
+div.notes table td.al {
+  text-align: left;
+  width: 85%;
+}
+
+div.notes table tr td {
+  padding-bottom: 1em;
+}
+
+div.notes table.portability tr td {
+  padding: 0em;
+}
+
+div.notes table.portability {
+  padding: 1em;
+}
+
+.resultstable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultstable th.basecol, .resultstable th.peakcol {
+  padding: 0.1em;
+  font-size: 90%;
+}
+
+.resultstable th {
+  border: solid 2px black;
+}
+
+.resultstable td {
+  border: solid 1px #b8b8b8;
+}
+
+td.bm, th.bm { 
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+td.l_edge { 
+  border-left: solid 2px black;
+}
+
+td.r_edge { 
+  border-right: solid 2px black;
+}
+
+.resultstable tfoot td {
+  text-align: center;
+  border: solid 2px black;
+}
+
+tr.table_metrics > td {
+  text-align: right;
+}
+
+th.basecol {
+  background-color: #c8c8c8;
+  color: black;
+}
+td.basecol {
+  text-align: right;
+  background-color: transparent;
+  color: black;
+}
+
+th.peakcol {
+  text-align: center;
+}
+
+.peakcol {
+  background-color: transparent;
+  color: #2626b3;       /* peak blue */
+  text-align: right;
+}
+
+td.bm {
+  /* Basically, the benchmark name and copies columns */
+  background-color: #c8c8c8;
+  color: black;
+}
+
+span.selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.selected a:link, .selected a:visited {
+  border-bottom: 0;
+}
+
+div.notes {
+  width: 100%;
+  float: left;
+  border: solid 1px black;
+}
+
+div.flagfooter {
+  text-align: center;
+}
+
+div.errors {
+  border: solid 2px red;
+}
+div.errors h2 {
+  background-color: transparent;
+  color: red;
+}
+
+div.footer {
+  border: none;
+}
+
+/* People find the "double underline" confusing.  And Safari 1.3 doesn't deal
+ * well with attempting to disable the border for userflag links.  So just
+ * give up and don't decorate user flags specially.
+********************
+span.userflag {
+  text-decoration: underline;
+}
+
+.userflag a:link {
+  border-bottom: 0;
+}
+********************
+*/
+
+/* Keep flags from being wrapped */
+span.userflag, span.flagtext {
+  white-space: nowrap;
+}
+/* Classes that contain links - useless on paper */
+.flagTOC, .SubMenu, .NoPrint {
+  display: none;
+}
+
+/* Don't decorate links - they're not clickable */
+a {
+  text-decoration: none;
+  background: inherit;
+  color: inherit;
+}
+
+.resultpage {
+  width: 100%;
+}
+
+.w3cbutton3 {
+  display: none;
+}
+-->
+</style>
+
+<title>2021 Tiny Result: Cray Isambard 2: XC50 (ThunderX2) (test sponsored by University of Bristol)</title>
+</head>
+
+<body>
+<div class="resultpage">
+ <div class="titlebarcontainer">
+  <div class="logo">
+  </div>
+  <div class="titlebar">
+   <h1>SPEChpc&trade; 2021 Tiny Result</h1>
+   <p style="font-size: smaller">Copyright 2021-2022 Standard Performance Evaluation Corporation</p>
+  </div>
+ </div>
+ <table class="titlebarcontainer">
+  <tr>
+   <td class="systembar" rowspan="2">
+    <p>Cray
+     <span style="font-size: 75%">(Test Sponsor: University of Bristol)</span>
+    </p>
+    <p>Isambard 2: XC50 (ThunderX2)    </p>
+   </td>
+   <td class="metricbar base">
+    <p><span class="item"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SPEChpc2021tnybase">SPEChpc 2021_tny_base</a> = </span>
+       <span class="value">9.64</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td class="metricbar peak">
+    <p><span class="item"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SPEChpc2021tnypeak">SPEChpc 2021_tny_peak</a> = </span>
+       <span class="value">Not Run</span></p>
+   </td>
+  </tr>
+ </table>
+ <table class="datebar">
+  <tbody>
+   <tr>
+    <th id="license_num"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#hpc2021License">hpc2021 License:</a></th>
+    <td id="license_num_val">?</td>
+    <th id="test_date"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TestDate">Test Date:</a></th>
+    <td id="test_date_val">Jun-2022</td>
+   </tr>
+   <tr>
+    <th id="test_sponsor"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TestSponsor">Test Sponsor:</a></th>
+    <td id="test_sponsor_val">University of Bristol</td>
+    <th id="hw_avail"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#HardwareAvailability">Hardware Availability:</a></th>
+    <td id="hw_avail_val">May-2018</td>
+   </tr>
+   <tr>
+    <th id="tester"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Testedby">Tested by:</a></th>
+    <td id="tester_val">University of Bristol</td>
+    <th id="sw_avail"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SoftwareAvailability">Software Availability:</a></th>
+    <td id="sw_avail_val">Mar-2020</td>
+   </tr>
+  </tbody>
+ </table>
+ <div class="graph">
+  <p style="text-align: center">Benchmark result graphs are available in the <a href="hpc2021_tny.001.tiny.pdf">PDF report</a>.</a>
+ </div>
+ <div class="resultstable">
+  <h2><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#ResultsTable">Results Table</a></h2>
+  <table summary="Detailed per-benchmark result data">
+   <colgroup>
+    <col id="benchmark" />
+    <col id="basepmodel" />
+    <col id="baseranks" />
+    <col id="basethreads" />
+    <col id="baseres" span="9" />
+    <col id="peakpmodel" />
+    <col id="peakranks" />
+    <col id="peakthreads" />
+    <col id="peakres" span="9" />
+   </colgroup>
+   <thead>
+    <tr>
+     <th rowspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Benchmark">Benchmark</a></th>
+     <th class="basecol" colspan="9">Base</th>
+     <th class="peakcol" colspan="9">Peak</th>
+    </tr>
+    <tr>
+     <th class="basecol pmodel"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Model">Model</a></th>
+     <th class="basecol ranks"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ranks">Ranks</a></th>
+     <th class="basecol threads"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#ThrdsRnk">Thrds/Rnk</a></th>
+     <th class="basecol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="basecol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="basecol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="basecol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol pmodel"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Model">Model</a></th>
+     <th class="peakcol ranks"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ranks">Ranks</a></th>
+     <th class="peakcol threads"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#ThrdsRnk">Thrds/Rnk</a></th>
+     <th class="peakcol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+     <th class="peakcol time l_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Seconds">Seconds</a></th>
+     <th class="peakcol ratio r_edge"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Ratio">Ratio</a></th>
+    </tr>
+   </thead>
+   <tfoot>
+    <tr class="table_metrics">
+     <td colspan="5"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SPEChpc2021tnybase">SPEChpc  2021_tny_base</a></td>
+     <td>9.64</td>
+     <td colspan="13"></td>
+    </tr>
+    <tr class="table_metrics">
+     <td colspan="5"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SPEChpc2021tnypeak">SPEChpc  2021_tny_peak</a></td>
+     <td>Not Run</td>
+     <td colspan="13"></td>
+    </tr>
+    <tr>
+     <td colspan="19">Results appear in the <a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#RunOrder">order in which they were run</a>. Bold underlined text <a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median">indicates a median measurement</a>.</td>
+    </tr>
+   </tfoot>
+   <tbody>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/505.lbm_t.html">505.lbm_t</a></td>
+     <td class="basecol pmodel">MPI</td>
+     <td class="basecol ranks">512</td>
+     <td class="basecol threads">1</td>
+     <td class="basecol time l_edge">193</td>
+     <td class="basecol ratio r_edge">11.7<span style="visibility:hidden">0</span></td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">195</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">11.6</span><span style="visibility:hidden">0</span></a></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/513.soma_t.html">513.soma_t</a></td>
+     <td class="basecol pmodel">MPI</td>
+     <td class="basecol ranks">512</td>
+     <td class="basecol threads">1</td>
+     <td class="basecol time l_edge">314</td>
+     <td class="basecol ratio r_edge">11.8<span style="visibility:hidden">0</span></td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">314</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">11.8</span><span style="visibility:hidden">0</span></a></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/518.tealeaf_t.html">518.tealeaf_t</a></td>
+     <td class="basecol pmodel selected">MPI</td>
+     <td class="basecol ranks selected">512</td>
+     <td class="basecol threads selected">1</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">191</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">8.64</span></a></td>
+     <td class="basecol time l_edge">190</td>
+     <td class="basecol ratio r_edge">8.69</td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/519.clvleaf_t.html">519.clvleaf_t</a></td>
+     <td class="basecol pmodel">MPI</td>
+     <td class="basecol ranks">512</td>
+     <td class="basecol threads">1</td>
+     <td class="basecol time l_edge">140</td>
+     <td class="basecol ratio r_edge">11.8<span style="visibility:hidden">0</span></td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">140</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">11.8</span><span style="visibility:hidden">0</span></a></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/521.miniswp_t.html">521.miniswp_t</a></td>
+     <td class="basecol pmodel selected">MPI</td>
+     <td class="basecol ranks selected">512</td>
+     <td class="basecol threads selected">1</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">346</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">4.63</span></a></td>
+     <td class="basecol time l_edge">346</td>
+     <td class="basecol ratio r_edge">4.63</td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/528.pot3d_t.html">528.pot3d_t</a></td>
+     <td class="basecol pmodel selected">MPI</td>
+     <td class="basecol ranks selected">512</td>
+     <td class="basecol threads selected">1</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">209</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">10.2</span><span style="visibility:hidden">0</span></a></td>
+     <td class="basecol time l_edge">207</td>
+     <td class="basecol ratio r_edge">10.3<span style="visibility:hidden">0</span></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/532.sph_exa_t.html">532.sph_exa_t</a></td>
+     <td class="basecol pmodel">MPI</td>
+     <td class="basecol ranks">512</td>
+     <td class="basecol threads">1</td>
+     <td class="basecol time l_edge">230</td>
+     <td class="basecol ratio r_edge">8.47</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">232</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">8.42</span></a></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/534.hpgmgfv_t.html">534.hpgmgfv_t</a></td>
+     <td class="basecol pmodel selected">MPI</td>
+     <td class="basecol ranks selected">512</td>
+     <td class="basecol threads selected">1</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">172</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">6.83</span></a></td>
+     <td class="basecol time l_edge">171</td>
+     <td class="basecol ratio r_edge">6.85</td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+    <tr>
+     <td class="bm"><a href="http://www.spec.org/auto/hpc2021/Docs/benchmarks/535.weather_t.html">535.weather_t</a></td>
+     <td class="basecol pmodel selected">MPI</td>
+     <td class="basecol ranks selected">512</td>
+     <td class="basecol threads selected">1</td>
+     <td class="basecol time l_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">167</span></a></td>
+     <td class="basecol ratio r_edge selected"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Median"><span class="selected">19.3</span><span style="visibility:hidden">0</span></a></td>
+     <td class="basecol time l_edge">167</td>
+     <td class="basecol ratio r_edge">19.3<span style="visibility:hidden">0</span></td>
+     <td class="basecol time l_edge"></td>
+     <td class="basecol ratio r_edge"></td>
+     <td class="peakcol pmodel"></td>
+     <td class="peakcol ranks"></td>
+     <td class="peakcol threads"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+     <td class="peakcol time l_edge"></td>
+     <td class="peakcol ratio r_edge"></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="infobox">
+  <table id="HardwareSummary"
+         summary="Benchmark configuration details for the run">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#HardwareSummary">Hardware Summary</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TypeofSystem">Type of System</a>:</th>
+     <td>Homogenous Cluster</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#ComputeNode">Compute Node</a>:</th>
+     <td><a href="#ThunderX2">ThunderX2</a></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Interconnect">Interconnect</a>:</th>
+     <td><a href="#CrayAries">Cray Aries</a></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#ComputeNodesUsed">Compute Nodes Used</a>:</th>
+     <td>8</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TotalChips">Total Chips</a>:</th>
+     <td>16</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TotalCores">Total Cores</a>:</th>
+     <td>512</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TotalThreads">Total Threads</a>:</th>
+     <td>2048</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#TotalMemory">Total Memory</a>:</th>
+     <td>2 TB</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="SoftwareSummary"
+         summary="Benchmark configuration details for the run">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SoftwareSummary">Software Summary</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Compiler">Compiler</a>:</th>
+     <td>HPE Cray Programming Environment (CPE),<br />
+C/C++/Fortran: Arm version 20.0 (based on LLVM<br />
+9.0.1)<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#MPILibrary">MPI Library</a>:</th>
+     <td>HPE Cray Programming Environment (CPE),<br />
+Cray-mvapich2 Version 2.3.6<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#BaseParallelModel">Base Parallel Model</a>:</th>
+     <td>MPI</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#BaseRanksRun">Base Ranks Run</a>:</th>
+     <td>512</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#BaseThreadsRun">Base Threads Run</a>:</th>
+     <td>1</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#PeakParallelModels">Peak Parallel Models</a>:</th>
+     <td>Not Run</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="sysdesc" id="ThunderX2">
+  <h2>Node Description: ThunderX2</h2>
+ <div class="infobox">
+  <table id="Hardware"
+         summary="Configuration details for node ThunderX2">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeHardware">Hardware</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeNumberofnodes">Number of nodes</a>:</th>
+     <td>8</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeUsesofthenode">Uses of the node</a>:</th>
+     <td>Compute</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeVendor">Vendor</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeModel">Model</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCPUName">CPU Name</a>:</th>
+     <td>Marvell ThunderX2 CN9980</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCPUsorderable">CPU(s) orderable</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeChipsenabled">Chips enabled</a>:</th>
+     <td>2</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCoresenabled">Cores enabled</a>:</th>
+     <td>64</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCoresperchip">Cores per chip</a>:</th>
+     <td>32</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeThreadspercore">Threads per core</a>:</th>
+     <td>4</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCPUCharacteristics">CPU Characteristics</a>:</th>
+     <td>Permanent turbo to 2.5 GHz</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeCPUMHz">CPU MHz</a>:</th>
+     <td>2100</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodePrimaryCache">Primary Cache</a>:</th>
+     <td>32 KB I + 32 KB D on chip per core</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeSecondaryCache">Secondary Cache</a>:</th>
+     <td>256 KB I+D on chip per core</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeL3Cache">L3 Cache</a>:</th>
+     <td>32 MB I+D on chip per chip<br />
+0.5 MB shared / 64 cores<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeOtherCache">Other Cache</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeMemory">Memory</a>:</th>
+     <td>256 GB (8 x 32 GB)</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeOtherHardware">Other Hardware</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelCount">Accel Count</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelModel">Accel Model</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelVendor">Accel Vendor</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelType">Accel Type</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelConnection">Accel Connection</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelECCenabled">Accel ECC enabled</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAccelDescription">Accel Description</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAdapter">Adapter</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeNumberofAdapters">Number of Adapters</a>:</th>
+     <td>0</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeSlotType">Slot Type</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeDataRate">Data Rate</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodePortsUsed">Ports Used</a>:</th>
+     <td>0</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeInterconnectType">Interconnect Type</a>:</th>
+     <td>None</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="Software"
+         summary="Configuration details for node ThunderX2">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeSoftware">Software</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAdapter">Adapter</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAdapterDriver">Adapter Driver</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeAdapterFirmware">Adapter Firmware</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeOperatingSystem">Operating System</a>:</th>
+     <td>SUSE Linux Enterprise Server 15 SP1<br />
+Linux 4.12.14-197.7_5.0.99-cray_ari_s<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeLocalFileSystem">Local File System</a>:</th>
+     <td>xfs</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeSharedFileSystem">Shared File System</a>:</th>
+     <td>None</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeSystemState">System State</a>:</th>
+     <td>Multi-user, run level 3</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#NodeOtherSoftware">Other Software</a>:</th>
+     <td>None</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ </div>
+ <div class="sysdesc" id="CrayAries">
+  <h2>Interconnect Description: Cray Aries</h2>
+ <div class="infobox">
+  <table id="Hardware0"
+         summary="Configuration details for interconnect Cray Aries">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectHardware">Hardware</a></th></tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectVendor">Vendor</a>:</th>
+     <td>Cray</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectModel">Model</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectSwitchModel">Switch Model</a>:</th>
+     <td>N/A<br />
+N/A<br /></td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectNumberofSwitches">Number of Switches</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectNumberofPorts">Number of Ports</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectDataRate">Data Rate</a>:</th>
+     <td>14 Gb/s</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectFirmware">Firmware</a>:</th>
+     <td>N/A</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectTopology">Topology</a>:</th>
+     <td>Dragonfly</td>
+    </tr>
+    <tr>
+     <th><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectPrimaryUse">Primary Use</a>:</th>
+     <td>MPI Traffic</td>
+    </tr>
+   </tbody>
+  </table>
+  <table id="Software0"
+         summary="Configuration details for interconnect Cray Aries">
+   <thead>
+    <tr><th colspan="2"><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#InterconnectSoftware">Software</a></th></tr>
+   </thead>
+   <tbody>
+   </tbody>
+  </table>
+ </div>
+ </div>
+ <div class="notes">
+  <h2><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#SubmitNotes">Submit Notes</a></h2>
+  <pre>
+The config file option 'submit' was used.
+</pre>
+ </div>
+ <div class="notes">
+  <h2><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#CompilerVersionNotes">Compiler Version Notes</a></h2>
+  <pre>
+==============================================================================
+ CC  505.lbm_t(base) 513.soma_t(base) 518.tealeaf_t(base) 521.miniswp_t(base)
+      534.hpgmgfv_t(base)
+------------------------------------------------------------------------------
+Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM
+  9.0.1)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir:
+  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin
+------------------------------------------------------------------------------
+
+==============================================================================
+ CXXC 532.sph_exa_t(base)
+------------------------------------------------------------------------------
+Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM
+  9.0.1)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir:
+  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin
+------------------------------------------------------------------------------
+
+==============================================================================
+ FC  519.clvleaf_t(base) 528.pot3d_t(base) 535.weather_t(base)
+------------------------------------------------------------------------------
+Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM
+  9.0.1)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir:
+  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin
+------------------------------------------------------------------------------
+</pre>
+ </div>
+ <div class="flags notes" id="base_compiler">
+  <h2><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#BaseCompilerInvocation">Base Compiler Invocation</a></h2>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Cbenchmarks">C benchmarks</a>:</h3>
+  <table class="compiler">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_CCbase_cc">cc</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#CXXbenchmarks">C++ benchmarks</a>:</h3>
+  <table class="compiler">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_CXXbase_CC">CC</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Fortranbenchmarks">Fortran benchmarks</a>:</h3>
+  <table class="compiler">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_FCbase_ftn">ftn</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+ </div>
+ <div class="flags notes" id="base_optimization">
+  <h2><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#BaseOptimizationFlags">Base Optimization Flags</a></h2>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Cbenchmarks">C benchmarks</a>:</h3>
+  <table class="optimization">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_CCbase_Ofast">-Ofast</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#CXXbenchmarks">C++ benchmarks</a>:</h3>
+  <table class="optimization">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_CXXbase_Ofast">-Ofast</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+  <h3><a href="http://www.spec.org/auto/hpc2021/Docs/result-fields.html#Fortranbenchmarks">Fortran benchmarks</a>:</h3>
+  <table class="optimization">
+   <tr>
+   <td></td>
+   <td class="al">
+    &nbsp;<span class="userflag"><a href="hpc2021_tny.001.tiny.flags.html#user_FCbase_Ofast">-Ofast</a></span>&nbsp;
+   </td>
+   </tr>
+  </table>
+ </div>
+ <div class="notes footer">
+<p>
+  SPEChpc is a trademark of the Standard Performance Evaluation
+    Corporation.  All other brand and product names appearing in this
+    result are trademarks or registered trademarks of their respective
+    holders.
+</p>
+ </div>
+ <div class="notes footer">
+  <p>For questions about this result, please contact the tester.  
+   For other inquiries, please contact <a href="mailto:info@spec.org">info@spec.org</a><br />
+   Copyright 2021-2022 Standard Performance Evaluation Corporation<br />
+   Tested with SPEChpc2021 v1.0.3 on 2022-06-30 15:23:36+0000.<br />
+   Report generated on 2022-06-30 16:32:10 by SPEC hpc2021 HTML formatter v1.0.3.<br />
+</p>
+ </div>
+ <div class="w3cbutton3">
+   <a href="http://validator.w3.org/check?uri=referer">
+     <span class="w3c">W3C</span>
+     <span class="spec">XHTML 1.0</span>
+   </a>
+ </div>
+ <div class="w3cbutton3">
+   <a href="http://jigsaw.w3.org/css-validator/check/referer">
+     <span class="w3c">W3C</span>
+     <span class="spec">CSS</span>
+   </a>
+ </div>
+</div>
+</body>
+</html>
+<!-- The following is an encoded version of the raw file that was used to
+     produce this result. Use the extract_raw script to retrieve it. -->
+<!-- BEGIN GZIP hpc2021_tny.001.tiny.rsf
+@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
+END -->

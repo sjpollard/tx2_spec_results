@@ -1,0 +1,91 @@
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.12s (123842 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Reading config file '/home/br-spollard/SPEChpc/config/hpe_cpe.cfg'
+Reading included config file '/home/br-spollard/SPEChpc/config/Example_SUT.inc'
+WARNING: Duplicate setting for "node_compute_sw_os000" on line 46
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+WARNING: Duplicate setting for "node_compute_sw_os001" on line 47
+         of /home/br-spollard/SPEChpc/config/hpe_cpe.cfg
+
+WARNING: OMP_NUM_THREADS is set to '64' in the run environment.  This
+         value will not be used; the tools set a value for this for each
+         benchmark run based on the run mode (rate or speed) and the setting
+         for number of threads.
+         See https://www.spec.org/hpc2021/Docs/config.html#threads
+         and https://www.spec.org/hpc2021/Docs/runhpc.html#threads
+Retrieving flags file (/home/br-spollard/SPEChpc/config/flags/Example_hpe_cpe_flags.xml)...
+
+
+1 configuration selected:
+
+ Action    Run Mode   Workload     Report Type     Benchmarks
+--------   --------   --------   ---------------   ----------------------------
+validate   speed      test       SPEChpc2021_tny   513.soma_t                  
+-------------------------------------------------------------------------------
+
+Benchmarks selected: 513.soma_t
+Compiling Binaries
+  Up to date 513.soma_t base cce_mpi
+
+
+Setting Up Run Directories
+  Setting up 513.soma_t test base cce_mpi: run_base_test_cce_mpi.0000
+Running Benchmarks
+  Running 513.soma_t test base cce_mpi [2022-06-18 14:48:44]
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/513.soma_t/run/run_base_test_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/SPEChpc/benchspec/HPC/513.soma_t/run/run_base_test_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Success: 1x513.soma_t
+Producing Raw Reports
+ label: cce_mpi
+  workload: test
+   metric: SPEChpc2021_tny_base
+    format: raw -> /home/br-spollard/SPEChpc/result/hpc2021_tny.021.tiny.test.rsf
+Parsing flags for 513.soma_t base: done
+Doing flag reduction: done
+    format: Text -> /home/br-spollard/SPEChpc/result/hpc2021_tny.021.tiny.test.txt
+
+The log for this run is in /home/br-spollard/SPEChpc/result/hpc2021.021.log
+
+runhpc finished at 2022-06-18 14:48:52; 10 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-06-18 14:48:58 for job 212254.xci00
+Submitted              : 2022-06-18 14:48:40
+Queued                 : 2022-06-18 14:48:40
+Started                : 2022-06-18 14:48:41
+Completed              : 2022-06-18 14:48:58
+Queued Time            : 0:00:01 (1 second)
+Elapsed Time           : 0:00:12 (12 seconds, 2% of limit)
+Walltime Limit         : 0:10:00 (600 seconds)
+Node Time Limit        : 0:10:00 (600 seconds)
+Node Time              : 0:00:12 (12 seconds, 2% of limit)
+Job Name               : jobsubmit.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.o212254
+STDERR                 : /home/br-spollard/benchmarks/testing/jobsubmit.pbs.e212254
+Job Directory          : /home/br-spollard/pbs.212254.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 61
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/
