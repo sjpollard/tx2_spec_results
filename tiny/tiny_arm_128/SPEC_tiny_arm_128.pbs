@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -N SPEC_tiny_arm_128
+#PBS -q arm
+#PBS -l select=2
+#PBS -l walltime=4:00:00
+#PBS -j oe
+#PBS -o SPEC_tiny_arm_128.out
+
+cd $PBS_O_WORKDIR
+cd ../../../SPEChpc
+. ./shrc
+
+#cray#
+#module load cdt
+
+#gcc#
+#module swap PrgEnv-cray PrgEnv-gnu
+
+#allinea#
+module swap PrgEnv-cray PrgEnv-allinea
+module load cdt/20.03
+
+runhpc --rebuild --config=hpe_cpe_arm_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/benchmarks/tiny/tiny_arm_128 --iterations=2 tiny
+

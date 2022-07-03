@@ -1,0 +1,59 @@
+Switching to allinea/20.0.0.0.
+Generic-AArch64/SUSE/12/suites/arm-compiler-for-linux/20.0(72):ERROR:105: Unable to locate a modulefile for 'Generic-AArch64/SUSE/12/arm-linux-compiler/20.0'
+Switching to atp/2.1.3.
+Switching to cray-libsci/19.06.1.
+Switching to cray-mpich/7.7.12.
+Switching to craype/2.6.4.
+Switching to gcc/9.2.0.
+Switching to modules/3.2.11.4.
+Switching to perftools-base/20.03.0.
+Switching to pmi/5.0.15.
+SPEC HPC(r) 2021 Benchmark Suites
+Copyright 1995-2021 Standard Performance Evaluation Corporation (SPEC)
+
+runhpc v.unknown
+Using 'linux-aarch64' tools
+Reading file manifests... read 14938 entries from 2 files in 0.12s (123575 files/s)
+Loading runhpc modules.................
+Locating benchmarks...found 31 benchmarks in 5 benchsets.
+Neither config file 'hpe_cpe_arm_2.cfg' nor 'hpe_cpe_arm_2.cfg.cfg' exist in /home/br-spollard/SPEChpc/config!
+
+There is no log file for this run.
+
+runhpc finished at 2022-07-01 17:53:58; 1 total seconds elapsed
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-07-01 17:54:03 for job 216686.xci00
+Submitted              : 2022-07-01 16:54:46
+Queued                 : 2022-07-01 16:54:46
+Started                : 2022-07-01 17:53:54
+Completed              : 2022-07-01 17:54:03
+Queued Time            : 0:59:08 (3548 seconds)
+Elapsed Time           : 0:00:04 (4 seconds, 0% of limit)
+Walltime Limit         : 4:00:00 (14400 seconds)
+Node Time Limit        : 8:00:00 (28800 seconds)
+Node Time              : 0:00:09 (9 seconds, 0% of limit)
+Job Name               : SPEC_tiny_arm_128
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /home/br-spollard/tx2_spec_results/tiny/tiny_arm_128/SPEC_tiny_arm_128.out
+STDERR                 : /home/br-spollard/tx2_spec_results/tiny/tiny_arm_128/SPEC_tiny_arm_128.e216686
+Job Directory          : /home/br-spollard/pbs.216686.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 2
+Total Tasks            : 128
+Parent Node            : xcimom2
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 57,64
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/
