@@ -1,0 +1,52 @@
+Hello from rank 3, thread 0, on nid00151. (core affinity = 12)
+Hello from rank 2, thread 2, on nid00151. (core affinity = 10)
+Hello from rank 3, thread 2, on nid00151. (core affinity = 14)
+Hello from rank 2, thread 0, on nid00151. (core affinity = 8)
+Hello from rank 3, thread 1, on nid00151. (core affinity = 13)
+Hello from rank 2, thread 1, on nid00151. (core affinity = 9)
+Hello from rank 1, thread 0, on nid00151. (core affinity = 4)
+Hello from rank 3, thread 3, on nid00151. (core affinity = 15)
+Hello from rank 2, thread 3, on nid00151. (core affinity = 11)
+Hello from rank 1, thread 1, on nid00151. (core affinity = 5)
+Hello from rank 0, thread 0, on nid00151. (core affinity = 0)
+Hello from rank 1, thread 3, on nid00151. (core affinity = 7)
+Hello from rank 1, thread 2, on nid00151. (core affinity = 6)
+Hello from rank 0, thread 1, on nid00151. (core affinity = 1)
+Hello from rank 0, thread 3, on nid00151. (core affinity = 3)
+Hello from rank 0, thread 2, on nid00151. (core affinity = 2)
+============================= PBS epilogue =============================
+
+End of Job Report
+Run at 2022-07-04 11:26:44 for job 217333.xci00
+Submitted              : 2022-07-04 11:26:33
+Queued                 : 2022-07-04 11:26:33
+Started                : 2022-07-04 11:26:33
+Completed              : 2022-07-04 11:26:44
+Queued Time            : 0:00:00 (0 seconds)
+Elapsed Time           : 0:00:06 (6 seconds, 68% of limit)
+Walltime Limit         : 0:00:10 (10 seconds)
+Node Time Limit        : 0:00:10 (10 seconds)
+Node Time              : 0:00:06 (6 seconds, 68% of limit)
+Job Name               : binding.pbs
+Queue                  : arm
+Owner                  : br-spollard
+Group                  : -default-
+Project                : GW03
+Subproject             : 
+Funding                : 
+Trustzone              : 
+STDOUT                 : /lustre/home/br-spollard/tx2_spec_results/testing/binding.pbs.o217333
+STDERR                 : /lustre/home/br-spollard/tx2_spec_results/testing/binding.pbs.e217333
+Job Directory          : /home/br-spollard/pbs.217333.xci00.x8z
+Job Arch               : XT
+CPU Core Type          : arm
+Total Nodes            : 1
+Total Tasks            : 64
+Parent Node            : xcimom
+Parent Node Memory     : 
+Parent Node CPU Time   : 
+Compute Nodes          : 151
+Electrical Groups      : 1
+Run Version            : 1
+
+For more information see https://gw4-isambard.github.io/docs/

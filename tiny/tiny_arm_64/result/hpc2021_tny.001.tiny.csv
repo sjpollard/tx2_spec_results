@@ -1,0 +1,355 @@
+valid,1
+
+"SPEC 2021 Tiny Result"
+
+"Full Results Table"
+
+Benchmark,"Base # Ranks ","Base Threads per Rank","Base Pmodel","Base Run Time","Base Ratio","Base Selected","Base Status","Peak # Ranks ","Peak Threads per Rank","Peak Pmodel","Peak Run Time","Peak Ratio","Peak Selected","Peak Status",Description
+505.lbm_t,64,1,MPI,1490.855757,1.5092,0,S,,,,,,,,"ref iteration #1"
+505.lbm_t,64,1,MPI,1491.082639,1.508971,1,S,,,,,,,,"ref iteration #2"
+513.soma_t,64,1,MPI,1713.341607,2.159523,1,S,,,,,,,,"ref iteration #1"
+513.soma_t,64,1,MPI,1712.853223,2.160138,0,S,,,,,,,,"ref iteration #2"
+518.tealeaf_t,64,1,MPI,1017.189019,1.622117,0,S,,,,,,,,"ref iteration #1"
+518.tealeaf_t,64,1,MPI,1018.355268,1.62026,1,S,,,,,,,,"ref iteration #2"
+519.clvleaf_t,64,1,MPI,933.773681,1.767023,0,S,,,,,,,,"ref iteration #1"
+519.clvleaf_t,64,1,MPI,936.311056,1.762235,1,S,,,,,,,,"ref iteration #2"
+521.miniswp_t,64,1,MPI,1149.8647,1.391468,1,S,,,,,,,,"ref iteration #1"
+521.miniswp_t,64,1,MPI,1149.778206,1.391573,0,S,,,,,,,,"ref iteration #2"
+528.pot3d_t,64,1,MPI,1336.701496,1.589734,0,S,,,,,,,,"ref iteration #1"
+528.pot3d_t,64,1,MPI,1339.689849,1.586188,1,S,,,,,,,,"ref iteration #2"
+532.sph_exa_t,64,1,MPI,1764.742424,1.104977,1,S,,,,,,,,"ref iteration #1"
+532.sph_exa_t,64,1,MPI,1754.779222,1.111251,0,S,,,,,,,,"ref iteration #2"
+534.hpgmgfv_t,64,1,MPI,1035.194374,1.135053,1,S,,,,,,,,"ref iteration #1"
+534.hpgmgfv_t,64,1,MPI,1031.896645,1.13868,0,S,,,,,,,,"ref iteration #2"
+535.weather_t,64,1,MPI,1199.829671,2.687882,0,S,,,,,,,,"ref iteration #1"
+535.weather_t,64,1,MPI,1209.861356,2.665595,1,S,,,,,,,,"ref iteration #2"
+
+"Selected Results Table"
+
+Benchmark,"Base # Ranks ","Base Threads per Rank","Base Pmodel","Base Run Time","Base Ratio","Base Selected","Base Status","Peak # Ranks ","Peak Threads per Rank","Peak Pmodel","Peak Run Time","Peak Ratio","Peak Selected","Peak Status",Description
+505.lbm_t,64,1,MPI,1491.082639,1.508971,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+513.soma_t,64,1,MPI,1713.341607,2.159523,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+518.tealeaf_t,64,1,MPI,1018.355268,1.62026,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+519.clvleaf_t,64,1,MPI,936.311056,1.762235,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+521.miniswp_t,64,1,MPI,1149.8647,1.391468,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+528.pot3d_t,64,1,MPI,1339.689849,1.586188,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+532.sph_exa_t,64,1,MPI,1764.742424,1.104977,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+534.hpgmgfv_t,64,1,MPI,1035.194374,1.135053,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+535.weather_t,64,1,MPI,1209.861356,2.665595,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+
+SPEChpc2021_tny_base,1.599836,,,,1.599836
+SPEChpc2021_tny_peak,"Not Run",,,,,,,,,,,"Not Run"
+
+"Run number:",001
+"runhpc command:","/home/br-spollard/SPEChpc/bin/harness/runhpc --rebuild --config=hpe_cpe_arm_1.cfg --ranks=64 --reportable --output_format=all --output_root=/home/br-spollard/benchmarks/tiny/tiny_arm_64 --iterations=2 tiny"
+"output root:",/home/br-spollard/benchmarks/tiny/tiny_arm_64
+
+"System Vendor:",Cray
+"System Name:","Isambard 2: XC50 (ThunderX2)"
+"Date tested:",Jul-2022
+"hpc2021 License:",?
+"Test sponsor:","University of Bristol"
+"Tested by:","University of Bristol"
+"Hardware avail:",May-2018
+"Software avail:",Mar-2020
+
+
+"Node Description: ThunderX2"
+
+HARDWARE
+
+"Number of nodes",1
+"Uses of the node",Compute
+Vendor,N/A
+Model,N/A
+"CPU Name","Marvell ThunderX2 CN9980"
+"CPU(s) orderable",N/A
+"Chips enabled",2
+"Cores enabled",64
+"Cores per chip",32
+"Threads per core",4
+"CPU Characteristics","Permanent turbo to 2.5 GHz"
+"CPU MHz",2100
+"Primary Cache","32 KB I + 32 KB D on chip per core"
+"Secondary Cache","256 KB I+D on chip per core"
+"L3 Cache","32 MB I+D on chip per chip"
+,"0.5 MB shared / 64 cores"
+"Other Cache",None
+Memory,"256 GB (8 x 32 GB)"
+"Disk Subsystem",--
+"Other Hardware",None
+"Accel Count",N/A
+"Accel Model",N/A
+"Accel Vendor",N/A
+"Accel Type",N/A
+"Accel Connection",N/A
+"Accel ECC enabled",N/A
+"Accel Description",N/A
+Adapter,None
+"Number of Adapters",0
+"Slot Type",None
+"Data Rate",None
+"Ports Used",0
+"Interconnect Type",None
+
+SOFTWARE
+
+"Accelerator Driver",--
+Adapter,None
+"Adapter Driver",None
+"Adapter Firmware",None
+"Operating System","SUSE Linux Enterprise Server 15 SP1"
+,"Linux 4.12.14-197.7_5.0.99-cray_ari_s"
+"Local File System",xfs
+"Shared File System",None
+"System State","Multi-user, run level 3"
+"Other Software",None
+
+
+"Interconnect Description: Cray Aries"
+
+HARDWARE
+
+Vendor,Cray
+Model,N/A
+"Switch Model",N/A
+,N/A
+"Number of Switches",N/A
+"Number of Ports",N/A
+"Data Rate","14 Gb/s"
+Firmware,N/A
+Topology,Dragonfly
+"Primary Use","MPI Traffic"
+
+SOFTWARE
+
+,--
+
+
+"BENCHMARK DETAILS"
+
+"Type of System",SMP
+"Compute Nodes Used",1
+"Total Chips",2
+"Total Cores",64
+"Total Threads",256
+"Total Memory","256 GB"
+"Max. Peak Threads",--
+Compiler,"HPE Cray Programming Environment (CPE),"
+,"C/C++/Fortran: Arm version 20.0 (based on LLVM"
+,9.0.1)
+"MPI Library","HPE Cray Programming Environment (CPE),"
+,"Cray-mvapich2 Version 2.3.6"
+"Other MPI Info",--
+"Other Software",--
+"Base Parallel Model",MPI
+"Base Ranks Run",64
+"Base Threads Run",1
+"Peak Parallel Models","Not Run"
+"Minimum Peak Ranks",--
+"Maximum Peak Ranks",--
+"Max. Peak Threads",--
+"Min. Peak Threads",--
+
+"Submit Notes"
+
+"The config file option 'submit' was used."
+
+"Compiler Version Notes"
+
+==============================================================================
+" CC  505.lbm_t(base) 513.soma_t(base) 518.tealeaf_t(base) 521.miniswp_t(base)"
+"      534.hpgmgfv_t(base)"
+------------------------------------------------------------------------------
+"Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM"
+"  9.0.1)"
+"Target: aarch64-unknown-linux-gnu"
+"Thread model: posix"
+InstalledDir:
+"  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin"
+------------------------------------------------------------------------------
+
+==============================================================================
+" CXXC 532.sph_exa_t(base)
+"
+------------------------------------------------------------------------------
+"Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM"
+"  9.0.1)"
+"Target: aarch64-unknown-linux-gnu"
+"Thread model: posix"
+InstalledDir:
+"  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin"
+------------------------------------------------------------------------------
+
+==============================================================================
+" FC  519.clvleaf_t(base) 528.pot3d_t(base) 535.weather_t(base)
+"
+------------------------------------------------------------------------------
+"Arm C/C++/Fortran Compiler version 20.0 (build number 51) (based on LLVM"
+"  9.0.1)"
+"Target: aarch64-unknown-linux-gnu"
+"Thread model: posix"
+InstalledDir:
+"  /opt/allinea/20.0.0.0/arm-linux-compiler-20.0_Generic-AArch64_SUSE-12_aarch64-linux/bin"
+------------------------------------------------------------------------------
+
+"Base Runtime Environment"
+505.lbm_t," No flags used"
+513.soma_t," No flags used"
+518.tealeaf_t," No flags used"
+519.clvleaf_t," No flags used"
+521.miniswp_t," No flags used"
+528.pot3d_t," No flags used"
+532.sph_exa_t," No flags used"
+534.hpgmgfv_t," No flags used"
+535.weather_t," No flags used"
+
+"Base Compiler Invocation"
+505.lbm_t," cc"," cc"
+513.soma_t," cc"," cc"
+518.tealeaf_t," cc"," cc"
+519.clvleaf_t," ftn"," ftn"
+521.miniswp_t," cc"," cc"
+528.pot3d_t," ftn"," ftn"
+532.sph_exa_t," CC"," CC"
+534.hpgmgfv_t," cc"," cc"
+535.weather_t," ftn"," ftn"
+
+"Base Portability Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Base Optimization Flags"
+505.lbm_t," -Ofast"
+513.soma_t," -Ofast"
+518.tealeaf_t," -Ofast"
+519.clvleaf_t," -Ofast"
+521.miniswp_t," -Ofast"
+528.pot3d_t," -Ofast"
+532.sph_exa_t," -Ofast"
+534.hpgmgfv_t," -Ofast"
+535.weather_t," -Ofast"
+
+"Base Other Flags"
+505.lbm_t," No flags used"
+513.soma_t," No flags used"
+518.tealeaf_t," No flags used"
+519.clvleaf_t," No flags used"
+521.miniswp_t," No flags used"
+528.pot3d_t," No flags used"
+532.sph_exa_t," No flags used"
+534.hpgmgfv_t," No flags used"
+535.weather_t," No flags used"
+
+"Base Forbidden Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Base Unknown Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Runtime Environment"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Compiler Invocation"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Portability Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Optimization Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Other Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Forbidden Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+
+"Peak Unknown Flags"
+505.lbm_t
+513.soma_t
+518.tealeaf_t
+519.clvleaf_t
+521.miniswp_t
+528.pot3d_t
+532.sph_exa_t
+534.hpgmgfv_t
+535.weather_t
+----------------
+"For questions about","this result, please","contact the tester.",
+"For other inquiries,","please contact",info@spec.org.,
+"Copyright 2021-2022 Standard","Performance Evaluation",Corporation,
+"Tested with SPEC hpc2021",v1.0.3.
+"Result run on","2022-07-03 14:24:01+0000."
+"Report generated on","2022-07-03 20:55:35","by SPEC hpc2021 CSV","formatter v1.0.3."

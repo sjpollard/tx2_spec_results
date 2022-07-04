@@ -20,5 +20,5 @@ module swap PrgEnv-cray PrgEnv-gnu
 #module swap PrgEnv-cray PrgEnv-allinea
 #module load cdt/20.03
 
-runhpc --rebuild --config=hpe_cpe_gnu_4.cfg --ranks=256 --reportable --output_format=all --output_root=/home/br-spollard/benchmarks/tiny/tiny_gnu_256 --iterations=2 tiny
+runhpc --rebuild --config=hpe_cpe_gnu_4.cfg --ranks=256 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_gnu_256 --iterations=2 tiny
 

@@ -20,5 +20,5 @@ cd ../../../SPEChpc
 module swap PrgEnv-cray PrgEnv-allinea
 module load cdt/20.03
 
-runhpc --rebuild --config=hpe_cpe_arm_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/benchmarks/tiny/tiny_arm_128 --iterations=2 tiny
+runhpc --rebuild --config=hpe_cpe_arm_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_arm_128 --iterations=2 tiny
 

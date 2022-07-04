@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -N SPEC_tiny_gnu_32_8
+#PBS -q arm
+#PBS -l select=4
+#PBS -l walltime=06:00:00
+#PBS -j oe
+#PBS -o SPEC_tiny_gnu_32_8.out
+
+cd $PBS_O_WORKDIR
+cd ../../../SPEChpc
+. ./shrc
+
+#cray#
+#module load cdt
+
+#gcc#
+module swap PrgEnv-cray PrgEnv-gnu
+
+#allinea#
+#module swap PrgEnv-cray PrgEnv-allinea
+#module load cdt/20.03
+
+runhpc --rebuild --define model=omp --define ppn=8 --pmodel=OMP --config=hpe_cpe_gnu_4.cfg --ranks=32 --threads=8 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_gnu_32_8 --iterations=2 tiny
+

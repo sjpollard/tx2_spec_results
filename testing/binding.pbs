@@ -1,13 +1,13 @@
 #!/bin/bash
 #PBS -q arm
-#PBS -l select=1
-#PBS -l walltime=00:05:00
+#PBS -l select=2
+#PBS -l walltime=00:00:10
 
 cd $PBS_O_WORKDIR
 
-module swap PrgEnv-cray PrgEnv-gnu
+export OMP_NUM_THREADS=8
 
-export OMP_NUM_THREADS=64
+module swap PrgEnv-cray PrgEnv-gnu
 
 # MPI (CPU) settings
 #%if %{model} eq 'mpi'
@@ -19,6 +19,6 @@ export OMP_NUM_THREADS=64
 #   APRUN_OPTS = -d $threads -N 1 -q
 #%endif
 
-aprun -n 1 -N 1 -d 64 -q ./xthi
+aprun -n 16 -N 8 -d 8 -q ./xthi
 
 

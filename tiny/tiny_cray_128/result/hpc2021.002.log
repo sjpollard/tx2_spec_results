@@ -3272,3 +3272,2070 @@ ftn -c -o hdf5/H5IMff.fppized.o -Ofast hdf5/H5IMff.fppized.f90
 ftn -c -o hdf5/H5TBff.fppized.o -Ofast hdf5/H5TBff.fppized.f90
 ftn -c -o hdf5/H5LTff.fppized.o -Ofast hdf5/H5LTff.fppized.f90
 ftn -c -o zm_parse.fppized.o -Ofast zm_parse.fppized.f90
+ftn -c -o zm_sds.fppized.o -Ofast zm_sds.fppized.f90
+cc -c -o hdf5/H5Tconv.o -DSPEC -DNDEBUG  -Ihdf5/include -Ilibz/include -DNDEBUG  -Ofast                  hdf5/H5Tconv.c
+ftn -c -o pot3d.fppized.o -Ofast pot3d.fppized.f90
+ftn      -Ofast          number_types.fppized.o pot3d.fppized.o zm_parse.fppized.o zm_parse_modules.fppized.o zm_sds.fppized.o zm_sds_modules.fppized.o hdf5/H5.o hdf5/H5A.o hdf5/H5AC.o hdf5/H5ACdbg.o hdf5/H5ACmpio.o hdf5/H5ACproxy_entry.o hdf5/H5Abtree2.o hdf5/H5Adense.o hdf5/H5Adeprec.o hdf5/H5Af.o hdf5/H5Aint.o hdf5/H5Atest.o hdf5/H5B.o hdf5/H5B2.o hdf5/H5B2cache.o hdf5/H5B2dbg.o hdf5/H5B2hdr.o hdf5/H5B2int.o hdf5/H5B2internal.o hdf5/H5B2leaf.o hdf5/H5B2stat.o hdf5/H5B2test.o hdf5/H5Bcache.o hdf5/H5Bdbg.o hdf5/H5C.o hdf5/H5CS.o hdf5/H5Cdbg.o hdf5/H5Cepoch.o hdf5/H5Cimage.o hdf5/H5Clog.o hdf5/H5Clog_json.o hdf5/H5Clog_trace.o hdf5/H5Cmpio.o hdf5/H5Cprefetched.o hdf5/H5Cquery.o hdf5/H5Ctag.o hdf5/H5Ctest.o hdf5/H5CX.o hdf5/H5D.o hdf5/H5Dbtree.o hdf5/H5Dbtree2.o hdf5/H5Dchunk.o hdf5/H5Dcompact.o hdf5/H5Dcontig.o hdf5/H5Ddbg.o hdf5/H5Ddeprec.o hdf5/H5Dearray.o hdf5/H5Defl.o hdf5/H5Df.o hdf5/H5Dfarray.o hdf5/H5Dfill.o hdf5/H5Dint.o hdf5/H5Dio.o hdf5/H5Dlayout.o hdf5/H5Dmpio.o hdf5/H5Dnone.o hdf5/H5Doh.o hdf5/H5Dscatgath.o hdf5/H5Dselect.o hdf5/H5Dsingle.o hdf5/H5Dtest.o hdf5/H5Dvirtual.o hdf5/H5E.o hdf5/H5EA.o hdf5/H5EAcache.o hdf5/H5EAdbg.o hdf5/H5EAdblkpage.o hdf5/H5EAdblock.o hdf5/H5EAhdr.o hdf5/H5EAiblock.o hdf5/H5EAint.o hdf5/H5EAsblock.o hdf5/H5EAstat.o hdf5/H5EAtest.o hdf5/H5Edeprec.o hdf5/H5Ef.o hdf5/H5Eint.o hdf5/H5F.o hdf5/H5FA.o hdf5/H5FAcache.o hdf5/H5FAdbg.o hdf5/H5FAdblkpage.o hdf5/H5FAdblock.o hdf5/H5FAhdr.o hdf5/H5FAint.o hdf5/H5FAstat.o hdf5/H5FAtest.o hdf5/H5FD.o hdf5/H5FDcore.o hdf5/H5FDdirect.o hdf5/H5FDfamily.o hdf5/H5FDint.o hdf5/H5FDlog.o hdf5/H5FDmpi.o hdf5/H5FDmpio.o hdf5/H5FDmulti.o hdf5/H5FDsec2.o hdf5/H5FDspace.o hdf5/H5FDstdio.o hdf5/H5FDtest.o hdf5/H5FDwindows.o hdf5/H5FL.o hdf5/H5FO.o hdf5/H5FS.o hdf5/H5FScache.o hdf5/H5FSdbg.o hdf5/H5FSint.o hdf5/H5FSsection.o hdf5/H5FSstat.o hdf5/H5FStest.o hdf5/H5Faccum.o hdf5/H5Fcwfs.o hdf5/H5Fdbg.o hdf5/H5Fdeprec.o hdf5/H5Fefc.o hdf5/H5Ff.o hdf5/H5Ffake.o hdf5/H5Fint.o hdf5/H5Fio.o hdf5/H5Fmount.o hdf5/H5Fmpi.o hdf5/H5Fquery.o hdf5/H5Fsfile.o hdf5/H5Fspace.o hdf5/H5Fsuper.o hdf5/H5Fsuper_cache.o hdf5/H5Ftest.o hdf5/H5G.o hdf5/H5Gbtree2.o hdf5/H5Gcache.o hdf5/H5Gcompact.o hdf5/H5Gdense.o hdf5/H5Gdeprec.o hdf5/H5Gent.o hdf5/H5Gf.o hdf5/H5Gint.o hdf5/H5Glink.o hdf5/H5Gloc.o hdf5/H5Gname.o hdf5/H5Gnode.o hdf5/H5Gobj.o hdf5/H5Goh.o hdf5/H5Groot.o hdf5/H5Gstab.o hdf5/H5Gtest.o hdf5/H5Gtraverse.o hdf5/H5HF.o hdf5/H5HFbtree2.o hdf5/H5HFcache.o hdf5/H5HFdbg.o hdf5/H5HFdblock.o hdf5/H5HFdtable.o hdf5/H5HFhdr.o hdf5/H5HFhuge.o hdf5/H5HFiblock.o hdf5/H5HFiter.o hdf5/H5HFman.o hdf5/H5HFsection.o hdf5/H5HFspace.o hdf5/H5HFstat.o hdf5/H5HFtest.o hdf5/H5HFtiny.o hdf5/H5HG.o hdf5/H5HGcache.o hdf5/H5HGdbg.o hdf5/H5HGquery.o hdf5/H5HL.o hdf5/H5HLcache.o hdf5/H5HLdbg.o hdf5/H5HLdblk.o hdf5/H5HLint.o hdf5/H5HLprfx.o hdf5/H5HP.o hdf5/H5I.o hdf5/H5If.o hdf5/H5Itest.o hdf5/H5L.o hdf5/H5Lexternal.o hdf5/H5lib_settings.o hdf5/H5Lf.o hdf5/H5MF.o hdf5/H5MFaggr.o hdf5/H5MFdbg.o hdf5/H5MFsection.o hdf5/H5MM.o hdf5/H5MP.o hdf5/H5MPtest.o hdf5/H5O.o hdf5/H5Oainfo.o hdf5/H5Oalloc.o hdf5/H5Oattr.o hdf5/H5Oattribute.o hdf5/H5Obogus.o hdf5/H5Obtreek.o hdf5/H5Ocache.o hdf5/H5Ocache_image.o hdf5/H5Ochunk.o hdf5/H5Ocont.o hdf5/H5Ocopy.o hdf5/H5Odbg.o hdf5/H5Odrvinfo.o hdf5/H5Odtype.o hdf5/H5Oefl.o hdf5/H5Of.o hdf5/H5Ofill.o hdf5/H5Oflush.o hdf5/H5Ofsinfo.o hdf5/H5Oginfo.o hdf5/H5Oint.o hdf5/H5Olayout.o hdf5/H5Olinfo.o hdf5/H5Olink.o hdf5/H5Omessage.o hdf5/H5Omtime.o hdf5/H5Oname.o hdf5/H5Onull.o hdf5/H5Opline.o hdf5/H5Orefcount.o hdf5/H5Osdspace.o hdf5/H5Oshared.o hdf5/H5Oshmesg.o hdf5/H5Ostab.o hdf5/H5Otest.o hdf5/H5Ounknown.o hdf5/H5P.o hdf5/H5PB.o hdf5/H5PL.o hdf5/H5PLint.o hdf5/H5PLpath.o hdf5/H5PLplugin_cache.o hdf5/H5Pacpl.o hdf5/H5Pdapl.o hdf5/H5Pdcpl.o hdf5/H5Pdeprec.o hdf5/H5Pdxpl.o hdf5/H5Pencdec.o hdf5/H5Pf.o hdf5/H5Pfapl.o hdf5/H5Pfcpl.o hdf5/H5Pfmpl.o hdf5/H5Pgcpl.o hdf5/H5Pint.o hdf5/H5Plapl.o hdf5/H5Plcpl.o hdf5/H5Pocpl.o hdf5/H5Pocpypl.o hdf5/H5Pstrcpl.o hdf5/H5Ptest.o hdf5/H5R.o hdf5/H5RS.o hdf5/H5Rdeprec.o hdf5/H5Rf.o hdf5/H5Rint.o hdf5/H5S.o hdf5/H5SL.o hdf5/H5SM.o hdf5/H5SMbtree2.o hdf5/H5SMcache.o hdf5/H5SMmessage.o hdf5/H5SMtest.o hdf5/H5ST.o hdf5/H5Sall.o hdf5/H5Sdbg.o hdf5/H5Sf.o hdf5/H5Shyper.o hdf5/H5Smpio.o hdf5/H5Snone.o hdf5/H5Spoint.o hdf5/H5Sselect.o hdf5/H5Stest.o hdf5/H5T.o hdf5/H5TS.o hdf5/H5Tarray.o hdf5/H5Tbit.o hdf5/H5Tcommit.o hdf5/H5Tcompound.o hdf5/H5Tconv.o hdf5/H5Tcset.o hdf5/H5Tdbg.o hdf5/H5Tdeprec.o hdf5/H5Tenum.o hdf5/H5Tf.o hdf5/H5Tfields.o hdf5/H5Tfixed.o hdf5/H5Tfloat.o hdf5/H5Tinit.o hdf5/H5Tnative.o hdf5/H5Toffset.o hdf5/H5Toh.o hdf5/H5Topaque.o hdf5/H5Torder.o hdf5/H5Tpad.o hdf5/H5Tprecis.o hdf5/H5Tstrpad.o hdf5/H5Tvisit.o hdf5/H5Tvlen.o hdf5/H5UC.o hdf5/H5VM.o hdf5/H5WB.o hdf5/H5Z.o hdf5/H5Zdeflate.o hdf5/H5Zf.o hdf5/H5Zfletcher32.o hdf5/H5Znbit.o hdf5/H5Zscaleoffset.o hdf5/H5Zshuffle.o hdf5/H5Ztrans.o hdf5/H5_f.o hdf5/H5checksum.o hdf5/H5dbg.o hdf5/H5f90kit.o hdf5/H5system.o hdf5/H5timer.o hdf5/H5trace.o hdf5/H5_gen.fppized.o hdf5/H5Aff.fppized.o hdf5/H5Dff.fppized.o hdf5/H5Eff.fppized.o hdf5/H5Fff.fppized.o hdf5/H5Gff.fppized.o hdf5/H5Iff.fppized.o hdf5/H5Lff.fppized.o hdf5/H5Off.fppized.o hdf5/H5Pff.fppized.o hdf5/H5Rff.fppized.o hdf5/H5Sff.fppized.o hdf5/H5Tff.fppized.o hdf5/H5Zff.fppized.o hdf5/H5_ff.fppized.o hdf5/H5f90global.fppized.o hdf5/H5fortkit.fppized.o hdf5/H5fortran_types.fppized.o hdf5/HDF5.fppized.o hdf5/H5DO.o hdf5/H5DS.o hdf5/H5IM.o hdf5/H5LD.o hdf5/H5LT.o hdf5/H5LTanalyze.o hdf5/H5LTparse.o hdf5/H5PT.o hdf5/H5TB.o hdf5/H5DSfc.o hdf5/H5DSff.fppized.o hdf5/H5IMcc.o hdf5/H5IMfc.o hdf5/H5IMff.fppized.o hdf5/H5LTfc.o hdf5/H5LTff.fppized.o hdf5/H5TBfc.o hdf5/H5TBff.fppized.o libz/adler32.o libz/crc32.o libz/deflate.o libz/infback.o libz/inffast.o libz/inflate.o libz/inftrees.o libz/trees.o libz/zutil.o libz/compress.o libz/uncompr.o libz/gzclose.o libz/gzlib.o libz/gzread.o libz/gzwrite.o                      -o pot3d  
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5CS.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5FDdirect.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5FDwindows.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5lib_settings.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5Obogus.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5Onull.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5Pacpl.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/aarch64-unknown-linux-gnu/bin/ld: warning: hdf5/H5TS.o: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+/opt/cray/pe/cce/11.0.4/binutils/aarch64/bin/objcopy: warning: pot3d: unsupported GNU_PROPERTY_TYPE (5) type: 0xc0000000
+Stop make command: 2022-07-03 14:39:00 (1656859140.94024)
+Elapsed time for make command: 00:01:31 (91.3052730560303)
+Issuing options command 'specmake --output-sync -j 10 options'
+specmake --output-sync -j 10 options
+Start options command: 2022-07-03 14:39:00 (1656859140.94478)
+
+FPP: "specpp -DSPEC -DNDEBUG -Ihdf5 -Ihdf5/include -DNDEBUG <source> -o <source>.fppized.f9x"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FPPFLAGS="-Ihdf5 -Ihdf5/include -DNDEBUG"
+O: OPTIMIZE=""
+O: EXTRA_OPTIMIZE=""
+O: FPPOPTIMIZE=""
+O: EXTRA_FPPOPTIMIZE=""
+O: FOPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: PORTABILITY=""
+P: EXTRA_PORTABILITY=""
+P: FPORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: "ftn -c -o options.o -Ofast <source>"
+C: FC="ftn"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_FFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: FOPTIMIZE=""
+P: PORTABILITY=""
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+LINK: "ftn      -Ofast          <objects>            -o options  "
+C: LD="ftn"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+Stop options command: 2022-07-03 14:39:01 (1656859141.16596)
+Elapsed time for options command: 00:00:00 (0.221184968948364)
+Issuing compiler-version command 'specmake --output-sync -j 10 compiler-version'
+specmake --output-sync -j 10 compiler-version
+Start compiler-version command: 2022-07-03 14:39:01 (1656859141.17106)
+
+ FC_VERSION_OPTION:
+
+Cray Fortran : Version 11.0.4
+Stop compiler-version command: 2022-07-03 14:39:01 (1656859141.41025)
+Elapsed time for compiler-version command: 00:00:00 (0.239192008972168)
+  Compile for '528.pot3d_t' ended at: 2022-07-03 14:39:01 (1656859141)
+  Elapsed compile for '528.pot3d_t': 00:01:32 (92)
+
+FPP: "specpp -DSPEC -DNDEBUG -Ihdf5 -Ihdf5/include -DNDEBUG <source> -o <source>.fppized.f9x"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FPPFLAGS="-Ihdf5 -Ihdf5/include -DNDEBUG"
+O: OPTIMIZE=""
+O: EXTRA_OPTIMIZE=""
+O: FPPOPTIMIZE=""
+O: EXTRA_FPPOPTIMIZE=""
+O: FOPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: PORTABILITY=""
+P: EXTRA_PORTABILITY=""
+P: FPORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: "ftn -c -o options.o -Ofast <source>"
+C: FC="ftn"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_FFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: FOPTIMIZE=""
+P: PORTABILITY=""
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+LINK: "ftn      -Ofast          <objects>            -o options  "
+C: LD="ftn"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+
+ FC_VERSION_OPTION:
+
+Cray Fortran : Version 11.0.4
+
+------------------------------------------------------------------------
+  Building 532.sph_exa_t base cce_mpi: (build_base_cce_mpi.0000) [2022-07-03 14:39:03]
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/build/build_base_cce_mpi.0000/Makefile.deps':
+
+
+# End dependencies
+# These are the build dependencies
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/build/build_base_cce_mpi.0000/Makefile.spec':
+TUNE=base
+LABEL=cce_mpi
+NUMBER=532
+NAME=sph_exa_t
+SOURCES= sqpatch.cpp
+EXEBASE=sph_exa
+NEED_MATH=
+USE_SPACK=
+BENCHLANG=CXX
+
+APRUN_OPTS       = -d 1 -N 64 -q
+BENCH_CXXFLAGS   = -DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree 
+BENCH_FLAGS      = 
+CC               = cc
+CC_VERSION_OPTION = --version
+CXX              = CC
+CXX_VERSION_OPTION = --version
+FC               = ftn
+FC_VERSION_OPTION = --version
+OPTIMIZE         = -Ofast
+OS               = unix
+PMODEL           = 
+absolutely_no_locking = 0
+abstol           = 4e-07
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = sph_exa
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 532.sph_exa_t
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 1
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = sph_exa_base.cce_mpi
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = hpe_cpe_cray_2.cfg
+configpath       = /home/br-spollard/SPEChpc/config/hpe_cpe_cray_2.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 1
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 0
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/hpc2021/Docs/benchmarks/flags/
+floatcompare     = 
+force_monitor    = 0
+hostname         = xcimom
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = May-2018
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 0
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+interconnect_fs_hw_model = N/A
+interconnect_fs_hw_switch_fs_count = N/A
+interconnect_fs_hw_switch_fs_data_rate = 14 Gb/s
+interconnect_fs_hw_switch_fs_firmware = N/A
+interconnect_fs_hw_switch_fs_model000 = N/A
+interconnect_fs_hw_switch_fs_model001 = N/A
+interconnect_fs_hw_switch_fs_ports = N/A
+interconnect_fs_hw_topo = Dragonfly
+interconnect_fs_hw_vendor = Cray
+interconnect_fs_order = 0
+interconnect_fs_purpose = MPI Traffic
+interconnect_fs_syslbl = Cray Aries
+islibrary        = 0
+iteration        = -1
+iterations       = 2
+keeptmp          = 0
+label            = cce_mpi
+license_num      = ?
+line_width       = 0
+link_input_files = 1
+locking          = 1
+log              = hpc2021
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021.002.log
+lognum           = 002
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = -j 10
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 0
+max_unknown_uncertainty = 1
+mean_anyway      = 0
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = sph_exa_t
+nansupport       = 
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+node_compute_count = 2
+node_compute_hw_accel_connect = N/A
+node_compute_hw_accel_count = N/A
+node_compute_hw_accel_desc = N/A
+node_compute_hw_accel_ecc = N/A
+node_compute_hw_accel_model = N/A
+node_compute_hw_accel_type = N/A
+node_compute_hw_accel_vendor = N/A
+node_compute_hw_adapter_fs_count = 0
+node_compute_hw_adapter_fs_data_rate = None
+node_compute_hw_adapter_fs_driver = None
+node_compute_hw_adapter_fs_firmware = None
+node_compute_hw_adapter_fs_interconnect = None
+node_compute_hw_adapter_fs_model = None
+node_compute_hw_adapter_fs_ports_used = 0
+node_compute_hw_adapter_fs_slot_type = None
+node_compute_hw_cpu_char = Permanent turbo to 2.5 GHz
+node_compute_hw_cpu_mhz = 2100
+node_compute_hw_cpu_name = Marvell ThunderX2 CN9980
+node_compute_hw_memory = 256 GB (8 x 32 GB)
+node_compute_hw_model = N/A
+node_compute_hw_nchips = 2
+node_compute_hw_ncores = 64
+node_compute_hw_ncoresperchip = 32
+node_compute_hw_ncpuorder = N/A
+node_compute_hw_nthreadspercore = 4
+node_compute_hw_ocache = None
+node_compute_hw_other = None
+node_compute_hw_pcache = 32 KB I + 32 KB D on chip per core
+node_compute_hw_scache = 256 KB I+D on chip per core
+node_compute_hw_tcache000 = 32 MB I+D on chip per chip
+node_compute_hw_tcache001 = 0.5 MB shared / 64 cores
+node_compute_hw_vendor = N/A
+node_compute_order = N/A
+node_compute_purpose = Compute
+node_compute_sw_localfile = xfs
+node_compute_sw_os000 = SUSE Linux Enterprise Server 15 SP1
+node_compute_sw_os001 = Linux 4.12.14-197.7_5.0.99-cray_ari_s
+node_compute_sw_other = None
+node_compute_sw_sharedfile = None
+node_compute_sw_state = Multi-user, run level 3
+node_compute_syslbl = ThunderX2
+noratios         = 0
+note_preenv      = 0
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 532
+obiwan           = 
+oldhash          = 
+os_exe_ext       = 
+output_format    = all
+output_root      = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128
+outputdir        = output
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/br-spollard/SPEChpc/benchspec/HPC/532.sph_exa_t
+plain_train      = 0
+platform         = 
+pmodel           = MPI
+power            = 0
+preenv           = 1
+prefix           = 
+ranks            = 128
+rawhash_bits     = 256
+rebuild          = 1
+reftime          = reftime
+reltol           = 0.006
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runhpc           = /home/br-spollard/SPEChpc/bin/harness/runhpc --rebuild --config=hpe_cpe_cray_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128 --iterations=2 tiny
+runmode          = speed
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = ref
+size_class       = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/br-spollard/SPEChpc/benchspec/HPC/632.sph_exa_s/src
+stagger          = 10
+strict_rundir_verify = 1
+submit_default   = aprun -n $ranks ${APRUN_OPTS} $command
+sw_avail         = Mar-2020
+sw_compiler000   = HPE Cray Programming Environment (CPE),
+sw_compiler001   = C/C++/Fortran: Cray clang version 11.0.4
+sw_mpi_library000 = HPE Cray Programming Environment (CPE),
+sw_mpi_library001 = Cray-mvapich2 Version 2.3.6
+sysinfo_hash_bits = 256
+sysinfo_program  = 
+sysinfo_program_hash = 
+system_name      = Isambard 2: XC50 (ThunderX2)
+system_vendor    = Cray
+table            = 1
+teeout           = yes
+test_date        = Jul-2022
+test_sponsor     = University of Bristol
+tester           = University of Bristol
+threads          = 1
+top              = /home/br-spollard/SPEChpc
+train_single_thread = 0
+train_with       = train
+tune             = base
+uid              = 415400816
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/hpc2021/updates/
+use_spack        = 
+use_submit_for_compare = 0
+use_submit_for_speed = 1
+username         = br-spollard
+verbose          = 5
+verify_binaries  = 1
+version          = 1.000003
+version_url      = http://www.spec.org/auto/hpc2021/devel_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = sqpatch.dat
+  Compile for '532.sph_exa_t' started at: 2022-07-03 14:39:03 (1656859143)
+Issuing make.clean command 'specmake --output-sync -j 10 clean'
+specmake --output-sync -j 10 clean
+Start make.clean command: 2022-07-03 14:39:03 (1656859143.57396)
+rm -rf *.o  sqpatch.dat
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf sph_exa
+rm -rf sph_exa.exe
+rm -rf core
+Stop make.clean command: 2022-07-03 14:39:03 (1656859143.77108)
+Elapsed time for make.clean command: 00:00:00 (0.197112083435059)
+Issuing make command 'specmake --output-sync -j 10 build'
+specmake --output-sync -j 10 build
+Start make command: 2022-07-03 14:39:03 (1656859143.78948)
+CC -c -o sqpatch.o -DSPEC -DNDEBUG  -DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree  -Ofast            sqpatch.cpp
+CC      -Ofast          sqpatch.o                      -o sph_exa  
+Stop make command: 2022-07-03 14:39:14 (1656859154.6433)
+Elapsed time for make command: 00:00:10 (10.8538160324097)
+Issuing options command 'specmake --output-sync -j 10 options'
+specmake --output-sync -j 10 options
+Start options command: 2022-07-03 14:39:14 (1656859154.6477)
+
+COMP: "CC -c -o options.o -DSPEC -DNDEBUG  -DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree  -Ofast            <source>"
+C: CXXC="CC"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree "
+O: OPTIMIZE="-Ofast"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CXXPORTABILITY=""
+LINK: "CC      -Ofast          <objects>            -o options  "
+C: LD="CC"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+Stop options command: 2022-07-03 14:39:14 (1656859154.85489)
+Elapsed time for options command: 00:00:00 (0.207190036773682)
+Issuing compiler-version command 'specmake --output-sync -j 10 compiler-version'
+specmake --output-sync -j 10 compiler-version
+Start compiler-version command: 2022-07-03 14:39:14 (1656859154.86004)
+
+ CXXC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+Stop compiler-version command: 2022-07-03 14:39:15 (1656859155.10297)
+Elapsed time for compiler-version command: 00:00:00 (0.242931127548218)
+  Compile for '532.sph_exa_t' ended at: 2022-07-03 14:39:15 (1656859155)
+  Elapsed compile for '532.sph_exa_t': 00:00:12 (12)
+
+COMP: "CC -c -o options.o -DSPEC -DNDEBUG  -DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree  -Ofast            <source>"
+C: CXXC="CC"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-DUSE_MPI -DSPEC_USE_LT_IN_KERNELS -I. -Iinclude -Iinclude/tree "
+O: OPTIMIZE="-Ofast"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CXXPORTABILITY=""
+LINK: "CC      -Ofast          <objects>            -o options  "
+C: LD="CC"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+
+ CXXC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+
+------------------------------------------------------------------------
+  Building 534.hpgmgfv_t base cce_mpi: (build_base_cce_mpi.0000) [2022-07-03 14:39:15]
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/build/build_base_cce_mpi.0000/Makefile.deps':
+
+
+# End dependencies
+# These are the build dependencies
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/build/build_base_cce_mpi.0000/Makefile.spec':
+TUNE=base
+LABEL=cce_mpi
+NUMBER=534
+NAME=hpgmgfv_t
+SOURCES= hpgmg-fv.c level.c mg.c operators.fv4.c solvers.c timers.c \
+	 directives-wrapper.c cuda-wrapper.c offload-fns.c
+EXEBASE=hpgmgfv
+NEED_MATH=yes
+USE_SPACK=
+BENCHLANG=C
+
+APRUN_OPTS       = -d 1 -N 64 -q
+BENCH_FLAGS      = -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1
+CC               = cc
+CC_VERSION_OPTION = --version
+CXX              = CC
+CXX_VERSION_OPTION = --version
+FC               = ftn
+FC_VERSION_OPTION = --version
+OPTIMIZE         = -Ofast
+OS               = unix
+PMODEL           = 
+absolutely_no_locking = 0
+abstol           = 4e-07
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = hpgmgfv
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 534.hpgmgfv_t
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 1
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = hpgmgfv_base.cce_mpi
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = hpe_cpe_cray_2.cfg
+configpath       = /home/br-spollard/SPEChpc/config/hpe_cpe_cray_2.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 1
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 0
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/hpc2021/Docs/benchmarks/flags/
+floatcompare     = 
+force_monitor    = 0
+hostname         = xcimom
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = May-2018
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 0
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+interconnect_fs_hw_model = N/A
+interconnect_fs_hw_switch_fs_count = N/A
+interconnect_fs_hw_switch_fs_data_rate = 14 Gb/s
+interconnect_fs_hw_switch_fs_firmware = N/A
+interconnect_fs_hw_switch_fs_model000 = N/A
+interconnect_fs_hw_switch_fs_model001 = N/A
+interconnect_fs_hw_switch_fs_ports = N/A
+interconnect_fs_hw_topo = Dragonfly
+interconnect_fs_hw_vendor = Cray
+interconnect_fs_order = 0
+interconnect_fs_purpose = MPI Traffic
+interconnect_fs_syslbl = Cray Aries
+islibrary        = 0
+iteration        = -1
+iterations       = 2
+keeptmp          = 0
+label            = cce_mpi
+license_num      = ?
+line_width       = 0
+link_input_files = 1
+locking          = 1
+log              = hpc2021
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021.002.log
+lognum           = 002
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = -j 10
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 0
+max_unknown_uncertainty = 1
+mean_anyway      = 0
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = hpgmgfv_t
+nansupport       = 
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+node_compute_count = 2
+node_compute_hw_accel_connect = N/A
+node_compute_hw_accel_count = N/A
+node_compute_hw_accel_desc = N/A
+node_compute_hw_accel_ecc = N/A
+node_compute_hw_accel_model = N/A
+node_compute_hw_accel_type = N/A
+node_compute_hw_accel_vendor = N/A
+node_compute_hw_adapter_fs_count = 0
+node_compute_hw_adapter_fs_data_rate = None
+node_compute_hw_adapter_fs_driver = None
+node_compute_hw_adapter_fs_firmware = None
+node_compute_hw_adapter_fs_interconnect = None
+node_compute_hw_adapter_fs_model = None
+node_compute_hw_adapter_fs_ports_used = 0
+node_compute_hw_adapter_fs_slot_type = None
+node_compute_hw_cpu_char = Permanent turbo to 2.5 GHz
+node_compute_hw_cpu_mhz = 2100
+node_compute_hw_cpu_name = Marvell ThunderX2 CN9980
+node_compute_hw_memory = 256 GB (8 x 32 GB)
+node_compute_hw_model = N/A
+node_compute_hw_nchips = 2
+node_compute_hw_ncores = 64
+node_compute_hw_ncoresperchip = 32
+node_compute_hw_ncpuorder = N/A
+node_compute_hw_nthreadspercore = 4
+node_compute_hw_ocache = None
+node_compute_hw_other = None
+node_compute_hw_pcache = 32 KB I + 32 KB D on chip per core
+node_compute_hw_scache = 256 KB I+D on chip per core
+node_compute_hw_tcache000 = 32 MB I+D on chip per chip
+node_compute_hw_tcache001 = 0.5 MB shared / 64 cores
+node_compute_hw_vendor = N/A
+node_compute_order = N/A
+node_compute_purpose = Compute
+node_compute_sw_localfile = xfs
+node_compute_sw_os000 = SUSE Linux Enterprise Server 15 SP1
+node_compute_sw_os001 = Linux 4.12.14-197.7_5.0.99-cray_ari_s
+node_compute_sw_other = None
+node_compute_sw_sharedfile = None
+node_compute_sw_state = Multi-user, run level 3
+node_compute_syslbl = ThunderX2
+noratios         = 0
+note_preenv      = 0
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 534
+obiwan           = 
+oldhash          = 
+os_exe_ext       = 
+output_format    = all
+output_root      = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128
+outputdir        = output
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/br-spollard/SPEChpc/benchspec/HPC/534.hpgmgfv_t
+plain_train      = 0
+platform         = 
+pmodel           = MPI
+power            = 0
+preenv           = 1
+prefix           = 
+ranks            = 128
+rawhash_bits     = 256
+rebuild          = 1
+reftime          = reftime
+reltol           = 0.006
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runhpc           = /home/br-spollard/SPEChpc/bin/harness/runhpc --rebuild --config=hpe_cpe_cray_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128 --iterations=2 tiny
+runmode          = speed
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = ref
+size_class       = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/br-spollard/SPEChpc/benchspec/HPC/634.hpgmgfv_s/src
+stagger          = 10
+strict_rundir_verify = 1
+submit_default   = aprun -n $ranks ${APRUN_OPTS} $command
+sw_avail         = Mar-2020
+sw_compiler000   = HPE Cray Programming Environment (CPE),
+sw_compiler001   = C/C++/Fortran: Cray clang version 11.0.4
+sw_mpi_library000 = HPE Cray Programming Environment (CPE),
+sw_mpi_library001 = Cray-mvapich2 Version 2.3.6
+sysinfo_hash_bits = 256
+sysinfo_program  = 
+sysinfo_program_hash = 
+system_name      = Isambard 2: XC50 (ThunderX2)
+system_vendor    = Cray
+table            = 1
+teeout           = yes
+test_date        = Jul-2022
+test_sponsor     = University of Bristol
+tester           = University of Bristol
+threads          = 1
+top              = /home/br-spollard/SPEChpc
+train_single_thread = 0
+train_with       = train
+tune             = base
+uid              = 415400816
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/hpc2021/updates/
+use_spack        = 
+use_submit_for_compare = 0
+use_submit_for_speed = 1
+username         = br-spollard
+verbose          = 5
+verify_binaries  = 1
+version          = 1.000003
+version_url      = http://www.spec.org/auto/hpc2021/devel_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = hpgmgfv.out
+  Compile for '534.hpgmgfv_t' started at: 2022-07-03 14:39:16 (1656859156)
+Issuing make.clean command 'specmake --output-sync -j 10 clean'
+specmake --output-sync -j 10 clean
+Start make.clean command: 2022-07-03 14:39:16 (1656859156.62797)
+rm -rf *.o  hpgmgfv.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf hpgmgfv
+rm -rf hpgmgfv.exe
+rm -rf core
+Stop make.clean command: 2022-07-03 14:39:16 (1656859156.84433)
+Elapsed time for make.clean command: 00:00:00 (0.216361045837402)
+Issuing make command 'specmake --output-sync -j 10 build'
+specmake --output-sync -j 10 build
+Start make command: 2022-07-03 14:39:16 (1656859156.86268)
+cc -c -o timers.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  timers.c
+cc -c -o solvers.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  solvers.c
+cc -c -o cuda-wrapper.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  cuda-wrapper.c
+cc -c -o directives-wrapper.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  directives-wrapper.c
+cc -c -o hpgmg-fv.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  hpgmg-fv.c
+cc -c -o offload-fns.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  offload-fns.c
+cc -c -o mg.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  mg.c
+cc -c -o level.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  level.c
+cc -c -o operators.fv4.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  operators.fv4.c
+cc      -Ofast          hpgmg-fv.o level.o mg.o operators.fv4.o solvers.o timers.o directives-wrapper.o cuda-wrapper.o offload-fns.o             -lm         -o hpgmgfv  
+Stop make command: 2022-07-03 14:39:38 (1656859178.30396)
+Elapsed time for make command: 00:00:21 (21.4412848949432)
+Issuing options command 'specmake --output-sync -j 10 options'
+specmake --output-sync -j 10 options
+Start options command: 2022-07-03 14:39:38 (1656859178.30831)
+
+COMP: "cc -c -o options.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  <source>"
+C: CC="cc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: "cc      -Ofast          <objects>   -lm         -o options  "
+C: LD="cc"
+O: OPTIMIZE="-Ofast"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: 2022-07-03 14:39:38 (1656859178.5128)
+Elapsed time for options command: 00:00:00 (0.204492807388306)
+Issuing compiler-version command 'specmake --output-sync -j 10 compiler-version'
+specmake --output-sync -j 10 compiler-version
+Start compiler-version command: 2022-07-03 14:39:38 (1656859178.51782)
+
+ CC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+Stop compiler-version command: 2022-07-03 14:39:38 (1656859178.76065)
+Elapsed time for compiler-version command: 00:00:00 (0.242836952209473)
+  Compile for '534.hpgmgfv_t' ended at: 2022-07-03 14:39:38 (1656859178)
+  Elapsed compile for '534.hpgmgfv_t': 00:00:22 (22)
+
+COMP: "cc -c -o options.o -DSPEC -DNDEBUG -DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1  -Ofast                  <source>"
+C: CC="cc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DUSE_BICGSTAB=1 -DUSE_SUBCOMM=1 -DUSE_FCYCLES=1 -DUSE_GSRB=1 -DBLOCKCOPY_TILE_I=32 -DBLOCKCOPY_TILE_J=4 -DBLOCKCOPY_TILE_K=16 -DBOUNDARY_TILE_I=64 -DBOUNDARY_TILE_J=16 -DBOUNDARY_TILE_K=16 -DUSE_MPI=1"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: "cc      -Ofast          <objects>   -lm         -o options  "
+C: LD="cc"
+O: OPTIMIZE="-Ofast"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+
+ CC_VERSION_OPTION:
+
+Cray clang version 11.0.4  (bc9473a12d1f2f43cde01f962a11240263bd8908)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/11.0.4/cce-clang/aarch64/share/../bin
+
+------------------------------------------------------------------------
+  Building 535.weather_t base cce_mpi: (build_base_cce_mpi.0000) [2022-07-03 14:39:39]
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/build/build_base_cce_mpi.0000/Makefile.deps':
+
+
+# End dependencies
+# These are the build dependencies
+Wrote to makefile '/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/build/build_base_cce_mpi.0000/Makefile.spec':
+TUNE=base
+LABEL=cce_mpi
+NUMBER=535
+NAME=weather_t
+SOURCES= miniWeather.F90
+EXEBASE=weather
+NEED_MATH=
+USE_SPACK=
+BENCHLANG=F
+
+APRUN_OPTS       = -d 1 -N 64 -q
+BENCH_FFLAGS     = 
+BENCH_FLAGS      = 
+CC               = cc
+CC_VERSION_OPTION = --version
+CXX              = CC
+CXX_VERSION_OPTION = --version
+FC               = ftn
+FC_VERSION_OPTION = --version
+OPTIMIZE         = -Ofast
+OS               = unix
+PMODEL           = 
+absolutely_no_locking = 0
+abstol           = 4e-07
+action           = validate
+allow_label_override = 0
+backup_config    = 1
+baseexe          = weather
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 535.weather_t
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 1
+changedhash      = 0
+check_version    = 0
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = weather_base.cce_mpi
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+comparedir       = compare
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configfile       = hpe_cpe_cray_2.cfg
+configpath       = /home/br-spollard/SPEChpc/config/hpe_cpe_cray_2.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+default_submit   = $command
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = 
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 1
+enable_monitor   = 1
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+exthash_bits     = 0
+failflags        = 0
+fake             = 0
+feedback         = 1
+flag_url_base    = https://www.spec.org/auto/hpc2021/Docs/benchmarks/flags/
+floatcompare     = 
+force_monitor    = 0
+hostname         = xcimom
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = May-2018
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 0
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+inputgenerrfile  = inputgen.err
+inputgenfile     = inputgen.cmd
+inputgenoutfile  = inputgen.out
+inputgenstdoutfile = inputgen.stdout
+interconnect_fs_hw_model = N/A
+interconnect_fs_hw_switch_fs_count = N/A
+interconnect_fs_hw_switch_fs_data_rate = 14 Gb/s
+interconnect_fs_hw_switch_fs_firmware = N/A
+interconnect_fs_hw_switch_fs_model000 = N/A
+interconnect_fs_hw_switch_fs_model001 = N/A
+interconnect_fs_hw_switch_fs_ports = N/A
+interconnect_fs_hw_topo = Dragonfly
+interconnect_fs_hw_vendor = Cray
+interconnect_fs_order = 0
+interconnect_fs_purpose = MPI Traffic
+interconnect_fs_syslbl = Cray Aries
+islibrary        = 0
+iteration        = -1
+iterations       = 2
+keeptmp          = 0
+label            = cce_mpi
+license_num      = ?
+line_width       = 0
+link_input_files = 1
+locking          = 1
+log              = hpc2021
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021.002.log
+lognum           = 002
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = -j 10
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 0
+max_unknown_uncertainty = 1
+mean_anyway      = 0
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 2
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = weather_t
+nansupport       = 
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+node_compute_count = 2
+node_compute_hw_accel_connect = N/A
+node_compute_hw_accel_count = N/A
+node_compute_hw_accel_desc = N/A
+node_compute_hw_accel_ecc = N/A
+node_compute_hw_accel_model = N/A
+node_compute_hw_accel_type = N/A
+node_compute_hw_accel_vendor = N/A
+node_compute_hw_adapter_fs_count = 0
+node_compute_hw_adapter_fs_data_rate = None
+node_compute_hw_adapter_fs_driver = None
+node_compute_hw_adapter_fs_firmware = None
+node_compute_hw_adapter_fs_interconnect = None
+node_compute_hw_adapter_fs_model = None
+node_compute_hw_adapter_fs_ports_used = 0
+node_compute_hw_adapter_fs_slot_type = None
+node_compute_hw_cpu_char = Permanent turbo to 2.5 GHz
+node_compute_hw_cpu_mhz = 2100
+node_compute_hw_cpu_name = Marvell ThunderX2 CN9980
+node_compute_hw_memory = 256 GB (8 x 32 GB)
+node_compute_hw_model = N/A
+node_compute_hw_nchips = 2
+node_compute_hw_ncores = 64
+node_compute_hw_ncoresperchip = 32
+node_compute_hw_ncpuorder = N/A
+node_compute_hw_nthreadspercore = 4
+node_compute_hw_ocache = None
+node_compute_hw_other = None
+node_compute_hw_pcache = 32 KB I + 32 KB D on chip per core
+node_compute_hw_scache = 256 KB I+D on chip per core
+node_compute_hw_tcache000 = 32 MB I+D on chip per chip
+node_compute_hw_tcache001 = 0.5 MB shared / 64 cores
+node_compute_hw_vendor = N/A
+node_compute_order = N/A
+node_compute_purpose = Compute
+node_compute_sw_localfile = xfs
+node_compute_sw_os000 = SUSE Linux Enterprise Server 15 SP1
+node_compute_sw_os001 = Linux 4.12.14-197.7_5.0.99-cray_ari_s
+node_compute_sw_other = None
+node_compute_sw_sharedfile = None
+node_compute_sw_state = Multi-user, run level 3
+node_compute_syslbl = ThunderX2
+noratios         = 0
+note_preenv      = 0
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 535
+obiwan           = 
+oldhash          = 
+os_exe_ext       = 
+output_format    = all
+output_root      = /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128
+outputdir        = output
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/br-spollard/SPEChpc/benchspec/HPC/535.weather_t
+plain_train      = 0
+platform         = 
+pmodel           = MPI
+power            = 0
+preenv           = 1
+prefix           = 
+ranks            = 128
+rawhash_bits     = 256
+rebuild          = 1
+reftime          = reftime
+reltol           = 0.006
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runhpc           = /home/br-spollard/SPEChpc/bin/harness/runhpc --rebuild --config=hpe_cpe_cray_2.cfg --ranks=128 --reportable --output_format=all --output_root=/home/br-spollard/tx2_spec_results/tiny/tiny_cray_128 --iterations=2 tiny
+runmode          = speed
+safe_eval        = 1
+save_build_files = 
+section_specifier_fatal = 1
+setprocgroup     = 1
+setup_error      = 0
+sigint           = 2
+size             = ref
+size_class       = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+srcsource        = /home/br-spollard/SPEChpc/benchspec/HPC/635.weather_s/src
+stagger          = 10
+strict_rundir_verify = 1
+submit_default   = aprun -n $ranks ${APRUN_OPTS} $command
+sw_avail         = Mar-2020
+sw_compiler000   = HPE Cray Programming Environment (CPE),
+sw_compiler001   = C/C++/Fortran: Cray clang version 11.0.4
+sw_mpi_library000 = HPE Cray Programming Environment (CPE),
+sw_mpi_library001 = Cray-mvapich2 Version 2.3.6
+sysinfo_hash_bits = 256
+sysinfo_program  = 
+sysinfo_program_hash = 
+system_name      = Isambard 2: XC50 (ThunderX2)
+system_vendor    = Cray
+table            = 1
+teeout           = yes
+test_date        = Jul-2022
+test_sponsor     = University of Bristol
+tester           = University of Bristol
+threads          = 1
+top              = /home/br-spollard/SPEChpc
+train_single_thread = 0
+train_with       = train
+tune             = base
+uid              = 415400816
+unbuffer         = 1
+uncertainty_exception = 5
+update           = 0
+update_url       = http://www.spec.org/auto/hpc2021/updates/
+use_spack        = 
+use_submit_for_compare = 0
+use_submit_for_speed = 1
+username         = br-spollard
+verbose          = 5
+verify_binaries  = 1
+version          = 1.000003
+version_url      = http://www.spec.org/auto/hpc2021/devel_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = output6.train.txt
+  Compile for '535.weather_t' started at: 2022-07-03 14:39:39 (1656859179)
+Issuing make.clean command 'specmake --output-sync -j 10 clean'
+specmake --output-sync -j 10 clean
+Start make.clean command: 2022-07-03 14:39:39 (1656859179.47237)
+rm -rf *.o  output6.train.txt
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf weather
+rm -rf weather.exe
+rm -rf core
+Stop make.clean command: 2022-07-03 14:39:39 (1656859179.66722)
+Elapsed time for make.clean command: 00:00:00 (0.194851875305176)
+Issuing make command 'specmake --output-sync -j 10 build'
+specmake --output-sync -j 10 build
+Start make command: 2022-07-03 14:39:39 (1656859179.68579)
+/home/br-spollard/SPEChpc/bin/specperl /home/br-spollard/SPEChpc/bin/harness/specpp -DSPEC -DNDEBUG miniWeather.F90 -o miniWeather.fppized.f90
+ftn -c -o miniWeather.fppized.o -Ofast miniWeather.fppized.f90
+ftn      -Ofast          miniWeather.fppized.o                      -o weather  
+Stop make command: 2022-07-03 14:39:45 (1656859185.43987)
+Elapsed time for make command: 00:00:05 (5.75408101081848)
+Issuing options command 'specmake --output-sync -j 10 options'
+specmake --output-sync -j 10 options
+Start options command: 2022-07-03 14:39:45 (1656859185.44425)
+
+FPP: "specpp -DSPEC -DNDEBUG <source> -o <source>.fppized.f9x"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+O: OPTIMIZE=""
+O: EXTRA_OPTIMIZE=""
+O: FPPOPTIMIZE=""
+O: EXTRA_FPPOPTIMIZE=""
+O: FOPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: PORTABILITY=""
+P: EXTRA_PORTABILITY=""
+P: FPORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: "ftn -c -o options.o -Ofast <source>"
+C: FC="ftn"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_FFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: FOPTIMIZE=""
+P: PORTABILITY=""
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+LINK: "ftn      -Ofast          <objects>            -o options  "
+C: LD="ftn"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+Stop options command: 2022-07-03 14:39:45 (1656859185.65954)
+Elapsed time for options command: 00:00:00 (0.215289115905762)
+Issuing compiler-version command 'specmake --output-sync -j 10 compiler-version'
+specmake --output-sync -j 10 compiler-version
+Start compiler-version command: 2022-07-03 14:39:45 (1656859185.66475)
+
+ FC_VERSION_OPTION:
+
+Cray Fortran : Version 11.0.4
+Stop compiler-version command: 2022-07-03 14:39:45 (1656859185.89859)
+Elapsed time for compiler-version command: 00:00:00 (0.233848810195923)
+  Compile for '535.weather_t' ended at: 2022-07-03 14:39:45 (1656859185)
+  Elapsed compile for '535.weather_t': 00:00:06 (6)
+
+FPP: "specpp -DSPEC -DNDEBUG <source> -o <source>.fppized.f9x"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+O: OPTIMIZE=""
+O: EXTRA_OPTIMIZE=""
+O: FPPOPTIMIZE=""
+O: EXTRA_FPPOPTIMIZE=""
+O: FOPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: PORTABILITY=""
+P: EXTRA_PORTABILITY=""
+P: FPORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: "ftn -c -o options.o -Ofast <source>"
+C: FC="ftn"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_FFLAGS=""
+O: OPTIMIZE="-Ofast"
+O: FOPTIMIZE=""
+P: PORTABILITY=""
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+LINK: "ftn      -Ofast          <objects>            -o options  "
+C: LD="ftn"
+O: OPTIMIZE="-Ofast"
+C: LDOUT="-o options"
+
+ FC_VERSION_OPTION:
+
+Cray Fortran : Version 11.0.4
+
+Build successes for tiny: 505.lbm_t(base), 513.soma_t(base), 518.tealeaf_t(base), 519.clvleaf_t(base), 521.miniswp_t(base), 528.pot3d_t(base), 532.sph_exa_t(base), 534.hpgmgfv_t(base), 535.weather_t(base)
+Build errors for tiny: None
+
+Setting Up Run Directories
+  Setting up 505.lbm_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 513.soma_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 518.tealeaf_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 519.clvleaf_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 521.miniswp_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 528.pot3d_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 532.sph_exa_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 534.hpgmgfv_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+  Setting up 535.weather_t ref base cce_mpi: run_base_ref_cce_mpi.0000
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running (#1) 505.lbm_t ref base cce_mpi [2022-07-03 14:39:47]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000
+    -o lbm.out -e lbm.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/lbm_base.cce_mpi (timed)
+**WARNING: environment variable 'BASH_FUNC_module%%' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 14:39:47 (1656859187.58225)
+Stop command: 2022-07-03 14:52:09 (1656859929.62215)
+Elapsed time for command: 00:12:22 (742.039892911911)
+Workload elapsed time (copy 0 workload 1) = 741.868961 seconds
+Copy 0 of 505.lbm_t (base ref) run 1 finished at 2022-07-03 14:52:09.  Total elapsed time: 741.868961
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'lbm.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 14:52:09 (1656859929.74407)
+Stop command: 2022-07-03 14:52:10 (1656859930.28128)
+Elapsed time for command: 00:00:00 (0.537214994430542)
+Benchmark Times:
+  Run Start:    2022-07-03 14:39:47 (1656859187)
+  Run Stop:     2022-07-03 14:52:09 (1656859929)
+  Run Elapsed:  00:12:22 (742)
+  Run Reported: 00:12:21 (741 869139000 741.869139)
+ Success 505.lbm_t base ref ratio=3.03, runtime=741.869139, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 513.soma_t ref base cce_mpi [2022-07-03 14:52:10]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000
+    -o soma.out -e soma.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/soma_base.cce_mpi -r 42 -t 200 --npoly=14000000 --gen-state-file (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 14:52:10 (1656859930.4126)
+Stop command: 2022-07-03 15:07:23 (1656860843.32671)
+Elapsed time for command: 00:15:12 (912.914101839066)
+Workload elapsed time (copy 0 workload 1) = 912.745614 seconds
+Copy 0 of 513.soma_t (base ref) run 1 finished at 2022-07-03 15:07:23.  Total elapsed time: 912.745614
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'stateR42time200Npoly14000000.txt' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 15:07:23 (1656860843.44542)
+Stop command: 2022-07-03 15:07:23 (1656860843.96604)
+Elapsed time for command: 00:00:00 (0.520623207092285)
+Benchmark Times:
+  Run Start:    2022-07-03 14:52:10 (1656859930)
+  Run Stop:     2022-07-03 15:07:23 (1656860843)
+  Run Elapsed:  00:15:13 (913)
+  Run Reported: 00:15:12 (912 745813000 912.745813)
+ Success 513.soma_t base ref ratio=4.05, runtime=912.745813, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 518.tealeaf_t ref base cce_mpi [2022-07-03 15:07:24]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000
+    -o output -e tea.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/tealeaf_base.cce_mpi (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 15:07:24 (1656860844.10491)
+Stop command: 2022-07-03 15:17:52 (1656861472.74434)
+Elapsed time for command: 00:10:28 (628.639436006546)
+Workload elapsed time (copy 0 workload 1) = 628.470645 seconds
+Copy 0 of 518.tealeaf_t (base ref) run 1 finished at 2022-07-03 15:17:52.  Total elapsed time: 628.470645
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'tea.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 15:17:52 (1656861472.8614)
+Stop command: 2022-07-03 15:17:53 (1656861473.38677)
+Elapsed time for command: 00:00:00 (0.525373935699463)
+Benchmark Times:
+  Run Start:    2022-07-03 15:07:24 (1656860844)
+  Run Stop:     2022-07-03 15:17:52 (1656861472)
+  Run Elapsed:  00:10:28 (628)
+  Run Reported: 00:10:28 (628 470790000 628.47079)
+ Success 518.tealeaf_t base ref ratio=2.63, runtime=628.470790, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 519.clvleaf_t ref base cce_mpi [2022-07-03 15:17:53]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000
+    -e clover.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/clvleaf_base.cce_mpi (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 15:17:53 (1656861473.53154)
+Stop command: 2022-07-03 15:26:06 (1656861966.34263)
+Elapsed time for command: 00:08:12 (492.811096906662)
+Workload elapsed time (copy 0 workload 1) = 492.642837 seconds
+Copy 0 of 519.clvleaf_t (base ref) run 1 finished at 2022-07-03 15:26:06.  Total elapsed time: 492.642837
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'clover.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 15:26:06 (1656861966.4595)
+Stop command: 2022-07-03 15:26:07 (1656861967.00264)
+Elapsed time for command: 00:00:00 (0.543142080307007)
+Benchmark Times:
+  Run Start:    2022-07-03 15:17:53 (1656861473)
+  Run Stop:     2022-07-03 15:26:06 (1656861966)
+  Run Elapsed:  00:08:13 (493)
+  Run Reported: 00:08:12 (492 642995000 492.642995)
+ Success 519.clvleaf_t base ref ratio=3.35, runtime=492.642995, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 521.miniswp_t ref base cce_mpi [2022-07-03 15:26:07]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000
+    -o sweep_1.out -e sweep_1.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/sweep_base.cce_mpi --niterations 40 --ncell_x 96 --ncell_y 64 --ncell_z 64 --ne 64 --na 32 --nblock_z 8 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 15:26:07 (1656861967.13719)
+Stop command: 2022-07-03 15:39:32 (1656862772.02534)
+Elapsed time for command: 00:13:24 (804.888142108917)
+Workload elapsed time (copy 0 workload 1) = 804.71833 seconds
+Copy 0 of 521.miniswp_t (base ref) run 1 finished at 2022-07-03 15:39:31.  Total elapsed time: 804.71833
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'sweep_1.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 15:39:32 (1656862772.14296)
+Stop command: 2022-07-03 15:39:32 (1656862772.67785)
+Elapsed time for command: 00:00:00 (0.534882068634033)
+Benchmark Times:
+  Run Start:    2022-07-03 15:26:07 (1656861967)
+  Run Stop:     2022-07-03 15:39:32 (1656862772)
+  Run Elapsed:  00:13:25 (805)
+  Run Reported: 00:13:24 (804 718513000 804.718513)
+ Success 521.miniswp_t base ref ratio=1.99, runtime=804.718513, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 528.pot3d_t ref base cce_mpi [2022-07-03 15:39:32]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000
+    -o pot3d.stdout.out -e pot3d.stderr.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/pot3d_base.cce_mpi 1 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 15:39:33 (1656862773.36833)
+Stop command: 2022-07-03 15:51:50 (1656863510.15026)
+Elapsed time for command: 00:12:16 (736.781929969788)
+Workload elapsed time (copy 0 workload 1) = 736.612875 seconds
+Copy 0 of 528.pot3d_t (base ref) run 1 finished at 2022-07-03 15:51:49.  Total elapsed time: 736.612875
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'pot3d1.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 15:51:50 (1656863510.26886)
+Stop command: 2022-07-03 15:51:50 (1656863510.83591)
+Elapsed time for command: 00:00:00 (0.567049980163574)
+Benchmark Times:
+  Run Start:    2022-07-03 15:39:32 (1656862772)
+  Run Stop:     2022-07-03 15:51:50 (1656863510)
+  Run Elapsed:  00:12:18 (738)
+  Run Reported: 00:12:16 (736 613015000 736.613015)
+ Success 528.pot3d_t base ref ratio=2.88, runtime=736.613015, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 532.sph_exa_t ref base cce_mpi [2022-07-03 15:51:50]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000
+    -o sph_exa.out -e sph_exa.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/sph_exa_base.cce_mpi -n 210 -s 80 -w -1 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 15:51:51 (1656863511.01097)
+Stop command: 2022-07-03 16:05:31 (1656864331.99483)
+Elapsed time for command: 00:13:40 (820.983866930008)
+Workload elapsed time (copy 0 workload 1) = 820.812645 seconds
+Copy 0 of 532.sph_exa_t (base ref) run 1 finished at 2022-07-03 16:05:31.  Total elapsed time: 820.812645
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'sqpatch.dat' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 16:05:32 (1656864332.10528)
+Stop command: 2022-07-03 16:05:32 (1656864332.61753)
+Elapsed time for command: 00:00:00 (0.512255907058716)
+Benchmark Times:
+  Run Start:    2022-07-03 15:51:50 (1656863510)
+  Run Stop:     2022-07-03 16:05:31 (1656864331)
+  Run Elapsed:  00:13:41 (821)
+  Run Reported: 00:13:40 (820 812778000 820.812778)
+ Success 532.sph_exa_t base ref ratio=2.38, runtime=820.812778, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 534.hpgmgfv_t ref base cce_mpi [2022-07-03 16:05:32]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000
+    -o hpgmgfv.out -e hpgmgfv.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/hpgmgfv_base.cce_mpi 5 9 300 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 16:05:32 (1656864332.77907)
+Stop command: 2022-07-03 16:16:19 (1656864979.3668)
+Elapsed time for command: 00:10:46 (646.587728023529)
+Workload elapsed time (copy 0 workload 1) = 646.419498 seconds
+Copy 0 of 534.hpgmgfv_t (base ref) run 1 finished at 2022-07-03 16:16:19.  Total elapsed time: 646.419498
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'hpgmgfv.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 16:16:19 (1656864979.48308)
+Stop command: 2022-07-03 16:16:20 (1656864980.12835)
+Elapsed time for command: 00:00:00 (0.645272970199585)
+Benchmark Times:
+  Run Start:    2022-07-03 16:05:32 (1656864332)
+  Run Stop:     2022-07-03 16:16:19 (1656864979)
+  Run Elapsed:  00:10:47 (647)
+  Run Reported: 00:10:46 (646 419639000 646.419639)
+ Success 534.hpgmgfv_t base ref ratio=1.82, runtime=646.419639, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 535.weather_t ref base cce_mpi [2022-07-03 16:16:20]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000
+    -o weather.1.stdout.out -e weather.1.stderr.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/weather_base.cce_mpi output6.ref.txt 24000 10000 3000 1250 600 100 6 ; (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 16:16:20 (1656864980.26675)
+Stop command: 2022-07-03 16:27:09 (1656865629.95696)
+Elapsed time for command: 00:10:49 (649.690210819244)
+Workload elapsed time (copy 0 workload 1) = 649.521922 seconds
+Copy 0 of 535.weather_t (base ref) run 1 finished at 2022-07-03 16:27:09.  Total elapsed time: 649.521922
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'output6.ref.txt' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 16:27:10 (1656865630.07077)
+Stop command: 2022-07-03 16:27:10 (1656865630.8748)
+Elapsed time for command: 00:00:00 (0.804033994674683)
+Benchmark Times:
+  Run Start:    2022-07-03 16:16:20 (1656864980)
+  Run Stop:     2022-07-03 16:27:09 (1656865629)
+  Run Elapsed:  00:10:49 (649)
+  Run Reported: 00:10:49 (649 522097000 649.522097)
+ Success 535.weather_t base ref ratio=4.97, runtime=649.522097, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 505.lbm_t ref base cce_mpi [2022-07-03 16:27:11]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000
+    -o lbm.out -e lbm.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/lbm_base.cce_mpi (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 16:27:11 (1656865631.35337)
+Stop command: 2022-07-03 16:39:35 (1656866375.00824)
+Elapsed time for command: 00:12:23 (743.654870033264)
+Workload elapsed time (copy 0 workload 1) = 743.486697 seconds
+Copy 0 of 505.lbm_t (base ref) run 2 finished at 2022-07-03 16:39:34.  Total elapsed time: 743.486697
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'lbm.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/505.lbm_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 16:39:35 (1656866375.12598)
+Stop command: 2022-07-03 16:39:35 (1656866375.71995)
+Elapsed time for command: 00:00:00 (0.593972206115723)
+Benchmark Times:
+  Run Start:    2022-07-03 16:27:11 (1656865631)
+  Run Stop:     2022-07-03 16:39:35 (1656866375)
+  Run Elapsed:  00:12:24 (744)
+  Run Reported: 00:12:23 (743 486837000 743.486837)
+ Success 505.lbm_t base ref ratio=3.03, runtime=743.486837, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 513.soma_t ref base cce_mpi [2022-07-03 16:39:35]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000
+    -o soma.out -e soma.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/soma_base.cce_mpi -r 42 -t 200 --npoly=14000000 --gen-state-file (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 16:39:36 (1656866376.01838)
+Stop command: 2022-07-03 16:54:48 (1656867288.9542)
+Elapsed time for command: 00:15:12 (912.935821056366)
+Workload elapsed time (copy 0 workload 1) = 912.76848 seconds
+Copy 0 of 513.soma_t (base ref) run 2 finished at 2022-07-03 16:54:48.  Total elapsed time: 912.76848
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'stateR42time200Npoly14000000.txt' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/513.soma_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 16:54:49 (1656867289.06798)
+Stop command: 2022-07-03 16:54:49 (1656867289.63002)
+Elapsed time for command: 00:00:00 (0.562037944793701)
+Benchmark Times:
+  Run Start:    2022-07-03 16:39:36 (1656866376)
+  Run Stop:     2022-07-03 16:54:48 (1656867288)
+  Run Elapsed:  00:15:12 (912)
+  Run Reported: 00:15:12 (912 768666000 912.768666)
+ Success 513.soma_t base ref ratio=4.05, runtime=912.768666, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 518.tealeaf_t ref base cce_mpi [2022-07-03 16:54:49]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000
+    -o output -e tea.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/tealeaf_base.cce_mpi (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 16:54:49 (1656867289.77652)
+Stop command: 2022-07-03 17:05:24 (1656867924.87855)
+Elapsed time for command: 00:10:35 (635.102030038834)
+Workload elapsed time (copy 0 workload 1) = 634.933609 seconds
+Copy 0 of 518.tealeaf_t (base ref) run 2 finished at 2022-07-03 17:05:24.  Total elapsed time: 634.933609
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'tea.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/518.tealeaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 17:05:25 (1656867925.12411)
+Stop command: 2022-07-03 17:05:26 (1656867926.015)
+Elapsed time for command: 00:00:00 (0.890890121459961)
+Benchmark Times:
+  Run Start:    2022-07-03 16:54:49 (1656867289)
+  Run Stop:     2022-07-03 17:05:24 (1656867924)
+  Run Elapsed:  00:10:35 (635)
+  Run Reported: 00:10:34 (634 933797000 634.933797)
+ Success 518.tealeaf_t base ref ratio=2.60, runtime=634.933797, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 519.clvleaf_t ref base cce_mpi [2022-07-03 17:05:27]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000
+    -e clover.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/clvleaf_base.cce_mpi (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 17:05:27 (1656867927.67383)
+Stop command: 2022-07-03 17:13:40 (1656868420.94582)
+Elapsed time for command: 00:08:13 (493.271990060806)
+Workload elapsed time (copy 0 workload 1) = 493.101314 seconds
+Copy 0 of 519.clvleaf_t (base ref) run 2 finished at 2022-07-03 17:13:40.  Total elapsed time: 493.101314
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'clover.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 17:13:41 (1656868421.06034)
+Stop command: 2022-07-03 17:13:41 (1656868421.60814)
+Elapsed time for command: 00:00:00 (0.547796964645386)
+Benchmark Times:
+  Run Start:    2022-07-03 17:05:27 (1656867927)
+  Run Stop:     2022-07-03 17:13:40 (1656868420)
+  Run Elapsed:  00:08:13 (493)
+  Run Reported: 00:08:13 (493 101453000 493.101453)
+ Success 519.clvleaf_t base ref ratio=3.35, runtime=493.101453, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 521.miniswp_t ref base cce_mpi [2022-07-03 17:13:41]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000
+    -o sweep_1.out -e sweep_1.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/sweep_base.cce_mpi --niterations 40 --ncell_x 96 --ncell_y 64 --ncell_z 64 --ne 64 --na 32 --nblock_z 8 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 17:13:41 (1656868421.75046)
+Stop command: 2022-07-03 17:27:05 (1656869225.99673)
+Elapsed time for command: 00:13:24 (804.246262073517)
+Workload elapsed time (copy 0 workload 1) = 804.078983 seconds
+Copy 0 of 521.miniswp_t (base ref) run 2 finished at 2022-07-03 17:27:05.  Total elapsed time: 804.078983
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'sweep_1.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 17:27:06 (1656869226.11665)
+Stop command: 2022-07-03 17:27:06 (1656869226.75564)
+Elapsed time for command: 00:00:00 (0.638993978500366)
+Benchmark Times:
+  Run Start:    2022-07-03 17:13:41 (1656868421)
+  Run Stop:     2022-07-03 17:27:05 (1656869225)
+  Run Elapsed:  00:13:24 (804)
+  Run Reported: 00:13:24 (804 79162000 804.079162)
+ Success 521.miniswp_t base ref ratio=1.99, runtime=804.079162, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 528.pot3d_t ref base cce_mpi [2022-07-03 17:27:06]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000
+    -o pot3d.stdout.out -e pot3d.stderr.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/pot3d_base.cce_mpi 1 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 17:27:06 (1656869226.99078)
+Stop command: 2022-07-03 17:39:24 (1656869964.3085)
+Elapsed time for command: 00:12:17 (737.317713022232)
+Workload elapsed time (copy 0 workload 1) = 737.15143 seconds
+Copy 0 of 528.pot3d_t (base ref) run 2 finished at 2022-07-03 17:39:24.  Total elapsed time: 737.15143
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'pot3d1.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/528.pot3d_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 17:39:24 (1656869964.61022)
+Stop command: 2022-07-03 17:39:25 (1656869965.20756)
+Elapsed time for command: 00:00:00 (0.597340822219849)
+Benchmark Times:
+  Run Start:    2022-07-03 17:27:06 (1656869226)
+  Run Stop:     2022-07-03 17:39:24 (1656869964)
+  Run Elapsed:  00:12:18 (738)
+  Run Reported: 00:12:17 (737 151560000 737.15156)
+ Success 528.pot3d_t base ref ratio=2.88, runtime=737.151560, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 532.sph_exa_t ref base cce_mpi [2022-07-03 17:39:25]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000
+    -o sph_exa.out -e sph_exa.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/sph_exa_base.cce_mpi -n 210 -s 80 -w -1 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 17:39:25 (1656869965.38639)
+Stop command: 2022-07-03 17:53:01 (1656870781.82065)
+Elapsed time for command: 00:13:36 (816.43425989151)
+Workload elapsed time (copy 0 workload 1) = 816.264447 seconds
+Copy 0 of 532.sph_exa_t (base ref) run 2 finished at 2022-07-03 17:53:01.  Total elapsed time: 816.264447
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'sqpatch.dat' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 17:53:01 (1656870781.93487)
+Stop command: 2022-07-03 17:53:02 (1656870782.4943)
+Elapsed time for command: 00:00:00 (0.559428930282593)
+Benchmark Times:
+  Run Start:    2022-07-03 17:39:25 (1656869965)
+  Run Stop:     2022-07-03 17:53:01 (1656870781)
+  Run Elapsed:  00:13:36 (816)
+  Run Reported: 00:13:36 (816 264589000 816.264589)
+ Success 532.sph_exa_t base ref ratio=2.39, runtime=816.264589, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 534.hpgmgfv_t ref base cce_mpi [2022-07-03 17:53:02]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000
+    -o hpgmgfv.out -e hpgmgfv.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/hpgmgfv_base.cce_mpi 5 9 300 (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 17:53:02 (1656870782.66161)
+Stop command: 2022-07-03 18:03:47 (1656871427.84963)
+Elapsed time for command: 00:10:45 (645.18802690506)
+Workload elapsed time (copy 0 workload 1) = 645.016392 seconds
+Copy 0 of 534.hpgmgfv_t (base ref) run 2 finished at 2022-07-03 18:03:47.  Total elapsed time: 645.016392
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'hpgmgfv.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 18:03:47 (1656871427.96036)
+Stop command: 2022-07-03 18:03:48 (1656871428.62543)
+Elapsed time for command: 00:00:00 (0.665069103240967)
+Benchmark Times:
+  Run Start:    2022-07-03 17:53:02 (1656870782)
+  Run Stop:     2022-07-03 18:03:47 (1656871427)
+  Run Elapsed:  00:10:45 (645)
+  Run Reported: 00:10:45 (645 16518000 645.016518)
+ Success 534.hpgmgfv_t base ref ratio=1.82, runtime=645.016518, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 535.weather_t ref base cce_mpi [2022-07-03 18:03:48]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000
+    -o weather.1.stdout.out -e weather.1.stderr.err aprun -n 128 -d 1 -N 64 -q ../run_base_ref_cce_mpi.0000/weather_base.cce_mpi output6.ref.txt 24000 10000 3000 1250 600 100 6 ; (timed)
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-03 18:03:48 (1656871428.76037)
+Stop command: 2022-07-03 18:14:39 (1656872079.75308)
+Elapsed time for command: 00:10:50 (650.9927110672)
+Workload elapsed time (copy 0 workload 1) = 650.823001 seconds
+Copy 0 of 535.weather_t (base ref) run 2 finished at 2022-07-03 18:14:39.  Total elapsed time: 650.823001
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '1'
+	ACC_NUM_CORES	=> '1'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '1')
+	'OMP_NUM_THREADS' changed: (value now '1')
+comparing 'output6.ref.txt' with abstol=4e-07, reltol=0.006
+Specinvoke: /home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/benchspec/HPC/535.weather_t/run/run_base_ref_cce_mpi.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-03 18:14:39 (1656872079.86762)
+Stop command: 2022-07-03 18:14:40 (1656872080.66616)
+Elapsed time for command: 00:00:00 (0.798540115356445)
+Benchmark Times:
+  Run Start:    2022-07-03 18:03:48 (1656871428)
+  Run Stop:     2022-07-03 18:14:39 (1656872079)
+  Run Elapsed:  00:10:51 (651)
+  Run Reported: 00:10:50 (650 823184000 650.823184)
+ Success 535.weather_t base ref ratio=4.96, runtime=650.823184, pmodel=MPI, ranks=128, threads=1, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 2x505.lbm_t 2x513.soma_t 2x518.tealeaf_t 2x519.clvleaf_t 2x521.miniswp_t 2x528.pot3d_t 2x532.sph_exa_t 2x534.hpgmgfv_t 2x535.weather_t
+Producing Raw Reports
+ label: cce_mpi
+  workload: ref
+   benchset: tiny
+   metric: SPEChpc2021_tny_base
+    format: raw -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.rsf
+Parsing flags for 505.lbm_t base: done
+Parsing flags for 513.soma_t base: done
+Parsing flags for 518.tealeaf_t base: done
+Parsing flags for 519.clvleaf_t base: done
+Parsing flags for 521.miniswp_t base: done
+Parsing flags for 528.pot3d_t base: done
+Parsing flags for 532.sph_exa_t base: done
+Parsing flags for 534.hpgmgfv_t base: done
+Parsing flags for 535.weather_t base: done
+Doing flag reduction: done
+    format: flags -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.flags.html
+    format: cfg -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.cfg, /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.orig.cfg
+    format: CSV -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.csv
+    format: PDF -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.pdf
+    format: HTML -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.html
+    format: PostScript -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.ps
+    format: Text -> /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021_tny.002.tiny.txt
+   benchset: small
+   benchset: medium
+   benchset: large
+
+The log for this run is in /home/br-spollard/tx2_spec_results/tiny/tiny_cray_128/result/hpc2021.002.log
+
+runhpc finished at 2022-07-03 18:14:47; 13212 total seconds elapsed
