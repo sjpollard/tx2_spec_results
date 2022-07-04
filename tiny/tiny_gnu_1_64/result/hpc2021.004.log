@@ -4955,3 +4955,43 @@ Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard
 Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_omp.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
 /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_omp.0002 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
 Start command: 2022-07-04 14:30:56 (1656945056.40363)
+Stop command: 2022-07-04 14:48:43 (1656946123.22939)
+Elapsed time for command: 00:17:46 (1066.82576203346)
+Workload elapsed time (copy 0 workload 1) = 1066.657293 seconds
+Copy 0 of 519.clvleaf_t (base ref) run 1 finished at 2022-07-04 14:48:43.  Total elapsed time: 1066.657293
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+comparing 'clover.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_omp.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_omp.0002 -f compare.cmd -E -e compare.err -o compare.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/519.clvleaf_t/run/run_base_ref_cce_omp.0002 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-04 14:48:43 (1656946123.3705)
+Stop command: 2022-07-04 14:48:43 (1656946123.94165)
+Elapsed time for command: 00:00:00 (0.571153879165649)
+Benchmark Times:
+  Run Start:    2022-07-04 14:30:56 (1656945056)
+  Run Stop:     2022-07-04 14:48:43 (1656946123)
+  Run Elapsed:  00:17:47 (1067)
+  Run Reported: 00:17:46 (1066 657414000 1066.657414)
+ Success 519.clvleaf_t base ref ratio=1.55, runtime=1066.657414, pmodel=OMP, ranks=1, threads=64, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#1) 521.miniswp_t ref base cce_omp threads:64 [2022-07-04 14:48:44]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_omp.0001
+    -o sweep_1.out -e sweep_1.err aprun -n 1 -d 64 -N 1 -q ../run_base_ref_cce_omp.0001/sweep_base.cce_omp --niterations 40 --ncell_x 96 --ncell_y 64 --ncell_z 64 --ne 64 --na 32 --nblock_z 8 (timed)
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_omp.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_omp.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_1_64/benchspec/HPC/521.miniswp_t/run/run_base_ref_cce_omp.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-04 14:48:44 (1656946124.12064)
