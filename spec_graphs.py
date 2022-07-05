@@ -188,7 +188,7 @@ def tiny_gnu_omp_1ppn_time(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP (1 rank/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([0, 4000])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -207,7 +207,7 @@ def tiny_gnu_omp_2ppn_time(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP (2 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([0, 2500])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -226,7 +226,7 @@ def tiny_gnu_omp_4ppn_time(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP (4 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([0, 2500])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -273,10 +273,22 @@ def main():
                                    [751,908,584,484,774,691,871,558,604],
                                    [381,514,348,257,458,359,435,286,323],
                                    [195,314,191,140,346,209,232,172,167]])
-    tiny_gnu_omp_1ppn_times = np.array([[],[],[],[]])
-    tiny_gnu_omp_2ppn_times = np.array([[],[],[],[]])
-    tiny_gnu_omp_4ppn_times = np.array([[],[],[],[]])
-    tiny_gnu_omp_8ppn_times = np.array([[],[],[],[]])
+    tiny_gnu_omp_1ppn_times = np.array([[1601,1847,1013,1067,786,2592,3705,1098,2574],
+                                        [819,945,596,586,431,1362,1098,843,1300],
+                                        [422,493,381,332,240,717,541,586,652],
+                                        [213,266,272,192,159,395,271,431,348]])
+    tiny_gnu_omp_2ppn_times = np.array([[1276,1865,1254,1582, 768,2076,1840,1590,2259],
+                                        [635,907,563,571,398,884,928,676,1037],
+                                        [321,475,333,313,257,508,453,414,455],
+                                        [170,260,237,173,159,270,239,264,236]])
+    tiny_gnu_omp_4ppn_times = np.array([[1269,1785,1056,1073,728,1682,1602,1209,2124],
+                                        [629,917,557,563,437,874,843,644,925],
+                                        [325,480,341,280,261,478,442,332,402],
+                                        [169,266,212,157,174,256,235,207,208]])
+    tiny_gnu_omp_8ppn_times = np.array([[1263,1802,1030,1005,823,1544,1580,1009,1726],
+                                        [645,914,534,499,455,849,812,545,837],
+                                        [328,484,345,274,295,422,427,309,387],
+                                        [165,268,204,153,183,245,232,172,196]])
     #tiny_gnu_mpi_time(tiny_gnu_mpi_times)
     #tiny_gnu_mpi_speedup(tiny_gnu_mpi_times)
     #tiny_gnu_mpi_efficiency(tiny_gnu_mpi_times)

@@ -5449,3 +5449,137 @@ Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard
 Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
 /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
 Start command: 2022-07-04 14:47:59 (1656946079.06368)
+Stop command: 2022-07-04 14:57:00 (1656946620.21331)
+Elapsed time for command: 00:09:01 (541.149628162384)
+Workload elapsed time (copy 0 workload 1) = 540.981109 seconds
+Copy 0 of 532.sph_exa_t (base ref) run 2 finished at 2022-07-04 14:57:00.  Total elapsed time: 540.981109
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+comparing 'sqpatch.dat' with abstol=4e-07, reltol=0.006
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/532.sph_exa_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-04 14:57:00 (1656946620.32131)
+Stop command: 2022-07-04 14:57:00 (1656946620.81942)
+Elapsed time for command: 00:00:00 (0.498103141784668)
+Benchmark Times:
+  Run Start:    2022-07-04 14:47:59 (1656946079)
+  Run Stop:     2022-07-04 14:57:00 (1656946620)
+  Run Elapsed:  00:09:01 (541)
+  Run Reported: 00:09:00 (540 981239000 540.981239)
+ Success 532.sph_exa_t base ref ratio=3.60, runtime=540.981239, pmodel=OMP, ranks=4, threads=64, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 534.hpgmgfv_t ref base cce_omp threads:64 [2022-07-04 14:57:00]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000
+    -o hpgmgfv.out -e hpgmgfv.err aprun -n 4 -d 64 -N 1 -q ../run_base_ref_cce_omp.0000/hpgmgfv_base.cce_omp 5 9 300 (timed)
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-04 14:57:00 (1656946620.96066)
+Stop command: 2022-07-04 15:06:47 (1656947207.37628)
+Elapsed time for command: 00:09:46 (586.415621995926)
+Workload elapsed time (copy 0 workload 1) = 586.24838 seconds
+Copy 0 of 534.hpgmgfv_t (base ref) run 2 finished at 2022-07-04 15:06:47.  Total elapsed time: 586.24838
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+comparing 'hpgmgfv.out' with abstol=4e-07, reltol=0.006
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/534.hpgmgfv_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-04 15:06:47 (1656947207.48368)
+Stop command: 2022-07-04 15:06:48 (1656947208.16787)
+Elapsed time for command: 00:00:00 (0.684189081192017)
+Benchmark Times:
+  Run Start:    2022-07-04 14:57:00 (1656946620)
+  Run Stop:     2022-07-04 15:06:47 (1656947207)
+  Run Elapsed:  00:09:47 (587)
+  Run Reported: 00:09:46 (586 248516000 586.248516)
+ Success 534.hpgmgfv_t base ref ratio=2.00, runtime=586.248516, pmodel=OMP, ranks=4, threads=64, power=0.00W, temp=0.00 degC, humidity=0.00%
+
+-----------------------------------
+  Running (#2) 535.weather_t ref base cce_omp threads:64 [2022-07-04 15:06:48]
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+Commands to run (specinvoke command file):
+    -N C
+    -C /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000
+    -o weather.1.stdout.out -e weather.1.stderr.err aprun -n 4 -d 64 -N 1 -q ../run_base_ref_cce_omp.0000/weather_base.cce_omp output6.ref.txt 24000 10000 3000 1250 600 100 6 ; (timed)
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Start command: 2022-07-04 15:06:48 (1656947208.3229)
+Stop command: 2022-07-04 15:17:40 (1656947860.34478)
+Elapsed time for command: 00:10:52 (652.021878004074)
+Workload elapsed time (copy 0 workload 1) = 651.855617 seconds
+Copy 0 of 535.weather_t (base ref) run 2 finished at 2022-07-04 15:17:40.  Total elapsed time: 651.855617
+OpenMP/OpenACC environment variables removed: None
+OpenMP/OpenACC environment variables in effect:
+	OMP_NUM_THREADS	=> '64'
+	ACC_NUM_CORES	=> '64'
+Pre-run environment changes:
+	'ACC_NUM_CORES' added: (value now '64')
+comparing 'output6.ref.txt' with abstol=4e-07, reltol=0.006
+Specinvoke: /lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+/lustre/home/br-spollard/SPEChpc/bin/specinvoke -d /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/benchspec/HPC/535.weather_t/run/run_base_ref_cce_omp.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Start command: 2022-07-04 15:17:40 (1656947860.4808)
+Stop command: 2022-07-04 15:17:41 (1656947861.19427)
+Elapsed time for command: 00:00:00 (0.7134690284729)
+Benchmark Times:
+  Run Start:    2022-07-04 15:06:48 (1656947208)
+  Run Stop:     2022-07-04 15:17:40 (1656947860)
+  Run Elapsed:  00:10:52 (652)
+  Run Reported: 00:10:51 (651 855758000 651.855758)
+ Success 535.weather_t base ref ratio=4.95, runtime=651.855758, pmodel=OMP, ranks=4, threads=64, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 2x505.lbm_t 2x513.soma_t 2x518.tealeaf_t 2x519.clvleaf_t 2x521.miniswp_t 2x528.pot3d_t 2x532.sph_exa_t 2x534.hpgmgfv_t 2x535.weather_t
+Producing Raw Reports
+ label: cce_omp
+  workload: ref
+   benchset: tiny
+   metric: SPEChpc2021_tny_base
+    format: raw -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.rsf
+Parsing flags for 505.lbm_t base: done
+Parsing flags for 513.soma_t base: done
+Parsing flags for 518.tealeaf_t base: done
+Parsing flags for 519.clvleaf_t base: done
+Parsing flags for 521.miniswp_t base: done
+Parsing flags for 528.pot3d_t base: done
+Parsing flags for 532.sph_exa_t base: done
+Parsing flags for 534.hpgmgfv_t base: done
+Parsing flags for 535.weather_t base: done
+Doing flag reduction: done
+    format: flags -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.flags.html
+    format: cfg -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.cfg, /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.orig.cfg
+    format: CSV -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.csv
+    format: PDF -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.pdf
+    format: HTML -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.html
+    format: PostScript -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.ps
+    format: Text -> /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021_tny.001.tiny.txt
+   benchset: small
+   benchset: medium
+   benchset: large
+
+The log for this run is in /home/br-spollard/tx2_spec_results/tiny/tiny_gnu_4_64/result/hpc2021.001.log
+
+runhpc finished at 2022-07-04 15:17:48; 8847 total seconds elapsed
