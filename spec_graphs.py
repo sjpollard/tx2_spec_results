@@ -2,10 +2,11 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def tiny_gnu_mpi_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - MPI Runtime (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([2, 3.4])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -17,7 +18,7 @@ def tiny_gnu_mpi_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_gnu_mpi_speedup(times):
@@ -47,7 +48,8 @@ def tiny_gnu_mpi_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - MPI Parallel Efficiency (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([35, 105])
+    plt.ylim([30, 110])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -59,14 +61,15 @@ def tiny_gnu_mpi_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_cray_mpi_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - Cray Compiler - MPI Runtime (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([2, 3.4])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -78,7 +81,7 @@ def tiny_cray_mpi_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_cray_mpi_speedup(times):
@@ -108,7 +111,8 @@ def tiny_cray_mpi_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - Cray Compiler - MPI Parallel Efficiency (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([35, 105])
+    plt.ylim([30, 110])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -120,14 +124,15 @@ def tiny_cray_mpi_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_arm_mpi_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - Arm Compiler - MPI Runtime (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([2, 3.4])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -139,7 +144,7 @@ def tiny_arm_mpi_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_arm_mpi_speedup(times):
@@ -169,7 +174,8 @@ def tiny_arm_mpi_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - Arm Compiler - MPI Parallel Efficiency (64 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([35, 105])
+    plt.ylim([30, 110])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -181,14 +187,15 @@ def tiny_arm_mpi_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_gnu_omp_1ppn_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Runtime (1 rank/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 4000])
+    plt.ylim([2, 3.6])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -200,7 +207,7 @@ def tiny_gnu_omp_1ppn_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_gnu_omp_1ppn_speedup(times):
@@ -230,7 +237,8 @@ def tiny_gnu_omp_1ppn_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Parallel Efficiency (1 rank/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([30, 200])
+    plt.ylim([20, 200])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -242,14 +250,15 @@ def tiny_gnu_omp_1ppn_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_gnu_omp_2ppn_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Runtime (2 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2500])
+    plt.ylim([2, 3.6])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -261,7 +270,7 @@ def tiny_gnu_omp_2ppn_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_gnu_omp_2ppn_speedup(times):
@@ -269,7 +278,7 @@ def tiny_gnu_omp_2ppn_speedup(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Speedup (2 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([1, 10])
+    plt.ylim([1, 14])
     plt.plot(np.arange(0, 9), c="grey", linestyle="--")
     plt.plot([1,2,4,8], speedup.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], speedup.T[1], marker="x", label="513.soma_t")
@@ -291,7 +300,8 @@ def tiny_gnu_omp_2ppn_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Parallel Efficiency (2 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([60, 160])
+    plt.ylim([40, 160])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -303,14 +313,15 @@ def tiny_gnu_omp_2ppn_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_gnu_omp_4ppn_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Runtime (4 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2500])
+    plt.ylim([2, 3.6])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -322,7 +333,7 @@ def tiny_gnu_omp_4ppn_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_gnu_omp_4ppn_speedup(times):
@@ -330,7 +341,7 @@ def tiny_gnu_omp_4ppn_speedup(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Speedup (4 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([1, 12])
+    plt.ylim([1, 14])
     plt.plot(np.arange(0, 9), c="grey", linestyle="--")
     plt.plot([1,2,4,8], speedup.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], speedup.T[1], marker="x", label="513.soma_t")
@@ -352,7 +363,8 @@ def tiny_gnu_omp_4ppn_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Parallel Efficiency (4 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([50, 160])
+    plt.ylim([40, 160])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -364,14 +376,15 @@ def tiny_gnu_omp_4ppn_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_gnu_omp_8ppn_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Runtime (8 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 2000])
+    plt.ylim([2, 3.6])
     plt.plot([1,2,4,8], times.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], times.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], times.T[2], marker="x", label="518.tealeaf_t")
@@ -383,7 +396,7 @@ def tiny_gnu_omp_8ppn_time(times):
     plt.plot([1,2,4,8], times.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def tiny_gnu_omp_8ppn_speedup(times):
@@ -391,7 +404,7 @@ def tiny_gnu_omp_8ppn_speedup(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Speedup (8 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([1, 10])
+    plt.ylim([1, 14])
     plt.plot(np.arange(0, 9), c="grey", linestyle="--")
     plt.plot([1,2,4,8], speedup.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], speedup.T[1], marker="x", label="513.soma_t")
@@ -413,7 +426,8 @@ def tiny_gnu_omp_8ppn_efficiency(times):
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - OMP Parallel Efficiency (8 ranks/node)")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([50, 120])
+    plt.ylim([40, 140])
+    plt.axhline(y=100, c="grey", linestyle="--")
     plt.plot([1,2,4,8], efficiency.T[0], marker="x", label="505.lbm_t")
     plt.plot([1,2,4,8], efficiency.T[1], marker="x", label="513.soma_t")
     plt.plot([1,2,4,8], efficiency.T[2], marker="x", label="518.tealeaf_t")
@@ -425,14 +439,15 @@ def tiny_gnu_omp_8ppn_efficiency(times):
     plt.plot([1,2,4,8], efficiency.T[8], marker="x", label="535.weather_t")
     plt.legend(loc="lower left")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Parallel efficiency")
+    plt.ylabel("Parallel efficiency(%)")
     plt.show()
 
 def tiny_gnu_total_time(times):
+    times = np.log10(times)
     plt.title("Tiny suite - ThunderX2 - GNU Compiler - Total Runtime")
     plt.xticks([1,2,4,8])
     plt.xlim([1, 8])
-    plt.ylim([0, 18000])
+    plt.ylim([3.2, 4.4])
     plt.plot([1,2,4,8], times[0], marker="x", label="1x64")
     plt.plot([1,2,4,8], times[1], marker="x", label="2x32")
     plt.plot([1,2,4,8], times[2], marker="x", label="4x16")
@@ -440,7 +455,21 @@ def tiny_gnu_total_time(times):
     plt.plot([1,2,4,8], times[4], marker="x", label="64x1")
     plt.legend(loc="upper right")
     plt.xlabel("Number of nodes (64 cores/node)")
-    plt.ylabel("Time(s)")
+    plt.ylabel("$log_{10}$ Time(s)")
+    plt.show()
+
+def tiny_mpi_total_time(times):
+    times = np.log10(times)
+    plt.title("Tiny suite - ThunderX2 - MPI Total Runtime")
+    plt.xticks([1,2,4,8])
+    plt.xlim([1, 8])
+    plt.ylim([3.2, 4.4])
+    plt.plot([1,2,4,8], times[0], marker="x", label="GNU")
+    plt.plot([1,2,4,8], times[1], marker="x", label="Cray")
+    plt.plot([1,2,4,8], times[2], marker="x", label="Arm")
+    plt.legend(loc="upper right")
+    plt.xlabel("Number of nodes (64 cores/node)")
+    plt.ylabel("$log_{10}$ Time(s)")
     plt.show()
 
 def main():
@@ -472,14 +501,18 @@ def main():
                                         [645,914,534,499,455,849,812,545,837],
                                         [328,484,345,274,295,422,427,309,387],
                                         [165,268,204,153,183,245,232,172,196]])
-    tiny_total_times = np.array([tiny_gnu_omp_1ppn_times.sum(axis=1),
-                                 tiny_gnu_omp_2ppn_times.sum(axis=1),
-                                 tiny_gnu_omp_4ppn_times.sum(axis=1),
-                                 tiny_gnu_omp_8ppn_times.sum(axis=1),
-                                 tiny_gnu_mpi_times.sum(axis=1)])
+    tiny_gnu_total_times = np.array([tiny_gnu_omp_1ppn_times.sum(axis=1),
+                                     tiny_gnu_omp_2ppn_times.sum(axis=1),
+                                     tiny_gnu_omp_4ppn_times.sum(axis=1),
+                                     tiny_gnu_omp_8ppn_times.sum(axis=1),
+                                     tiny_gnu_mpi_times.sum(axis=1)])
+    tiny_mpi_total_times = np.array([tiny_gnu_mpi_times.sum(axis=1),
+                                     tiny_cray_mpi_times.sum(axis=1),
+                                     tiny_arm_mpi_times.sum(axis=1)])
     #tiny_gnu_mpi_time(tiny_gnu_mpi_times)
     #tiny_gnu_mpi_speedup(tiny_gnu_mpi_times)
     #tiny_gnu_mpi_efficiency(tiny_gnu_mpi_times)
+    #tiny_cray_mpi_time(tiny_cray_mpi_times)
     #tiny_cray_mpi_speedup(tiny_cray_mpi_times)
     #tiny_cray_mpi_efficiency(tiny_cray_mpi_times)
     #tiny_arm_mpi_time(tiny_arm_mpi_times)
@@ -497,7 +530,8 @@ def main():
     #tiny_gnu_omp_8ppn_time(tiny_gnu_omp_8ppn_times)
     #tiny_gnu_omp_8ppn_speedup(tiny_gnu_omp_8ppn_times)
     #tiny_gnu_omp_8ppn_efficiency(tiny_gnu_omp_8ppn_times)
-    tiny_gnu_total_time(tiny_total_times)
+    #tiny_gnu_total_time(tiny_total_times)
+    #tiny_mpi_total_time(tiny_mpi_total_times)
 
 if __name__ == "__main__":
     main()
