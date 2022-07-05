@@ -3,3 +3,5 @@ benchspec/
 *.csv
 *.pdf
 *.ps
+*.log
+*.hpc2021
