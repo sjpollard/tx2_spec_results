@@ -1,25 +1,28 @@
 #!/bin/bash
+#PBS -N testing
 #PBS -q arm
 #PBS -l select=1
-#PBS -l walltime=00:10:00
+#PBS -l walltime=0:15:00
+#PBS -j oe
+#PBS -o testing.out
 
 cd $PBS_O_WORKDIR
 cd ../../SPEChpc
 . ./shrc
 
 #cray#
-module load cdt
+#module load cdt
 
 #gcc#
 #module swap PrgEnv-cray PrgEnv-gnu
 
 #allinea#
-#module swap PrgEnv-cray PrgEnv-allinea
-#module load cdt/20.03
+module swap PrgEnv-cray PrgEnv-allinea
+module load cdt/20.03
 
-cc --version
+runhpc --define model=omp --define ppn=1 --pmodel=OMP --config=hpe_cpe_gnu_1.cfg --ranks=1 --threads=64 --noreportable --size=test --iterations=1 tiny
 
-runhpc --rebuild --config=hpe_cpe.cfg -ranks=64  --size=test --noreportable --tune=base --iterations=1 tiny
+#runhpc --rebuild --config=hpe_cpe.cfg -ranks=64  --size=test --noreportable --tune=base --iterations=1 tiny
 #runhpc --config=hpe_cpe.cfg -ranks=64 --size=test --noreportable --tune=base --iterations=1 tiny ^505.lbm_t ^519.clvleaf_t ^521.miniswp_t ^528.pot3d_t ^534.hpgmgfv_t ^535.weather_t
 #runhpc --config=hpe_cpe.cfg -ranks=64 --size=test --noreportable --tune=base --iterations=1 ^505.lbm_t 519.clvleaf_t ^521.miniswp_t ^528.pot3d_t ^534.hpgmgfv_t ^535.weather_t
 
