@@ -2,7 +2,7 @@
 #PBS -N SPEC_tiny_gnu_256_2
 #PBS -q arm
 #PBS -l select=8
-#PBS -l walltime=02:00:00
+#PBS -l walltime=02:30:00
 #PBS -j oe
 #PBS -o SPEC_tiny_gnu_256_2.out
 

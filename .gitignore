@@ -1,7 +1,7 @@
 benchspec/
 *.html
 *.csv
-*.pdf
+hpc2021*.pdf
 *.ps
 *.log
 *.hpc2021
