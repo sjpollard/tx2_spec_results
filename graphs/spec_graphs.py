@@ -681,11 +681,13 @@ def main():
     tiny_gnu_omp_32ppn_times = np.array([[1269,1762,902,880,992,1159,1480,858,1423],
                                          [626,964,587,516,579,791,816,555,716],
                                          [320,518,371,268,416,411,409,293,370],
-                                         [0,0,0,0,0,0,0,0,0]])
+                                         [167,302,200,147,261,232,211,168,207]])
     tiny_gnu_total_times = np.array([tiny_gnu_omp_1ppn_times.sum(axis=1),
                                      tiny_gnu_omp_2ppn_times.sum(axis=1),
                                      tiny_gnu_omp_4ppn_times.sum(axis=1),
                                      tiny_gnu_omp_8ppn_times.sum(axis=1),
+                                     tiny_gnu_omp_16ppn_times.sum(axis=1),
+                                     tiny_gnu_omp_32ppn_times.sum(axis=1),
                                      tiny_gnu_mpi_times.sum(axis=1)])
     tiny_mpi_total_times = np.array([tiny_gnu_mpi_times.sum(axis=1),
                                      tiny_cray_mpi_times.sum(axis=1),
@@ -695,7 +697,7 @@ def main():
                                       [1.52,2.94,5.57,9.81],
                                       [1.60,3.08,5.66,10.2],
                                       [1.59,3.16,5.59,9.96],
-                                      [1.75,3.02,5.49,0],
+                                      [1.75,3.02,5.49,9.84],
                                       [1.61,3.03,5.54,9.71]])
     tiny_gnu_mpi_time(tiny_gnu_mpi_times)
     tiny_gnu_mpi_speedup(tiny_gnu_mpi_times)
@@ -721,12 +723,12 @@ def main():
     tiny_gnu_omp_16ppn_time(tiny_gnu_omp_16ppn_times)
     tiny_gnu_omp_16ppn_speedup(tiny_gnu_omp_16ppn_times)
     tiny_gnu_omp_16ppn_efficiency(tiny_gnu_omp_16ppn_times)
-    #tiny_gnu_omp_32ppn_time(tiny_gnu_omp_32ppn_times)
-    #tiny_gnu_omp_32ppn_speedup(tiny_gnu_omp_32ppn_times)
-    #tiny_gnu_omp_32ppn_efficiency(tiny_gnu_omp_32ppn_times)
-    #tiny_gnu_total_time(tiny_total_times)
-    #tiny_mpi_total_time(tiny_mpi_total_times)
-    #tiny_gnu_spec_score(tiny_gnu_spec_scores)
+    tiny_gnu_omp_32ppn_time(tiny_gnu_omp_32ppn_times)
+    tiny_gnu_omp_32ppn_speedup(tiny_gnu_omp_32ppn_times)
+    tiny_gnu_omp_32ppn_efficiency(tiny_gnu_omp_32ppn_times)
+    tiny_gnu_total_time(tiny_gnu_total_times)
+    tiny_mpi_total_time(tiny_mpi_total_times)
+    tiny_gnu_spec_score(tiny_gnu_spec_scores)
 
 if __name__ == "__main__":
     main()
