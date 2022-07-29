@@ -1,7 +1,14 @@
 benchspec/
+tmp/
 *.html
 *.csv
 hpc2021*.pdf
 *.ps
 *.log
+*.log.debug
 *.hpc2021
+*.gif
+*.orig.cfg
+
+xthi
+version.txt
